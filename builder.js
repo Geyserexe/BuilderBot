@@ -66,13 +66,21 @@ function BuildTeam(){
                 for(var a = 0; a < sets.length; a++){
                     if(sets[a][key] && sets[a][key] > config.cutoff){
                         if((!stats.mega && !stats.z) || (stats.mega && !sets[a].mega) || (stats.z && !sets[a].z)){
-                            prunedArray.push(sets[a]);
+                            if(!speciesTest(sets[a])){
+                                prunedArray.push(sets[a]);
+                            }
                         }
                     }
                 }
             }
             else if(prunedArray.length == 0){
-                prunedArray.push(sets[getRandomInt(sets.length)]);
+                var set = sets[getRandomInt(sets.length)];
+                if(stats.mega && set.mega){
+                    while(set.mega){
+                        set = sets[getRandomInt(sets.length)];
+                    }
+                }
+                prunedArray.push(set);
             }
         }
         var rand = getRandomInt(prunedArray.length);
@@ -110,5 +118,14 @@ function updateStats(mon){
     }
     if(mon.z){
         stats.z = true;
+    }
+}
+
+function speciesTest(mon){
+    for(var i = 1; i < team.length + 1; i++){
+        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Necrozma-Dusk-Mane" && team[i].set.name != "Necrozma-Dusk-Mane")){
+            return true;
+        }
+        return false;
     }
 }
