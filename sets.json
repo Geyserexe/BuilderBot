@@ -1,5 +1,4 @@
-
-     [
+[
     {
       "set": {
           "name":"Zacian-Crowned",
@@ -1017,7 +1016,7 @@
             "ability":"Multitype",
             "evs":"252 HP / 156 Def / 100 Spe",
             "nature":"Timid",
-            "moves":["Calm Mind", "Judgement", "Refresh", "Recover"]
+            "moves":["Calm Mind", "Judgment", "Refresh", "Recover"]
         },
         "breaker":5,
         "ogreCheck":2,
@@ -1039,7 +1038,7 @@
             "ability":"Multitype",
             "evs":"252 HP / 132 Def / 124 Spe",
             "nature":"Bold",
-            "moves":["Judgement", "Recover", "Defog", "Refresh"]
+            "moves":["Judgment", "Recover", "Defog", "Refresh"]
         },
         "breaker":0,
         "ogreCheck":0,
@@ -1247,6 +1246,28 @@
         "rayCheck":3,
         "zygCheck":1,
         "zacCheck":0,
+        "mega":false,
+        "z":false,
+        "rocks":false,
+        "defog":false
+    },
+    {
+        "set": {
+            "name":"Necrozma-Dusk-Mane",
+            "item":"Leftovers",
+            "ability":"Prism Armor",
+            "evs":"252 HP / 252 Def / 4 SpD",
+            "nature":"Impish",
+            "moves":["Toxic", "Morning Sun", "Sunsteel Strike", "Knock Off"]
+        },
+        "breaker":1,
+        "ogreCheck":0,
+        "donCheck":1,
+        "ygodCheck":0,
+        "xernCheck":6,
+        "rayCheck":6,
+        "zygCheck":0,
+        "zacCheck":10,
         "mega":false,
         "z":false,
         "rocks":false,
