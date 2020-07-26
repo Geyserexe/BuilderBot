@@ -78,7 +78,9 @@ function BuildTeam(){
                 var set = sets[getRandomInt(sets.length)];
                 if((stats.mega && set.mega) || (stats.z && set.z)){
                     while(set.mega || set.z){
-                        set = sets[getRandomInt(sets.length)];
+                        if(!speciesTest(set)){
+                            set = sets[getRandomInt(sets.length)];
+                        }
                     }
                 }
                 prunedArray.push(set);
@@ -102,9 +104,12 @@ function BuildTeam(){
                 set.evs + "\n" + set.nature + " Nature\n- " +
                 set.moves[0] + "\n- " +
                 set.moves[1] + "\n- " + set.moves[2] + "\n- " +
-                 set.moves[3] + "\n\n"
+                set.moves[3] + "\n\n"
         }
         console.log(teamString);
+        for(let [key, value] of Object.entries(stats.ints)){
+            console.log(key,value);
+        }
 }
 
 function getRandomInt(max) {
@@ -139,7 +144,7 @@ function speciesTest(mon){
         if((mon.set.name === "Tyranitar" && team[i].set.name === "Tyranitar-Mega") || (mon.set.name === "Tyranitar-Mega" && team[i].set.name === "Tyranitar")){
             return true;
         }
-        if(mon.set.name === team[i].set.name){
+        if(mon.set.name == team[i].set.name){
             return true;
         }
         return false;
