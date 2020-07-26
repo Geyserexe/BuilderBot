@@ -29,6 +29,10 @@ const config = {
     teamLength: 6
 };
 
+const startMon = {
+
+};
+
 let stats = {
     ints:{
         breaker:0,
@@ -51,8 +55,13 @@ let team = [];
 BuildTeam();
 
 function BuildTeam(){
-    team[0] = sets[getRandomInt(sets.length-1)];
-    updateStats[team[0]]
+    if(!startMon.set){
+        team[0] = sets[getRandomInt(sets.length-1)];
+    } else {
+        team[0] = startMon;
+    }
+    
+    updateStats(team[0])
     for(let i = 1; i < config.teamLength; i++){
         let pruneArray = [];
         let prunedArray = [];

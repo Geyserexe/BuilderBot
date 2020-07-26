@@ -1116,7 +1116,7 @@
         "zacCheck":0,
         "mega":false,
         "z":false,
-        "rocks":true,
+        "rocks":false,
         "defog":false
     },
     {
