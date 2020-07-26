@@ -132,14 +132,14 @@ function updateStats(){
         defog:false
     };
     for(let i = 0; i < team.length; i++){
-        stats.ints.breaker += team[i].breaker;
-        stats.ints.rayCheck += team[i].rayCheck;
-        stats.ints.zygCheck += team[i].zygCheck;
-        stats.ints.zacCheck += team[i].zacCheck;
-        stats.ints.donCheck += team[i].donCheck;
-        stats.ints.ygodCheck += team[i].ygodCheck;
-        stats.ints.xernCheck += team[i].xernCheck;
-        stats.ints.ogreCheck += team[i].ogreCheck;
+        if(team[i].breaker){stats.ints.breaker += team[i].breaker;}
+        if(team[i].rayCheck){stats.ints.rayCheck += team[i].rayCheck;}
+        if(team[i].zygCheck){stats.ints.zygCheck += team[i].zygCheck;}
+        if(team[i].zacCheck){stats.ints.zacCheck += team[i].zacCheck;}
+        if(team[i].donCheck){stats.ints.donCheck += team[i].donCheck;}
+        if(team[i].ygodCheck){stats.ints.ygodCheck += team[i].ygodCheck;}
+        if(team[i].xernCheck){stats.ints.xernCheck += team[i].xernCheck;}
+        if(team[i].ogreCheck){stats.ints.ogreCheck += team[i].ogreCheck;}
         if(team[i].mega){
             stats.mega = true;
         }
