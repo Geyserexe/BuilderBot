@@ -61,7 +61,7 @@ function BuildTeam(){
         team[0] = startMon;
     }
     
-    updateStats(team[0])
+    updateStats();
     for(let i = 1; i < config.teamLength; i++){
         let pruneArray = [];
         let prunedArray = [];
@@ -87,7 +87,7 @@ function BuildTeam(){
                     if(zMegaCheckPassed(pruneArray[a])){
                         if(!stats.rocks){
                             prunedArray.push(pruneArray[a]);
-                        }else if(!pruneArray[a].rocks){
+                        } else if(!pruneArray[a].rocks){
                             prunedArray.push(pruneArray[a]);
                         }
                     }
@@ -97,7 +97,7 @@ function BuildTeam(){
             prunedArray.push(sets[getRandomInt(sets.length-1)])
         }
         team.push(prunedArray[getRandomInt(prunedArray.length-1)])
-        updateStats(team[i])
+        updateStats();
     }
     let teamString = "";
     for(let i = 0; i < team.length; i++){
@@ -114,26 +114,44 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function updateStats(mon){
-    stats.ints.breaker += mon.breaker;
-    stats.ints.ogreCheck += mon.ogreCheck;
-    stats.ints.donCheck += mon.donCheck;
-    stats.ints.ygodCheck += mon.ygodCheck;
-    stats.ints.xernCheck += mon.xernCheck;
-    stats.ints.rayCheck += mon.rayCheck;
-    stats.ints.zygCheck += mon.zygCheck
-    stats.ints.zacCheck += mon.zacCheck
-    if(mon.mega){
-        stats.mega = true;
-    }
-    if(mon.z){
-        stats.z = true;
-    }
-    if(mon.rocks){
-        stats.rocks = true;
-    }
-    if(mon.defog){
-        stats.defog = true;
+function updateStats(){
+    stats = {
+        ints:{
+            breaker:0,
+            rayCheck:0,
+            zygCheck:0,
+            zacCheck:0,
+            donCheck:0,
+            ygodCheck:0,
+            xernCheck:0,
+            ogreCheck:0
+        },
+        mega:false,
+        z:false,
+        rocks:false,
+        defog:false
+    };
+    for(let i = 0; i < team.length; i++){
+        stats.ints.breaker += team[i].breaker;
+        stats.ints.rayCheck += team[i].rayCheck;
+        stats.ints.zygCheck += team[i].zygCheck;
+        stats.ints.zacCheck += team[i].zacCheck;
+        stats.ints.donCheck += team[i].donCheck;
+        stats.ints.ygodCheck += team[i].ygodCheck;
+        stats.ints.xernCheck += team[i].xernCheck;
+        stats.ints.ogreCheck += team[i].ogreCheck;
+        if(team[i].mega){
+            stats.mega = true;
+        }
+        if(team[i].z){
+            stats.z = true;
+        }
+        if(team[i].rocks){
+            stats.rocks = true;
+        }
+        if(team[i].defog){
+            stats.defog = true;
+        }
     }
 }
 

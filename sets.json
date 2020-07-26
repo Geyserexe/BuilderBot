@@ -215,7 +215,9 @@
         "zygCheck":0,
         "zacCheck":9,
         "mega":false,
-        "z":false
+        "z":false,
+        "rocks":true,
+        "defog":false
     },
     {
         "set": {
