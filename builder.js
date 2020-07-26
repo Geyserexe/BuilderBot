@@ -16,7 +16,9 @@
 //     "zygCheck":,
 //     "zacCheck":,
 //     "mega":,
-//     "z":
+//     "z":,
+//     "rocks":,
+//     "defog":
 // },
 
 
@@ -27,7 +29,7 @@ const config = {
     teamLength: 6
 };
 
-var stats = {
+let stats = {
     ints:{
         breaker:0,
         ogreCheck:0,
@@ -44,7 +46,7 @@ var stats = {
     defog:false
 };
 
-var team = [];
+let team = [];
 
 BuildTeam();
 
@@ -131,7 +133,7 @@ function isValid(mon){
         if(mon.includes(team[i].set.name) || team[i].set.name.includes(mon) ){
             return false;
         }
-        if((mon.includes("Tyranitar") && team[i].set.name=== "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))){
+        if((mon.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))){
             return false;
         }
     }
