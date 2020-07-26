@@ -960,27 +960,6 @@
         "z":false
     },
     {
-    "set": {
-        "name":"Sableye-Mega",
-        "item":"Sablenite",
-        "ability":"Prankster",
-        "evs":"248 HP / 252 Def / 8 Spd",
-        "nature":"Impish",
-        "moves":["Fake Out", "Foul Play", "Toxic", "Recover"]
-    },
-    "breaker":0,
-    "ogreCheck":0,
-    "donCheck":6,
-    "ygodCheck":0,
-    "xernCheck":0,
-    "rayCheck":5,
-    "zygCheck":1,
-    "zacCheck":0,
-    "mega":true,
-    "z":false
-
-    },
-    {
         "set": {
             "name":"Arceus-Fairy",
             "item":"Pixie Plate",

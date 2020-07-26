@@ -24,11 +24,11 @@ const sets = require("./sets.json");
 
 const config = {
     ints:{  
+        ygodCheck:10,
+        xernCheck:7,
         breaker:15,
         ogreCheck:15,
         donCheck:15,
-        ygodCheck:10,
-        xernCheck:7,
         rayCheck:7,
         zygCheck:7,
         zacCheck:7,
@@ -57,6 +57,7 @@ var stats = {
 var team = [];
 
 BuildTeam();
+
 function BuildTeam(){
     team[1] = sets[getRandomInt(sets.length)];
     for(var i = 0; i < config.teamLength; i++){
@@ -129,7 +130,16 @@ function updateStats(mon){
 
 function speciesTest(mon){
     for(var i = 1; i < team.length + 1; i++){
-        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Necrozma-Dusk-Mane" && team[i].set.name != "Necrozma-Dusk-Mane") || (mon.set.name === "Shedinja" && (team[i].set.name === "Tyranitar" || team[i].set.name === "Tyranitar-Mega"))){
+        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Shedinja" && (team[i].set.name === "Tyranitar" || team[i].set.name === "Tyranitar-Mega"))){
+            return true;
+        }
+        if((mon.set.name === "Diancie" && team[i].set.name === "Diancie-Mega") || (mon.set.name === "Diancie-Mega" && team[i].set.name === "Diancie")){
+            return true;
+        }
+        if((mon.set.name === "Tyranitar" && team[i].set.name === "Tyranitar-Mega") || (mon.set.name === "Tyranitar-Mega" && team[i].set.name === "Tyranitar")){
+            return true;
+        }
+        if(mon.set.name === team[i].set.name){
             return true;
         }
         return false;
