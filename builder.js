@@ -25,20 +25,20 @@
 const sets = require("./sets.json");
 
 const config = {
-    cutoff: 8,
+    cutoff: 9,
     teamLength: 6
 };
 
 let stats = {
     ints:{
         breaker:0,
-        ogreCheck:0,
-        donCheck:0,
-        ygodCheck:0,
-        xernCheck:0,
         rayCheck:0,
         zygCheck:0,
         zacCheck:0,
+        donCheck:0,
+        ygodCheck:0,
+        xernCheck:0,
+        ogreCheck:0
     },
     mega:false,
     z:false,
@@ -59,7 +59,7 @@ function BuildTeam(){
         let priority = "";
         let currentValue = 11;
         for(let [key, value] of Object.entries(stats.ints)){
-            if(value < currentValue){
+            if(value <= currentValue+1){
                 currentValue = value;
                 priority = key;
             }

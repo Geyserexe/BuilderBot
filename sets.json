@@ -756,7 +756,7 @@
         },
         "breaker":2,
         "ogreCheck":0,
-        "donCheck":6,
+        "donCheck":7,
         "ygodCheck":0,
         "xernCheck":0,
         "rayCheck":0,
@@ -1104,7 +1104,7 @@
             "ability":"Clear Body",
             "evs":"248 HP / 8 Def / 252 Spd",
             "nature":"Calm",
-            "moves":["Stealth Rock", "Moonblast", "Power Gem", "Rest"]
+            "moves":["Heal Bell", "Moonblast", "Power Gem", "Rest"]
         },
         "breaker":0,
         "ogreCheck":0,
