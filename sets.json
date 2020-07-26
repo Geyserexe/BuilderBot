@@ -576,7 +576,7 @@
             "ability":"Multitype",
             "evs":"248 HP / 240 Def / 20 Spe",
             "nature":"Bold",
-            "moves":["Ice Beam", "Will-o-Wisp", "Recover", "Refresh"]
+            "moves":["Ice Beam", "Will-O-Wisp", "Recover", "Refresh"]
         },
         "breaker":0,
         "ogreCheck":5,
@@ -818,7 +818,7 @@
             "ability":"Shadow Shield",
             "evs":"252 HP / 252 Def / 4 SpA",
             "nature":"Bold",
-            "moves":["Will-o-Wisp", "Hex", "Defog", "Roost"]
+            "moves":["Will-O-Wisp", "Hex", "Defog", "Roost"]
         },
         "breaker":1,
         "ogreCheck":0,
@@ -1060,7 +1060,7 @@
             "ability":"Multitype",
             "evs":"244 HP / 176 SpD / 88 Spe",
             "nature":"Calm",
-            "moves":["Judgment", "Recover", "Refresh", "Will-o-Wisp"]
+            "moves":["Judgment", "Recover", "Refresh", "Will-O-Wisp"]
         },
         "breaker":0,
         "ogreCheck":0,
@@ -1170,7 +1170,7 @@
             "ability":"Pressure",
             "evs":"252 HP / 252 Def / 4 SpD",
             "nature":"Bold",
-            "moves":["Rest", "Toxic", "Will-o-Wisp", "Defog"]
+            "moves":["Rest", "Toxic", "Will-O-Wisp", "Defog"]
         },
         "breaker":0,
         "ogreCheck":5,
@@ -1192,7 +1192,7 @@
             "ability":"Wonder Guard",
             "evs":"252 Atk / 252 Spe",
             "nature":"Adamant",
-            "moves":["Shadow Sneak", "Toxic", "Will-o-Wisp", "Baton Pass"]
+            "moves":["Shadow Sneak", "Toxic", "Will-O-Wisp", "Baton Pass"]
         },
         "breaker":1,
         "ogreCheck":10,

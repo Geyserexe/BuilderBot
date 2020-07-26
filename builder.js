@@ -67,7 +67,7 @@ function BuildTeam(){
                 pruneArray.push(sets[a]);
             } else if(sets[a].defog && !stats.defog){
                 pruneArray.push(sets[a]);
-            }else if(sets[a][priority] > config.cutoff){
+            }else if(sets[a][priority] >= config.cutoff){
                 pruneArray.push(sets[a]);
             }
         }
@@ -81,6 +81,9 @@ function BuildTeam(){
                         }
                     }
                 }
+        }
+        if(prunedArray.length === 0){
+            prunedArray.push(sets[getRandomInt(sets.length-1)])
         }
         team.push(prunedArray[getRandomInt(prunedArray.length-1)])
         updateStats(team[i])
