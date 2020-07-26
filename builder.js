@@ -59,57 +59,47 @@ var team = [];
 BuildTeam();
 
 function BuildTeam(){
-    team[1] = sets[getRandomInt(sets.length)];
-    for(var i = 0; i < config.teamLength; i++){
-        var prunedArray = [];
+    team[0] = sets[getRandomInt(sets.length)];
+    updateStats[team[0]]
+    for(let i = 0; i < config.teamLength; i++){
+        let pruneArray = [];
+        let prunedArray = [];
+        let priority = "";
+        let currentValue = 11;
         for(let [key, value] of Object.entries(stats.ints)){
-            if(value < config.ints[key]){
-                for(var a = 0; a < sets.length; a++){
-                    if(sets[a][key] && sets[a][key] > config.cutoff){
-                        if((!stats.mega && !stats.z) || (stats.mega && !sets[a].mega) || (stats.z && !sets[a].z)){
-                            if(!speciesTest(sets[a])){
-                                prunedArray.push(sets[a]);
-                            }
-                        }
-                    }
-                }
-            }
-            else if(prunedArray.length == 0){
-                var set = sets[getRandomInt(sets.length)];
-                if((stats.mega && set.mega) || (stats.z && set.z)){
-                    while(set.mega || set.z){
-                        if(!speciesTest(set)){
-                            set = sets[getRandomInt(sets.length)];
-                        }
-                    }
-                }
-                prunedArray.push(set);
+            if(value < currentValue){
+                currentValue = value;
+                priority = key;
             }
         }
-        var rand = getRandomInt(prunedArray.length);
-        updateStats(prunedArray[rand])
-        team.push(prunedArray[rand]);
-        console.log(team);
-        prunedArray = [];
-        if(team.length > 6){
-            break;
+        for(let a = 0; a < sets.length; a++){
+            if(sets[a][priority] > config.cutoff){
+                pruneArray.push(sets[a]);
+            }
         }
+        for(let a = 0; a < pruneArray.length; a++){
+            if(!speciesTest(pruneArray[a].set.name)){
+                prunedArray.push(pruneArray[a])
+            }
+        }
+        team.push(prunedArray[getRandomInt(prunedArray.length)])
+        updateStats(team[i])
     }
-        var teamString = "";
-        for(var i = 1; i < team.length; i++){
-            set = team[i].set;
-            teamString += set.name + " @ " +
-                set.item + "\nAbility: " +
-                set.ability + "\nEVs: " +
-                set.evs + "\n" + set.nature + " Nature\n- " +
-                set.moves[0] + "\n- " +
-                set.moves[1] + "\n- " + set.moves[2] + "\n- " +
-                set.moves[3] + "\n\n"
-        }
-        console.log(teamString);
-        for(let [key, value] of Object.entries(stats.ints)){
-            console.log(key,value);
-        }
+    let teamString = "";
+    for(let i = 0; i < team.length; i++){
+        set = team[i].set;
+        teamString += set.name + " @ " +
+            set.item + "\nAbility: " +
+            set.ability + "\nEVs: " +
+            set.evs + "\n" + set.nature + " Nature\n- " +
+            set.moves[0] + "\n- " +
+            set.moves[1] + "\n- " + set.moves[2] + "\n- " +
+            set.moves[3] + "\n\n"
+    }
+    console.log(teamString);
+    for(let [key, value] of Object.entries(stats.ints)){
+        console.log(key,value);
+    }
 }
 
 function getRandomInt(max) {
@@ -134,17 +124,8 @@ function updateStats(mon){
 }
 
 function speciesTest(mon){
-    for(var i = 1; i < team.length + 1; i++){
-        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Shedinja" && (team[i].set.name === "Tyranitar" || team[i].set.name === "Tyranitar-Mega"))){
-            return true;
-        }
-        if((mon.set.name === "Diancie" && team[i].set.name === "Diancie-Mega") || (mon.set.name === "Diancie-Mega" && team[i].set.name === "Diancie")){
-            return true;
-        }
-        if((mon.set.name === "Tyranitar" && team[i].set.name === "Tyranitar-Mega") || (mon.set.name === "Tyranitar-Mega" && team[i].set.name === "Tyranitar")){
-            return true;
-        }
-        if(mon.set.name == team[i].set.name){
+    for(var i = 0; i < team.length; i++){
+        if(mon === team[i].set.name){
             return true;
         }
         return false;
