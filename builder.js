@@ -75,8 +75,8 @@ function BuildTeam(){
             }
             else if(prunedArray.length == 0){
                 var set = sets[getRandomInt(sets.length)];
-                if(stats.mega && set.mega){
-                    while(set.mega){
+                if((stats.mega && set.mega) || (stats.z && set.z)){
+                    while(set.mega || set.z){
                         set = sets[getRandomInt(sets.length)];
                     }
                 }
@@ -95,7 +95,13 @@ function BuildTeam(){
         var teamString = "";
         for(var i = 1; i < team.length; i++){
             set = team[i].set;
-            teamString += set.name + " @ " + set.item + "\nAbility: " + set.ability + "\nEVs: " + set.evs + "\n" + set.nature + " Nature\n- " + set.moves[0] + "\n- " + set.moves[1] + "\n- " + set.moves[2] + "\n- " + set.moves[3] + "\n\n"
+            teamString += set.name + " @ " +
+                set.item + "\nAbility: " +
+                set.ability + "\nEVs: " +
+                set.evs + "\n" + set.nature + " Nature\n- " +
+                set.moves[0] + "\n- " +
+                set.moves[1] + "\n- " + set.moves[2] + "\n- " +
+                 set.moves[3] + "\n\n"
         }
         console.log(teamString);
 }
@@ -123,7 +129,7 @@ function updateStats(mon){
 
 function speciesTest(mon){
     for(var i = 1; i < team.length + 1; i++){
-        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Necrozma-Dusk-Mane" && team[i].set.name != "Necrozma-Dusk-Mane")){
+        if(((mon.set.name === "Tyranitar" || mon.set.name === "Tyranitar-Mega") && team[i].set.name != "Shedinja") || (mon.set.name === "Necrozma-Dusk-Mane" && team[i].set.name != "Necrozma-Dusk-Mane") || (mon.set.name === "Shedinja" && (team[i].set.name === "Tyranitar" || team[i].set.name === "Tyranitar-Mega"))){
             return true;
         }
         return false;
