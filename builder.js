@@ -33,7 +33,7 @@ const config = {
         zygCheck:7,
         zacCheck:7,
     },
-    cutoff: 5,
+    cutoff: 6,
     mega:true,
     z:true,
     teamLength: 6
@@ -59,9 +59,9 @@ var team = [];
 BuildTeam();
 
 function BuildTeam(){
-    team[0] = sets[getRandomInt(sets.length)];
+    team[0] = sets[getRandomInt(sets.length-1)];
     updateStats[team[0]]
-    for(let i = 0; i < config.teamLength; i++){
+    for(let i = 0; i < config.teamLength-1; i++){
         let pruneArray = [];
         let prunedArray = [];
         let priority = "";
@@ -78,23 +78,17 @@ function BuildTeam(){
             }
         }
         for(let a = 0; a < pruneArray.length; a++){
-            if(!speciesTest(pruneArray[a].set.name)){
+            if(isValid(pruneArray[a].set.name)){
                 prunedArray.push(pruneArray[a])
             }
         }
-        team.push(prunedArray[getRandomInt(prunedArray.length)])
+        team.push(prunedArray[getRandomInt(prunedArray.length-1)])
         updateStats(team[i])
     }
     let teamString = "";
     for(let i = 0; i < team.length; i++){
         set = team[i].set;
-        teamString += set.name + " @ " +
-            set.item + "\nAbility: " +
-            set.ability + "\nEVs: " +
-            set.evs + "\n" + set.nature + " Nature\n- " +
-            set.moves[0] + "\n- " +
-            set.moves[1] + "\n- " + set.moves[2] + "\n- " +
-            set.moves[3] + "\n\n"
+        teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
     }
     console.log(teamString);
     for(let [key, value] of Object.entries(stats.ints)){
@@ -122,12 +116,14 @@ function updateStats(mon){
         stats.z = true;
     }
 }
-
-function speciesTest(mon){
-    for(var i = 0; i < team.length; i++){
-        if(mon === team[i].set.name){
-            return true;
+function isValid(mon){
+    for(let i = 0; i < team.length; i++){
+        if(mon.includes(team[i].set.name)){
+            return false;
         }
-        return false;
+        if((mon.includes("Tyranitar") && team[i].set.name=== "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))){
+            return false;
+        }
     }
+    return true;
 }
