@@ -23,7 +23,7 @@
 const sets = require("./sets.json");
 
 const config = {
-    cutoff: 6,
+    cutoff: 8,
     teamLength: 6
 };
 
@@ -51,7 +51,7 @@ BuildTeam();
 function BuildTeam(){
     team[0] = sets[getRandomInt(sets.length-1)];
     updateStats[team[0]]
-    for(let i = 0; i < config.teamLength-1; i++){
+    for(let i = 1; i < config.teamLength; i++){
         let pruneArray = [];
         let prunedArray = [];
         let priority = "";
@@ -72,11 +72,15 @@ function BuildTeam(){
             }
         }
         for(let a = 0; a < pruneArray.length; a++){
-            if(isValid(pruneArray[a].set.name)){
-                if(zMegaCheckPassed(pruneArray[a])){
-                    prunedArray.push(pruneArray[a])
+                if(isValid(pruneArray[a].set.name)){
+                    if(zMegaCheckPassed(pruneArray[a])){
+                        if(!stats.rocks){
+                            prunedArray.push(pruneArray[a]);
+                        }else if(!pruneArray[a].rocks){
+                            prunedArray.push(pruneArray[a]);
+                        }
+                    }
                 }
-            }
         }
         team.push(prunedArray[getRandomInt(prunedArray.length-1)])
         updateStats(team[i])
@@ -121,7 +125,7 @@ function updateStats(mon){
 
 function isValid(mon){
     for(let i = 0; i < team.length; i++){
-        if(mon.includes(team[i].set.name)){
+        if(mon.includes(team[i].set.name) || team[i].set.name.includes(mon) ){
             return false;
         }
         if((mon.includes("Tyranitar") && team[i].set.name=== "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))){
@@ -141,4 +145,3 @@ function zMegaCheckPassed(mon){
     }
     return false;
 }
-
