@@ -622,7 +622,7 @@
             "ability":"Multitype",
             "evs":"248 HP / 240 Def / 20 Spe",
             "nature":"Bold",
-            "moves":["Judgment", "Recover", "Defog", "Refresh"]
+            "moves":["Ice Beam", "Recover", "Defog", "Refresh"]
         },
         "breaker":0,
         "ogreCheck":5,

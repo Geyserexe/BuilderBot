@@ -25,7 +25,7 @@
 const sets = require("./sets.json");
 
 const config = {
-    cutoff: 8,
+    cutoff: 7,
     teamLength: 6
 };
 
@@ -103,7 +103,7 @@ function BuildTeam(){
         }
 
         if(prunedArray.length === 0){
-            if(!stats.defog){
+            if(!stats.defog && config.cutoff <= 2){
                 let mon = getRandomMon();
                 while(!mon.defog){
                     mon = getRandomMon();
