@@ -25,6 +25,10 @@
 const sets = require("./sets.json");
 
 const config = {
+    multimode: {
+        on:true,
+        teamNumber: 10
+    },
     cutoff: 7,
     teamLength: 6
 };
@@ -53,7 +57,32 @@ let stats = {
 
 let team = [];
 
-BuildTeam();
+if(config.multimode.on){
+    for(let i = 0; i < config.multimode.teamNumber; i++){
+        BuildTeam();
+        team = [];
+        stats = {
+            ints:{
+                rayCheck:0,
+                zygCheck:0,
+                zacCheck:0,
+                donCheck:0,
+                breaker:0,
+                ygodCheck:0,
+                xernCheck:0,
+                ogreCheck:0
+            },
+            mega:false,
+            z:false,
+            rocks:false,
+            defog:false,
+            cleric:false
+        };        
+    }
+} else {
+    BuildTeam();
+}
+
 
 function BuildTeam(){
 
