@@ -97,6 +97,7 @@ function BuildTeam(){
                         rejected.push(pruneArray[a]);
                     }
                 } else{
+                    if((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks))
                     prunedArray.push(pruneArray[a]);
                 }
             }
@@ -105,18 +106,25 @@ function BuildTeam(){
         if(prunedArray.length === 0){
             if(!stats.defog && config.cutoff <= 2){
                 let mon = getRandomMon();
+                let a = 0;
                 while(!mon.defog){
                     mon = getRandomMon();
+                    a++;
+                    if(a > 1000){
+                        break;
+                    }
                 }
                 prunedArray.push(mon);
             } else if(rejected){
                 for(let i = 0; i < rejected.length; i++){
                     if(rejected[i] && isValid(rejected[i].set.name) && zMegaCheckPassed(rejected[i]) && clericTest(rejected[i])){
-                        prunedArray.push(rejected[i]);
+                        if((!stats.rocks) || (stats.rocks && !rejected[i].rocks)){
+                            prunedArray.push(rejected[i]);
+                        }
                     }
                 }
                 if(prunedArray.length === 0){
-                    prunedArray.push(getRandomMon());
+                        prunedArray.push(getRandomMon());
                 }
             } else {
                 prunedArray.push(getRandomMon());
@@ -227,11 +235,18 @@ function clericTest(mon){
 }
 
 function getRandomMon(){
+    let a = 0;
     let completed = false;
     while(!completed){
         let rand = sets[getRandomInt(sets.length)];
         if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
-            return(rand);
+            if((!stats.rocks) || (stats.rocks && !rand.rocks)){
+                return(rand);
+            }
+        }
+        a++;
+        if(a > 1000){
+            return(sets[getRandomInt(set.length-1)])
         }
     }
 }
