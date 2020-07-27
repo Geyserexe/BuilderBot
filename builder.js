@@ -87,19 +87,19 @@ function BuildTeam(){
         }
 
         for(let a = 0; a < pruneArray.length; a++){
-                if(isValid(pruneArray[a].set.name) && zMegaCheckPassed(pruneArray[a]) && clericTest(pruneArray[a])){
-                    if(!stats.rocks || !stats.defog){
-                        if(!stats.rocks && pruneArray[a].rocks){
-                            prunedArray.push(prunedArray[a]);
-                        } else if(!stats.defog && pruneArray[a].defog){
-                            prunedArray.push(pruneArray[a]);
-                        } else {
-                            rejected.push(pruneArray[a]);
-                        }
-                    } else{
+            if(isValid(pruneArray[a].set.name) && zMegaCheckPassed(pruneArray[a]) && clericTest(pruneArray[a])){
+                if(!stats.rocks || !stats.defog){
+                    if(!stats.rocks && pruneArray[a].rocks){
                         prunedArray.push(pruneArray[a]);
+                    } else if(!stats.defog && pruneArray[a].defog){
+                        prunedArray.push(pruneArray[a]);
+                    } else {
+                        rejected.push(pruneArray[a]);
                     }
+                } else{
+                    prunedArray.push(pruneArray[a]);
                 }
+            }
         }
 
         if(prunedArray.length === 0){
@@ -116,7 +116,6 @@ function BuildTeam(){
                 }
             }
         }
-
         team.push(prunedArray[getRandomInt(prunedArray.length)])
         updateStats();
 
@@ -157,7 +156,6 @@ function updateStats(){
         rocks:false,
         defog:false
     };
-
     for(let i = 0; i < team.length; i++){
         if(team[i].breaker){stats.ints.breaker += team[i].breaker;}
         if(team[i].rayCheck){stats.ints.rayCheck += team[i].rayCheck;}
