@@ -1076,7 +1076,7 @@
         "mega":false,
         "z":false,
         "rocks":false,
-        "defog":true
+        "defog":false
     },
     {
         "set": {

@@ -103,17 +103,23 @@ function BuildTeam(){
         }
 
         if(prunedArray.length === 0){
-            if(rejected){
-                prunedArray.push(rejected[getRandomInt(rejected.length)]);
-            } else {
-                let completed = false;
-                while(!completed){
-                    let rand = sets[getRandomInt(sets.length)];
-                    if(isValid(rand) && zMegaCheckPassed(rand) && clericTest(rand)){
-                        prunedArray.push(rand);
-                        completed = true;
+            if(!stats.defog){
+                let mon = getRandomMon();
+                while(!mon.defog){
+                    mon = getRandomMon();
+                }
+                prunedArray.push(mon);
+            } else if(rejected){
+                for(let i = 0; i < rejected.length; i++){
+                    if(rejected[i] && isValid(rejected[i].set.name) && zMegaCheckPassed(rejected[i]) && clericTest(rejected[i])){
+                        prunedArray.push(rejected[i]);
                     }
                 }
+                if(prunedArray.length === 0){
+                    prunedArray.push(getRandomMon());
+                }
+            } else {
+                prunedArray.push(getRandomMon());
             }
         }
         team.push(prunedArray[getRandomInt(prunedArray.length)])
@@ -218,4 +224,14 @@ function clericTest(mon){
         return false;
     }
     return true;
+}
+
+function getRandomMon(){
+    let completed = false;
+    while(!completed){
+        let rand = sets[getRandomInt(sets.length)];
+        if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
+            return(rand);
+        }
+    }
 }
