@@ -26,7 +26,7 @@ const sets = require("./sets.json");
 
 const config = {
     multimode: {
-        on:true,
+        on:false,
         teamNumber: 10
     },
     cutoff: 7,
