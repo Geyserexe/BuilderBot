@@ -112,6 +112,7 @@ function BuildTeam(){
                 if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
                     if(!(stats.rocks && rand.rocks)){
                         prunedArray.push(rand);
+                        completed = true;
                     }
                 }
             }
