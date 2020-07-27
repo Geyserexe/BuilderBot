@@ -1213,28 +1213,6 @@
     },
     {
         "set": {
-            "name":"Shedinja",
-            "item":"Heavy-Duty Boots",
-            "ability":"Wonder Guard",
-            "evs":"252 Atk / 252 Spe",
-            "nature":"Adamant",
-            "moves":["Shadow Sneak", "Toxic", "Will-O-Wisp", "Baton Pass"]
-        },
-        "breaker":1,
-        "ogreCheck":10,
-        "donCheck":1,
-        "ygodCheck":0,
-        "xernCheck":7,
-        "rayCheck":0,
-        "zygCheck":10,
-        "zacCheck":4,
-        "mega":false,
-        "z":false,
-        "rocks":false,
-        "defog":false
-    },
-    {
-        "set": {
             "name":"Quagsire",
             "item":"Leftovers",
             "ability":"Unaware",
