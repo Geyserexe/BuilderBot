@@ -71,6 +71,7 @@ function BuildTeam(){
         let prunedArray = [];
         let priority = "";
         let currentValue = 11;
+        let rejected = [];
 
         for(let [key, value] of Object.entries(stats.ints)){
             if(value <= currentValue+1){
@@ -80,37 +81,35 @@ function BuildTeam(){
         }
 
         for(let a = 0; a < sets.length; a++){
-            if(sets[a].rocks && !stats.rocks){
-                pruneArray.push(sets[a]);
-            } else if(sets[a].defog && !stats.defog){
-                pruneArray.push(sets[a]);
-            }else if(sets[a][priority] >= config.cutoff){
+            if(sets[a][priority] >= config.cutoff){
                 pruneArray.push(sets[a]);
             }
         }
 
         for(let a = 0; a < pruneArray.length; a++){
-                if(isValid(pruneArray[a].set.name)){
-                    if(zMegaCheckPassed(pruneArray[a])){
-                        if(!stats.rocks){
-                            if(clericTest(pruneArray[a])){
-                                prunedArray.push(pruneArray[a]);
-                            }
-                        } else if(!pruneArray[a].rocks){
-                            if(clericTest(pruneArray[a])){
-                                prunedArray.push(pruneArray[a]);
-                            }
+                if(isValid(pruneArray[a].set.name) && zMegaCheckPassed(pruneArray[a]) && clericTest(pruneArray[a])){
+                    if(!stats.rocks || !stats.defog){
+                        if(!stats.rocks && pruneArray[a].rocks){
+                            prunedArray.push(prunedArray[a]);
+                        } else if(!stats.defog && pruneArray[a].defog){
+                            prunedArray.push(pruneArray[a]);
+                        } else {
+                            rejected.push(pruneArray[a]);
                         }
+                    } else{
+                        prunedArray.push(pruneArray[a]);
                     }
                 }
         }
 
         if(prunedArray.length === 0){
-            let completed = false;
-            while(!completed){
-                let rand = sets[getRandomInt(sets.length-1)];
-                if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
-                    if(!(stats.rocks && rand.rocks)){
+            if(rejected){
+                prunedArray.push(rejected[getRandomInt(rejected.length)]);
+            } else {
+                let completed = false;
+                while(!completed){
+                    let rand = sets[getRandomInt(sets.length)];
+                    if(isValid(rand) && zMegaCheckPassed(rand) && clericTest(rand)){
                         prunedArray.push(rand);
                         completed = true;
                     }
