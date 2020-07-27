@@ -622,6 +622,28 @@
             "ability":"Multitype",
             "evs":"248 HP / 240 Def / 20 Spe",
             "nature":"Bold",
+            "moves":["Ice Beam", "Whirlpool", "Recover", "Perish Song"]
+        },
+        "breaker":5,
+        "ogreCheck":4,
+        "donCheck":7,
+        "ygodCheck":2,
+        "xernCheck":0,
+        "rayCheck":5,
+        "zygCheck":10,
+        "zacCheck":2,
+        "mega":false,
+        "z":false,
+        "rocks":false,
+        "defog":false
+    },
+    {
+        "set": {
+            "name":"Arceus-Water",
+            "item":"Splash Plate",
+            "ability":"Multitype",
+            "evs":"248 HP / 240 Def / 20 Spe",
+            "nature":"Bold",
             "moves":["Judgment", "Toxic", "Recover", "Refresh"]
         },
         "breaker":0,
@@ -1033,6 +1055,28 @@
         "z":false,
         "rocks":false,
         "defog":false
+    },
+    {
+        "set": {
+            "name":"Arceus-Dark",
+            "item":"Dread Plate",
+            "ability":"Multitype",
+            "evs":"252 HP / 132 Def / 124 Spe",
+            "nature":"Bold",
+            "moves":["Judgment", "Recover", "Whirlpool", "Perish Song"]
+        },
+        "breaker":5,
+        "ogreCheck":0,
+        "donCheck":6,
+        "ygodCheck":7,
+        "xernCheck":0,
+        "rayCheck":4,
+        "zygCheck":5,
+        "zacCheck":0,
+        "mega":false,
+        "z":false,
+        "rocks":false,
+        "defog":true
     },
     {
         "set": {
