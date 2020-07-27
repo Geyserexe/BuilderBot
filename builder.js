@@ -106,7 +106,15 @@ function BuildTeam(){
         }
 
         if(prunedArray.length === 0){
-            prunedArray.push(sets[getRandomInt(sets.length-1)])
+            let completed = false;
+            while(!completed){
+                let rand = sets[getRandomInt(sets.length-1)];
+                if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
+                    if(!(stats.rocks && rand.rocks)){
+                        prunedArray.push(rand);
+                    }
+                }
+            }
         }
 
         team.push(prunedArray[getRandomInt(prunedArray.length-1)])
