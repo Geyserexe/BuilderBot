@@ -965,7 +965,8 @@
         "mega":false,
         "z":false,
         "rocks":false,
-        "defog":false
+        "defog":false,
+        "cleric":true
     },
     {
         "set": {
@@ -1119,7 +1120,8 @@
         "mega":false,
         "z":false,
         "rocks":false,
-        "defog":false
+        "defog":false,
+        "cleric":true
     },
     {
         "set": {
