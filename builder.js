@@ -35,11 +35,11 @@ const startMon = {
 
 let stats = {
     ints:{
-        breaker:0,
         rayCheck:0,
         zygCheck:0,
         zacCheck:0,
         donCheck:0,
+        breaker:0,
         ygodCheck:0,
         xernCheck:0,
         ogreCheck:0
@@ -118,7 +118,7 @@ function BuildTeam(){
             }
         }
 
-        team.push(prunedArray[getRandomInt(prunedArray.length-1)])
+        team.push(prunedArray[getRandomInt(prunedArray.length)])
         updateStats();
 
     }
@@ -144,14 +144,14 @@ function getRandomInt(max) {
 function updateStats(){
     stats = {
         ints:{
-            breaker:0,
             rayCheck:0,
             zygCheck:0,
             zacCheck:0,
             donCheck:0,
             ygodCheck:0,
             xernCheck:0,
-            ogreCheck:0
+            ogreCheck:0,
+            breaker:0,
         },
         mega:false,
         z:false,
