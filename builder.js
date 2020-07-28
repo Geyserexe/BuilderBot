@@ -25,12 +25,13 @@
 const sets = require("./sets.json");
 
 const config = {
-    multimode: {
+    multiMode: {
         on:false,
         teamNumber: 10
     },
-    cutoff: 7,
-    teamLength: 6
+    cutoff: 8,
+    teamLength: 6,
+    offenseMode: false
 };
 
 const startMon = {
@@ -57,8 +58,8 @@ let stats = {
 
 let team = [];
 
-if(config.multimode.on){
-    for(let i = 0; i < config.multimode.teamNumber; i++){
+if(config.multiMode.on){
+    for(let i = 0; i < config.Multimode.teamNumber; i++){
         BuildTeam();
         team = [];
         stats = {
@@ -101,9 +102,13 @@ function BuildTeam(){
         let priority = "";
         let currentValue = 11;
         let rejected = [];
-
+        if(config.offenseMode){
+            stats.defog = true;
+        }
         for(let [key, value] of Object.entries(stats.ints)){
-            if(value <= currentValue+1){
+            if(config.offenseMode){
+                priority = "breaker";
+            } else if(value <= currentValue+1){
                 currentValue = value;
                 priority = key;
             }
@@ -199,6 +204,11 @@ function updateStats(){
         rocks:false,
         defog:false
     };
+
+    if(config.offenseMode){
+        stats.defog = true;
+    }
+
     for(let i = 0; i < team.length; i++){
         if(team[i].breaker){stats.ints.breaker += team[i].breaker;}
         if(team[i].rayCheck){stats.ints.rayCheck += team[i].rayCheck;}
