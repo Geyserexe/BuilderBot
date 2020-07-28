@@ -24,21 +24,7 @@
 
 const sets = require("./mon-sets/sets.json");
 const leads = require("./mon-sets/leads.json");
-
-const config = {
-    multiMode: {
-        on:true,
-        teamNumber: 10,
-    },
-    cutoff: 7,
-    teamLength: 6,
-    offenseMode: false,
-    monToAvoid: ""
-};
-
-const startMon = {
-
-};
+const config = require("./config.json");
 
 let stats = {
     ints:{
@@ -69,41 +55,46 @@ if(config.multiMode.on){
             teamType = "O"
         }
         teamString += `=== [gen8nationaldexag] team${i} (${teamType}) ===\n\n`
-        BuildTeam();
-        team = [];
-        stats = {
-            ints:{
-                rayCheck:0,
-                zygCheck:0,
-                zacCheck:0,
-                donCheck:0,
-                breaker:0,
-                ygodCheck:0,
-                xernCheck:0,
-                ogreCheck:0
-            },
-            mega:false,
-            z:false,
-            rocks:false,
-            defog:false,
-            cleric:false
-        };
+        if(!config.offenseMode){
+            BuildTeam();
+            team = [];
+            stats = {
+                ints:{
+                    rayCheck:0,
+                    zygCheck:0,
+                    zacCheck:0,
+                    donCheck:0,
+                    breaker:0,
+                    ygodCheck:0,
+                    xernCheck:0,
+                    ogreCheck:0
+                },
+                mega:false,
+                z:false,
+                rocks:false,
+                defog:false,
+                cleric:false
+            };
+        } else {
+            teamString += require("./offensebuilder.js");
+        }
 
     }
 
 } else {
-    BuildTeam();
+    if(!config.offenseMode){
+        BuildTeam();
+    } else {
+        teamString = require("./offensebuilder.js");
+    }
 }
 console.log(teamString);
 
 function BuildTeam(){
-    if(config.offenseMode && !startMon.set){
-        team[0] = leads[getRandomInt(leads.length-1)];
-    }
-    else if(!startMon.set){
+    if(!config.startMon.set){
         team[0] = sets[getRandomInt(sets.length-1)];
     } else {
-        team[0] = startMon;
+        team[0] = config.startMon;
     }
     
     updateStats();
@@ -115,13 +106,8 @@ function BuildTeam(){
         let priority = "";
         let currentValue = 11;
         let rejected = [];
-        if(config.offenseMode){
-            stats.defog = true;
-        }
         for(let [key, value] of Object.entries(stats.ints)){
-            if(config.offenseMode){
-                priority = "breaker";
-            } else if(value <= currentValue+1){
+            if(value <= currentValue+1){
                 currentValue = value;
                 priority = key;
             }
@@ -216,10 +202,6 @@ function updateStats(){
         rocks:false,
         defog:false
     };
-
-    if(config.offenseMode){
-        stats.defog = true;
-    }
 
     for(let i = 0; i < team.length; i++){
         if(team[i].breaker){stats.ints.breaker += team[i].breaker;}
