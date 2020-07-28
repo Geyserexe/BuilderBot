@@ -24,6 +24,7 @@
 
 const sets = require("./sets.json");
 const leads = require("./leads.json");
+const { reverse } = require("dns");
 
 const config = {
     multiMode: {
@@ -302,7 +303,8 @@ function makeRequest(){
         const https = require('https');
 
         const options = {
-            url: 'pokepast.es',
+            hostname: 'pokepast.es',
+            port: 433,
             path: '/create',
             method: 'POST',
             body: teamString
@@ -312,7 +314,6 @@ function makeRequest(){
         const req = https.request(options, (res) => {
             console.log('statusCode:', res.statusCode);
             console.log('headers:', res.headers);
-
             res.on('data', (d) => {
                 process.stdout.write(d);
             });
@@ -322,6 +323,7 @@ function makeRequest(){
             console.error(e);
         });
         req.end();
+        resolve(req)
     });
 }
 
