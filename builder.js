@@ -30,9 +30,9 @@ const config = {
         on:false,
         teamNumber: 10
     },
-    cutoff: 9,
+    cutoff: 7,
     teamLength: 6,
-    offenseMode: true
+    offenseMode: false
 };
 
 const startMon = {
