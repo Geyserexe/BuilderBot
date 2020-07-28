@@ -23,15 +23,16 @@
 
 
 const sets = require("./sets.json");
+const leads = require("./leads.json");
 
 const config = {
     multiMode: {
         on:false,
         teamNumber: 10
     },
-    cutoff: 8,
+    cutoff: 9,
     teamLength: 6,
-    offenseMode: false
+    offenseMode: true
 };
 
 const startMon = {
@@ -86,8 +87,10 @@ if(config.multiMode.on){
 
 
 function BuildTeam(){
-
-    if(!startMon.set){
+    if(config.offenseMode){
+        team[0] = leads[getRandomInt(leads.length-1)];
+    }
+    else if(!startMon.set){
         team[0] = sets[getRandomInt(sets.length-1)];
     } else {
         team[0] = startMon;
