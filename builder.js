@@ -22,13 +22,13 @@
 // },
 
 
-const sets = require("./sets.json");
-const leads = require("./leads.json");
+const sets = require("./mon-sets/sets.json");
+const leads = require("./mon-sets/leads.json");
 
 const config = {
     multiMode: {
-        on:false,
-        teamNumber: 10
+        on:true,
+        teamNumber: 10,
     },
     cutoff: 7,
     teamLength: 6,
@@ -60,8 +60,15 @@ let stats = {
 
 let team = [];
 
+let teamString = "";
+
 if(config.multiMode.on){
-    for(let i = 0; i < config.Multimode.teamNumber; i++){
+    for(let i = 0; i < config.multiMode.teamNumber; i++){
+        let teamType = "B"
+        if(config.offenseMode){
+            teamType = "O"
+        }
+        teamString += `=== [gen8nationaldexag] team${i} (${teamType}) ===\n\n`
         BuildTeam();
         team = [];
         stats = {
@@ -80,12 +87,14 @@ if(config.multiMode.on){
             rocks:false,
             defog:false,
             cleric:false
-        };        
+        };
+
     }
+
 } else {
     BuildTeam();
 }
-
+console.log(teamString);
 
 function BuildTeam(){
     if(config.offenseMode && !startMon.set){
@@ -174,17 +183,15 @@ function BuildTeam(){
 
     }
 
-    let teamString = "";
-
     for(let i = 0; i < team.length; i++){
         set = team[i].set;
         teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
     }
 
-    console.log(teamString);
-
-    for(let [key, value] of Object.entries(stats.ints)){
-        console.log(key,value);
+    if(!config.multiMode.on){
+        for(let [key, value] of Object.entries(stats.ints)){
+            console.log(key,value);
+        }
     }
 }
 
