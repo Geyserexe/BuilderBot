@@ -87,7 +87,7 @@ if(config.multiMode.on){
 
 
 function BuildTeam(){
-    if(config.offenseMode){
+    if(config.offenseMode && !startMon.set){
         team[0] = leads[getRandomInt(leads.length-1)];
     }
     else if(!startMon.set){
@@ -134,8 +134,9 @@ function BuildTeam(){
                         rejected.push(pruneArray[a]);
                     }
                 } else{
-                    if((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks))
-                    prunedArray.push(pruneArray[a]);
+                    if((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)){
+                        prunedArray.push(pruneArray[a]);
+                    }
                 }
             }
         }
@@ -280,7 +281,7 @@ function getRandomMon(){
     let a = 0;
     let completed = false;
     while(!completed){
-        let rand = sets[getRandomInt(sets.length)];
+        let rand = sets[getRandomInt(sets.length-1)];
         if(isValid(rand.set.name) && zMegaCheckPassed(rand) && clericTest(rand)){
             if((!stats.rocks) || (stats.rocks && !rand.rocks)){
                 return(rand);
