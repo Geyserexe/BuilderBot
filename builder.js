@@ -307,15 +307,17 @@ function makeRequest(){
             port: 433,
             path: '/create',
             method: 'POST',
-            body: teamString
+            body: teamString,
+            id: 'pasteData',
+            target: '_blank'
         };
 
 
         const req = https.request(options, (res) => {
-            console.log('statusCode:', res.statusCode);
-            console.log('headers:', res.headers);
+            // console.log('statusCode:', res.statusCode);
+            // console.log('headers:', res.headers);
             res.on('data', (d) => {
-                process.stdout.write(d);
+                resolve(res);
             });
         });
 
@@ -323,7 +325,9 @@ function makeRequest(){
             console.error(e);
         });
         req.end();
-        resolve(req)
+        req.on('end', (res) => {
+            resolve(res);
+        });
     });
 }
 

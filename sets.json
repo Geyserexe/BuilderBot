@@ -1284,7 +1284,7 @@
             "ability":"Multitype",
             "evs":"252 Atk / 4 SpD / 252 Spe",
             "nature":"Jolly",
-            "moves":["Swords Dance", "Shadow Force", "Brick Break", "Stone Edge"]
+            "moves":["Swords Dance", "Shadow Force", "Extreme Speed", "Stone Edge"]
         },
         "breaker":8,
         "ogreCheck":1,
