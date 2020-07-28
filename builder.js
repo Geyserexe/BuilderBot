@@ -32,7 +32,8 @@ const config = {
     },
     cutoff: 7,
     teamLength: 6,
-    offenseMode: false
+    offenseMode: false,
+    monToAvoid: ""
 };
 
 const startMon = {
@@ -254,6 +255,9 @@ function isValid(mon){
         if((mon.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))){
             return false;
         }
+    }
+    if(mon.toLowerCase() === config.monToAvoid.toLowerCase()){
+        return false;
     }
     return true;
 }
