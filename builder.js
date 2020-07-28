@@ -59,6 +59,8 @@ let stats = {
 
 let team = [];
 
+let teamString = "";
+
 if(config.multiMode.on){
     for(let i = 0; i < config.Multimode.teamNumber; i++){
         BuildTeam();
@@ -87,6 +89,9 @@ if(config.multiMode.on){
 
 
 function BuildTeam(){
+
+    teamString = "";
+
     if(config.offenseMode && !startMon.set){
         team[0] = leads[getRandomInt(leads.length-1)];
     }
@@ -173,14 +178,12 @@ function BuildTeam(){
 
     }
 
-    let teamString = "";
-
     for(let i = 0; i < team.length; i++){
         set = team[i].set;
         teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
     }
 
-    console.log(teamString);
+    exportTeam();
 
     for(let [key, value] of Object.entries(stats.ints)){
         console.log(key,value);
@@ -292,4 +295,38 @@ function getRandomMon(){
             return(sets[getRandomInt(set.length-1)])
         }
     }
+}
+
+function makeRequest(){
+    return new Promise(resolve => {
+        const https = require('https');
+
+        const options = {
+            url: 'pokepast.es',
+            path: '/create',
+            method: 'POST',
+            body: teamString
+        };
+
+
+        const req = https.request(options, (res) => {
+            console.log('statusCode:', res.statusCode);
+            console.log('headers:', res.headers);
+
+            res.on('data', (d) => {
+                process.stdout.write(d);
+            });
+        });
+
+        req.on('error', (e) => {
+            console.error(e);
+        });
+        req.end();
+    });
+}
+
+async function exportTeam(){
+    console.log("exporting");
+    const result = await makeRequest();
+    console.log(result);
 }
