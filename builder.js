@@ -37,15 +37,14 @@ function makeRequest(){
             port: 80,
             path: '/create',
             method: 'POST',
-            body: teamString,
-            id: 'pasteData',
-            target: '_blank'
+            callback
+            body: {name: "BuilderBotExport",teamString, author: "Geysers' BuilderBot", notes: `cutoff:${config.cutoff}\nbuilder:${config.builder}\ntier:${config.tier}`}
         };
 
 
         const req = http.request(options, (res) => {
-            // console.log('statusCode:', res.statusCode);
-            // console.log('headers:', res.headers);
+            console.log('statusCode:', res.statusCode);
+            console.log('headers:', res.headers);
             res.on('data', (d) => {
                 resolve(res);
             });
@@ -55,7 +54,7 @@ function makeRequest(){
             console.error(e);
         });
         req.end();
-        console.log(req);
+        console.log(req.outputData[0]);
         req.on('end', (res) => {
             resolve(res);
         });
