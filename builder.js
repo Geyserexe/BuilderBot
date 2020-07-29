@@ -30,11 +30,11 @@ teamString = require(`./builders/${config.builder.toLowerCase()}builder.js`);
 
 function makeRequest(){
     return new Promise(resolve => {
-        const https = require('https');
+        const http = require('http');
 
         const options = {
             hostname: 'pokepast.es',
-            port: 433,
+            port: 80,
             path: '/create',
             method: 'POST',
             body: teamString,
@@ -43,7 +43,7 @@ function makeRequest(){
         };
 
 
-        const req = https.request(options, (res) => {
+        const req = http.request(options, (res) => {
             // console.log('statusCode:', res.statusCode);
             // console.log('headers:', res.headers);
             res.on('data', (d) => {
@@ -55,6 +55,7 @@ function makeRequest(){
             console.error(e);
         });
         req.end();
+        console.log(req);
         req.on('end', (res) => {
             resolve(res);
         });
@@ -67,4 +68,4 @@ async function exportTeam(){
     console.log(result);
 }
 
-console.log(teamString);
+exportTeam();
