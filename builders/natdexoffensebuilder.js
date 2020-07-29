@@ -8,37 +8,41 @@ module.exports = buildTeam();
 function buildTeam() {
 
     let teamString = "";
+    for (var b = 0; b < config.teamNumber; b++) {
+        let team = [];
 
-    let team = [];
+        if (config.teamNumber > 1) {
+            teamString += `=== [${config.tier}] team${b} ===\n\n`;
+        }
 
-    if (config.startMon.set) {
-        team[0] = config.startMon;
-    } else {
-        team[0] = leads[getRandomInt(leads.length)]
-    }
-    for (let i = 1; i < config.teamLength; i++) {
-        let prunedArray = getMons(0, team);
-        if (prunedArray.length > 0) {
-            team.push(prunedArray[getRandomInt(prunedArray.length)]);
+        if (config.startMon.set) {
+            team[0] = config.startMon;
         } else {
-            let foundMon = false;
-            let reps = 1;
-            while (!foundMon) {
-                let newList = getMons(reps, team);
-                if (newList.length > 1) {
-                    team.push(newList[getRandomInt(length)]);
-                    foundMon = true;
+            team[0] = leads[getRandomInt(leads.length)]
+        }
+        for (let i = 1; i < config.teamLength; i++) {
+            let prunedArray = getMons(0, team);
+            if (prunedArray.length > 0) {
+                team.push(prunedArray[getRandomInt(prunedArray.length)]);
+            } else {
+                let foundMon = false;
+                let reps = 1;
+                while (!foundMon) {
+                    let newList = getMons(reps, team);
+                    if (newList.length > 1) {
+                        team.push(newList[getRandomInt(length)]);
+                        foundMon = true;
+                    }
+                    reps++;
                 }
-                reps++;
             }
         }
-    }
 
-    for (let i = 0; i < team.length; i++) {
-        set = team[i].set;
-        teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+        for (let i = 0; i < team.length; i++) {
+            set = team[i].set;
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+        }
     }
-
     return (teamString);
 }
 

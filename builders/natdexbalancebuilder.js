@@ -23,99 +23,103 @@ module.exports = buildTeam();
 
 function buildTeam() {
 
-    let team = [];
-
     let teamString = "";
 
-    if (!config.startMon.set) {
-        team[0] = sets[getRandomInt(sets.length - 1)];
-    } else {
-        team[0] = config.startMon;
-    }
-
-    updateStats(team);
-
-    for (let i = 1; i < config.teamLength; i++) {
-
-        let pruneArray = [];
-        let prunedArray = [];
-        let priority = "";
-        let currentValue = 11;
-        let rejected = [];
-        for (let [key, value] of Object.entries(stats.ints)) {
-            if (value <= currentValue + 1) {
-                currentValue = value;
-                priority = key;
-            }
+    for (var b = 0; b < config.teamNumber; b++) {
+        let team = [];
+        if (config.teamNumber > 1) {
+            teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        for (let a = 0; a < sets.length; a++) {
-            if (sets[a][priority] >= config.cutoff) {
-                pruneArray.push(sets[a]);
-            }
+        if (!config.startMon.set) {
+            team[0] = sets[getRandomInt(sets.length - 1)];
+        } else {
+            team[0] = config.startMon;
         }
 
-        for (let a = 0; a < pruneArray.length; a++) {
-            if (isValid(pruneArray[a].set.name, team) && zMegaCheckPassed(pruneArray[a], stats) && clericTest(pruneArray[a], stats)) {
-                if (!stats.rocks || !stats.defog) {
-                    if (!stats.rocks && pruneArray[a].rocks) {
-                        prunedArray.push(pruneArray[a]);
-                    } else if (!stats.defog && pruneArray[a].defog) {
-                        prunedArray.push(pruneArray[a]);
+        updateStats(team);
+
+        for (let i = 1; i < config.teamLength; i++) {
+
+            let pruneArray = [];
+            let prunedArray = [];
+            let priority = "";
+            let currentValue = 11;
+            let rejected = [];
+            for (let [key, value] of Object.entries(stats.ints)) {
+                if (value <= currentValue + 1) {
+                    currentValue = value;
+                    priority = key;
+                }
+            }
+
+            for (let a = 0; a < sets.length; a++) {
+                if (sets[a][priority] >= config.cutoff) {
+                    pruneArray.push(sets[a]);
+                }
+            }
+
+            for (let a = 0; a < pruneArray.length; a++) {
+                if (isValid(pruneArray[a].set.name, team) && zMegaCheckPassed(pruneArray[a], stats) && clericTest(pruneArray[a], stats)) {
+                    if (!stats.rocks || !stats.defog) {
+                        if (!stats.rocks && pruneArray[a].rocks) {
+                            prunedArray.push(pruneArray[a]);
+                        } else if (!stats.defog && pruneArray[a].defog) {
+                            prunedArray.push(pruneArray[a]);
+                        } else {
+                            rejected.push(pruneArray[a]);
+                        }
                     } else {
-                        rejected.push(pruneArray[a]);
-                    }
-                } else {
-                    if ((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)) {
-                        prunedArray.push(pruneArray[a]);
-                    }
-                }
-            }
-        }
-
-        if (prunedArray.length === 0) {
-            if (!stats.defog && config.cutoff <= 2) {
-                let mon = getRandomMon(team, stats);
-                let a = 0;
-                while (!mon.defog) {
-                    mon = getRandomMon(team, stats);
-                    a++;
-                    if (a > 1000) {
-                        break;
-                    }
-                }
-                prunedArray.push(mon);
-            } else if (rejected) {
-                for (let i = 0; i < rejected.length; i++) {
-                    if (rejected[i] && isValid(rejected[i].set.name, team) && zMegaCheckPassed(rejected[i], stats) && clericTest(rejected[i], stats)) {
-                        if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
-                            prunedArray.push(rejected[i]);
+                        if ((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)) {
+                            prunedArray.push(pruneArray[a]);
                         }
                     }
                 }
-                if (prunedArray.length === 0) {
+            }
+
+            if (prunedArray.length === 0) {
+                if (!stats.defog && config.cutoff <= 2) {
+                    let mon = getRandomMon(team, stats);
+                    let a = 0;
+                    while (!mon.defog) {
+                        mon = getRandomMon(team, stats);
+                        a++;
+                        if (a > 1000) {
+                            break;
+                        }
+                    }
+                    prunedArray.push(mon);
+                } else if (rejected) {
+                    for (let i = 0; i < rejected.length; i++) {
+                        if (rejected[i] && isValid(rejected[i].set.name, team) && zMegaCheckPassed(rejected[i], stats) && clericTest(rejected[i], stats)) {
+                            if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
+                                prunedArray.push(rejected[i]);
+                            }
+                        }
+                    }
+                    if (prunedArray.length === 0) {
+                        prunedArray.push(getRandomMon(team, stats));
+                    }
+                } else {
                     prunedArray.push(getRandomMon(team, stats));
                 }
-            } else {
-                prunedArray.push(getRandomMon(team, stats));
+            }
+            team.push(prunedArray[getRandomInt(prunedArray.length)])
+            updateStats(team);
+
+        }
+
+        for (let i = 0; i < team.length; i++) {
+            set = team[i].set;
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+        }
+
+        if (config.teamNumber === 1) {
+            for (let [key, value] of Object.entries(stats.ints)) {
+                console.log(key, value);
             }
         }
-        team.push(prunedArray[getRandomInt(prunedArray.length)])
-        updateStats(team);
-
     }
-
-    for (let i = 0; i < team.length; i++) {
-        set = team[i].set;
-        teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
-    }
-
-    if (config.teamNumber === 1) {
-        for (let [key, value] of Object.entries(stats.ints)) {
-            console.log(key, value);
-        }
-    }
-
     return (teamString);
 }
 

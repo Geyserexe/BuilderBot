@@ -26,16 +26,6 @@ const config = require("./config.json");
 
 let teamString = "";
 
-if (config.teamNumber > 1) {
-    for (let i = 0; i < config.teamNumber; i++) {
+teamString = require(`./builders/${config.mode.toLowerCase()}builder.js`);
 
-        let teamType = config.mode.toUpperCase()[0];
-
-        teamString += `=== [gen8nationaldexag] team${i} (${teamType}) ===\n\n`
-        teamString += require(`./builders/${config.mode.toLowerCase()}builder.js`)
-
-    }
-} else {
-    teamString = require(`./builders/${config.mode.toLowerCase()}builder.js`)
-}
 console.log(teamString);
