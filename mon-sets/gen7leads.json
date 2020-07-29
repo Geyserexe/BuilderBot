@@ -1,0 +1,218 @@
+[
+    {
+        "set": {
+            "name": "Deoxys-Speed",
+            "item": "Focus Sash",
+            "ability": "Pressure",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Skill Swap",
+                "Magic Coat",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Deoxys-Speed",
+            "item": "Focus Sash",
+            "ability": "Pressure",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Spikes",
+                "Magic Coat",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Deoxys-Speed",
+            "item": "Light Clay",
+            "ability": "Pressure",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Light Screen",
+                "Reflect",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Shuckle",
+            "item": "Red Card",
+            "ability": "Sturdy",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Stealth Rock",
+                "Sticky Web",
+                "Encore",
+                "Infestation"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Ghost",
+            "item": "Spooky Plate",
+            "ability": "Multitype",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Magic Coat",
+                "Judgment",
+                "Roar",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Smeargle",
+            "item": "Focus Sash",
+            "ability": "Technician",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Taunt",
+                "Nuzzle",
+                "Rapid Spin",
+                "Sticky Web"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Excadrill",
+            "item": "Focus Sash",
+            "ability": "Mold Breaker",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Stealth Rock",
+                "Earthquake",
+                "Rapid Spin",
+                "Rock Tomb"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Aerodactyl",
+            "item": "Focus Sash",
+            "ability": "Pressure",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Stealth Rock",
+                "Taunt",
+                "Defog",
+                "Rock Tomb"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": true
+    }
+]
