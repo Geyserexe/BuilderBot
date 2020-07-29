@@ -26,6 +26,6 @@ const config = require("./config.json");
 
 let teamString = "";
 
-teamString = require(`./builders/${config.mode.toLowerCase()}builder.js`);
+teamString = require(`./builders/${config.builder.toLowerCase()}builder.js`);
 
 console.log(teamString);

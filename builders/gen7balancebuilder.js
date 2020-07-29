@@ -1,14 +1,14 @@
-const sets = require("../mon-sets/sets.json");
+const sets = require("../mon-sets/gen7.json");
 const config = require("../config.json");
 
 let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        zacCheck: 0,
+        marshCheck: 0,
         donCheck: 0,
         breaker: 0,
-        ygodCheck: 0,
+        ultraCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -132,9 +132,9 @@ function updateStats(team) {
         ints: {
             rayCheck: 0,
             zygCheck: 0,
-            zacCheck: 0,
+            marshCheck: 0,
             donCheck: 0,
-            ygodCheck: 0,
+            ultraCheck: 0,
             xernCheck: 0,
             ogreCheck: 0,
             breaker: 0,
@@ -149,9 +149,9 @@ function updateStats(team) {
         if (team[i].breaker) { stats.ints.breaker += team[i].breaker; }
         if (team[i].rayCheck) { stats.ints.rayCheck += team[i].rayCheck; }
         if (team[i].zygCheck) { stats.ints.zygCheck += team[i].zygCheck; }
-        if (team[i].zacCheck) { stats.ints.zacCheck += team[i].zacCheck; }
+        if (team[i].marshCheck) { stats.ints.marshCheck += team[i].marshCheck; }
         if (team[i].donCheck) { stats.ints.donCheck += team[i].donCheck; }
-        if (team[i].ygodCheck) { stats.ints.ygodCheck += team[i].ygodCheck; }
+        if (team[i].ultraCheck) { stats.ints.ultraCheck += team[i].ultraCheck; }
         if (team[i].xernCheck) { stats.ints.xernCheck += team[i].xernCheck; }
         if (team[i].ogreCheck) { stats.ints.ogreCheck += team[i].ogreCheck; }
 
