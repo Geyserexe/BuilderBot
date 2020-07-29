@@ -1,9 +1,9 @@
 {
-    "teamNumber": 1,
-    "cutoff": 8,
+    "teamNumber": 10,
+    "cutoff": 7,
     "teamLength": 6,
-    "tier":"gen8nationaldexag",
-    "builder": "natdexbalance",
+    "tier":"gen7anythinggoes",
+    "builder": "gen7balance",
     "monToAvoid": "",
     "startMon": {
 
