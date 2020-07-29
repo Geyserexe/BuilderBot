@@ -1,10 +1,10 @@
 {
-    "teamNumber": 10,
+    "teamNumber": 1,
     "cutoff": 7,
     "teamLength": 6,
     "tier":"gen8natdexag",
     "builder": "natdexbalance",
-    "monToAvoid": [""],
+    "monsToAvoid": [""],
     "startMon": {
 
     }
