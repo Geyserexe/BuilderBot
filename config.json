@@ -1,11 +1,8 @@
 {
-    "multiMode": {
-        "on":false,
-        "teamNumber": 10
-    },
+    "teamNumber": 2,
     "cutoff": 7,
     "teamLength": 6,
-    "offenseMode": false,
+    "mode": "balance",
     "monToAvoid": "",
     "startMon": {
 
