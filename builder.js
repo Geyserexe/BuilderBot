@@ -32,10 +32,10 @@ if (config.teamNumber > 1) {
         let teamType = config.mode.toUpperCase()[0];
 
         teamString += `=== [gen8nationaldexag] team${i} (${teamType}) ===\n\n`
-        teamString += require(`./${config.mode}builder.js`)
+        teamString += require(`./builders/${config.mode.toLowerCase}builder.js`)
 
     }
 } else {
-    teamString = require(`./${config.mode}builder.js`)
+    teamString = require(`./builders/${config.mode.toLowerCase()}builder.js`)
 }
 console.log(teamString);

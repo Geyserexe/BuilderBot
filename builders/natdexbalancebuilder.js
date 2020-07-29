@@ -1,5 +1,5 @@
-const sets = require("./mon-sets/sets.json");
-const config = require("./config.json");
+const sets = require("../mon-sets/sets.json");
+const config = require("../config.json");
 
 let stats = {
     ints: {

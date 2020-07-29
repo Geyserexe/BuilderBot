@@ -2,7 +2,7 @@
     "teamNumber": 2,
     "cutoff": 7,
     "teamLength": 6,
-    "mode": "balance",
+    "mode": "natdexbalance",
     "monToAvoid": "",
     "startMon": {
 
