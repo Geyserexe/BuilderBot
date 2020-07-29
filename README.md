@@ -5,5 +5,7 @@ use config.cutoff to change the building style by changing it between 0 and 10. 
 Add additional sets to sets.json. 
 Teams are exported in the console, so make sure debug mode is on and add a breakpoint anywhere in the program to access teams
 
+- Note: dev branch may be unreliable / produce really bad teams
+
 ######## TODO
 - Add more sets

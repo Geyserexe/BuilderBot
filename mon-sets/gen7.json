@@ -1,0 +1,1571 @@
+[
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
+            "item": "Life Orb",
+            "ability": "Delta Stream",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Dragon Dance",
+                "Dragon Ascent",
+                "Earthquake",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 4,
+        "donCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 0,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
+            "item": "Life Orb",
+            "ability": "Delta Stream",
+            "evs": "252 Atk / 4 SpA / 252 Spe",
+            "nature": "Hasty",
+            "moves": [
+                "Draco Meteor",
+                "Dragon Ascent",
+                "V-Create",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 4,
+        "donCheck": 7,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 5,
+        "marshCheck": 2,
+        "ultraCheck": 3,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
+            "item": "Choice Scarf",
+            "ability": "Delta Stream",
+            "evs": "252 Atk / 4 SpA / 252 Spe",
+            "nature": "Hasty",
+            "moves": [
+                "Draco Meteor",
+                "Dragon Ascent",
+                "V-Create",
+                "Surf"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 3,
+        "donCheck": 7,
+        "xernCheck": 2,
+        "rayCheck": 4,
+        "zygCheck": 5,
+        "marshCheck": 2,
+        "ultraCheck": 5,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
+            "item": "Choice Band",
+            "ability": "Delta Stream",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Outrage",
+                "Dragon Ascent",
+                "V-Create",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 10,
+        "ogreCheck": 6,
+        "donCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 3,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Ultranecrozium Z",
+            "ability": "Prism Armor",
+            "evs": "248 Atk / 8 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Photon Geyser",
+                "Earthquake",
+                "Rock Blast"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 3,
+        "donCheck": 2,
+        "xernCheck": 5,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Ultranecrozium Z",
+            "ability": "Prism Armor",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Photon Geyser",
+                "Dragon Pulse",
+                "Heat Wave"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 4,
+        "donCheck": 0,
+        "xernCheck": 3,
+        "rayCheck": 2,
+        "zygCheck": 4,
+        "marshCheck": 0,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Gengar-Mega",
+            "item": "Gengarite",
+            "ability": "Cursed Body",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Disable",
+                "Substitute",
+                "Perish Song",
+                "Shadow Ball"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 3,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Gengar-Mega",
+            "item": "Gengarite",
+            "ability": "Cursed Body",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Substitute",
+                "Sludge Wave",
+                "Shadow Ball"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 3,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Groudon-Primal",
+            "item": "Red Orb",
+            "ability": "Desolate Land",
+            "evs": "252 HP / 4 Atk / 252 SpD",
+            "nature": "Sassy",
+            "moves": [
+                "Stealth Rock",
+                "Roar",
+                "Earthquake",
+                "Toxic"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 10,
+        "donCheck": 0,
+        "xernCheck": 7,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 3,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Groudon-Primal",
+            "item": "Red Orb",
+            "ability": "Desolate Land",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Swords Dance",
+                "Stone Edge",
+                "Fire Punch",
+                "Precipice Blades"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 5,
+        "donCheck": 0,
+        "xernCheck": 2,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Groudon-Primal",
+            "item": "Red Orb",
+            "ability": "Desolate Land",
+            "evs": "4 Atk / 252 SpA / 252 Spe",
+            "nature": "Hasty",
+            "moves": [
+                "Rock Polish",
+                "Fire Blast",
+                "Stone Edge",
+                "Precipice Blades"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 3,
+        "donCheck": 0,
+        "xernCheck": 2,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 2,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Groudon-Primal",
+            "item": "Red Orb",
+            "ability": "Desolate Land",
+            "evs": "252 HP / 4 Atk / 252 SpD",
+            "nature": "Sassy",
+            "moves": [
+                "Rest",
+                "Earthquake",
+                "Roar",
+                "Toxic"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 10,
+        "donCheck": 0,
+        "xernCheck": 9,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 1,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Ho-Oh",
+            "item": "Life Orb",
+            "ability": "Regenerator",
+            "evs": "64 HP / 252 Atk / 192 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Sacred Fire",
+                "Brave Bird",
+                "Toxic",
+                "Defog"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 0,
+        "donCheck": 5,
+        "xernCheck": 7,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 5,
+        "ultraCheck": 4,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Ho-Oh",
+            "item": "Leftovers",
+            "ability": "Regenerator",
+            "evs": "248 HP / 208 Def / 52 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Whirlwind",
+                "Defog",
+                "Toxic",
+                "Sacred Fire"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 7,
+        "xernCheck": 9,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 7,
+        "ultraCheck": 6,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Marshadow",
+            "item": "Life Orb",
+            "ability": "Technician",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Pursuit",
+                "Spectral Thief",
+                "Close Combat",
+                "Shadow Sneak"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Marshadow",
+            "item": "Marshadium Z",
+            "ability": "Technician",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Bulk Up",
+                "Spectral Thief",
+                "Close Combat",
+                "Shadow Sneak"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 1,
+        "marshCheck": 0,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Zygarde",
+            "item": "Safety Goggles",
+            "ability": "Power Construct",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Glare",
+                "Haze",
+                "Rest",
+                "Thousand Arows"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 7,
+        "zygCheck": 4,
+        "marshCheck": 8,
+        "ultraCheck": 7,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Zygarde",
+            "item": "Leftovers",
+            "ability": "Power Construct",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Glare",
+                "Coil",
+                "Rest",
+                "Thousand Arrows"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "donCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 8,
+        "zygCheck": 5,
+        "marshCheck": 7,
+        "ultraCheck": 8,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Zygarde",
+            "item": "Leftovers",
+            "ability": "Power Construct",
+            "evs": "16 HP / 224 Atk / 36 Def / 232 Spe",
+            "nature": "Impish",
+            "moves": [
+                "Substitute",
+                "Dragon Dance",
+                "Thousand Arrows",
+                "Dragon Tail"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus",
+            "item": "Life Orb",
+            "ability": "Multitype",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Earthquake",
+                "Shadow Claw",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 2,
+        "xernCheck": 4,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus",
+            "item": "Leftovers",
+            "ability": "Multitype",
+            "evs": "252 HP / 252 Atk / 4 Def",
+            "nature": "Adamant",
+            "moves": [
+                "Substitute",
+                "Earthquake",
+                "Swords Dance",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 2,
+        "donCheck": 3,
+        "xernCheck": 4,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 2,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Fairy",
+            "item": "Pixie Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 248 Def / 8 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Toxic",
+                "Defog",
+                "Recover"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 4,
+        "xernCheck": 0,
+        "rayCheck": 8,
+        "zygCheck": 9,
+        "marshCheck": 10,
+        "ultraCheck": 6,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Arceus-Ground",
+            "item": "Pixie Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 248 Def / 8 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Ice Beam",
+                "Defog",
+                "Recover"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 7,
+        "zygCheck": 7,
+        "marshCheck": 8,
+        "ultraCheck": 5,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Leftovers",
+            "ability": "Prism Armor",
+            "evs": "248 HP / 8 Atk / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Stealth Rock",
+                "Toxic",
+                "Morning Sun",
+                "Sunsteel Strike"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 10,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Weakness Policy",
+            "ability": "Prism Armor",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Autotomize",
+                "Sunsteel Strike",
+                "Earthquake",
+                "Stone Edge"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 5,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Solganium Z",
+            "ability": "Prism Armor",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Autotomize",
+                "Swords Dance",
+                "Sunsteel Strike",
+                "Earthquake"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 6,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Xerneas",
+            "item": "Power Herb",
+            "ability": "Fairy Aura",
+            "evs": "168 Def / 252 SpA / 88 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Geomancy",
+                "Moonblast",
+                "Psyshock",
+                "Focus Blast"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 4,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Xerneas",
+            "item": "Choice Scarf",
+            "ability": "Fairy Aura",
+            "evs": "252 Spa / 4 Def / 252 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Defog",
+                "Aromatherapy",
+                "Moonblast",
+                "Thunder Wave"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 7,
+        "marshCheck": 4,
+        "ultraCheck": 7,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true,
+        "cleric": true
+    },
+    {
+        "set": {
+            "name": "Arceus-Dark",
+            "item": "Dread Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 248 Def / 8 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Will-O-Wisp",
+                "Recover",
+                "Defog"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 4,
+        "xernCheck": 0,
+        "rayCheck": 7,
+        "zygCheck": 4,
+        "marshCheck": 1,
+        "ultraCheck": 9,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Arceus-Dark",
+            "item": "Dread Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 4 SpA / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Judgment",
+                "Recover",
+                "Refresh"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 3,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 4,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Poison",
+            "item": "Poisonium Z",
+            "ability": "Multitype",
+            "evs": "236 HP / 36 Def / 136 SpD / 100 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Will-O-Wisp",
+                "Poison Jab",
+                "Recover",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 3,
+        "donCheck": 0,
+        "xernCheck": 10,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 8,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": true,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Water",
+            "item": "Splash Plate",
+            "ability": "Multitype",
+            "evs": "248 HP / 244 Def / 16 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Toxic",
+                "Recover",
+                "Defog"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 5,
+        "donCheck": 8,
+        "xernCheck": 1,
+        "rayCheck": 5,
+        "zygCheck": 5,
+        "marshCheck": 7,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Arceus-Water",
+            "item": "Splash Plate",
+            "ability": "Multitype",
+            "evs": "248 HP / 244 Def / 16 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Ice Beam",
+                "Will-O-Wisp",
+                "Recover",
+                "Defog"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 4,
+        "donCheck": 7,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 6,
+        "marshCheck": 7,
+        "ultraCheck": 5,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Ferrothorn",
+            "item": "Leftovers",
+            "ability": "Iron Barbs",
+            "evs": "252 HP / 4 Atk / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Gyro Ball",
+                "Leech Seed",
+                "Protect",
+                "Spikes"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 10,
+        "donCheck": 0,
+        "xernCheck": 2,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 5,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Kyogre-Primal",
+            "item": "Blue Orb",
+            "ability": "Primordial Sea",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Origin Pulse",
+                "Ice Beam",
+                "Thunder"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 3,
+        "donCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 3,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Kyogre-Primal",
+            "item": "Blue Orb",
+            "ability": "Primordial Sea",
+            "evs": "252 HP / 252 Def / 4 SpA",
+            "nature": "Bold",
+            "moves": [
+                "Rest",
+                "Ice Beam",
+                "Scald",
+                "Sleep Talk"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 2,
+        "donCheck": 6,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 7,
+        "marshCheck": 6,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Lunala",
+            "item": "Lunalium Z",
+            "ability": "Shadow Shield",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Tailwind",
+                "Moongeist Beam",
+                "Moonblast"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 4,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 5,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Lunala",
+            "item": "Choice Specs",
+            "ability": "Shadow Shield",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Moongeist Beam",
+                "Ice Beam",
+                "Psyshock",
+                "Focus Blast"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 4,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 5,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Yveltal",
+            "item": "Life Orb",
+            "ability": "Dark Aura",
+            "evs": "4 Atk / 252 SpA / 252 Spe",
+            "nature": "Hasty",
+            "moves": [
+                "Dark Pulse",
+                "Oblivion Wing",
+                "Taunt",
+                "Sucker Punch"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 6,
+        "marshCheck": 3,
+        "ultraCheck": 7,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Yveltal",
+            "item": "Rocky Helmet",
+            "ability": "Dark Aura",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Foul Play",
+                "Roost",
+                "Toxic",
+                "Defog"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 4,
+        "marshCheck": 7,
+        "ultraCheck": 9,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Arceus-Rock",
+            "item": "Stone Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 252 Def / 4 SpA",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Will-O-Wisp",
+                "Recover",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 1,
+        "donCheck": 3,
+        "xernCheck": 0,
+        "rayCheck": 7,
+        "zygCheck": 1,
+        "marshCheck": 0,
+        "ultraCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Celesteela",
+            "item": "Leftovers",
+            "ability": "Beast Boost",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Flame Charge",
+                "Substitute",
+                "Protect",
+                "Leech Seed"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 1,
+        "rayCheck": 7,
+        "zygCheck": 2,
+        "marshCheck": 1,
+        "ultraCheck": 9,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Steel",
+            "item": "Iron Plate",
+            "ability": "Multitype",
+            "evs": "252 Spa / 4 SpD / 252 SpE",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Judgment",
+                "Recover",
+                "Earth Power"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "xernCheck": 2,
+        "rayCheck": 4,
+        "zygCheck": 1,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Giratina",
+            "item": "Leftovers",
+            "ability": "Pressure",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Will-O-Wisp",
+                "Toxic",
+                "Rest",
+                "Defog"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 4,
+        "donCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 4,
+        "marshCheck": 4,
+        "ultraCheck": 8,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Mewtwo",
+            "item": "Leftovers",
+            "ability": "Pressure",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Recover",
+                "Will-O-Wisp",
+                "Psystrike"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 2,
+        "donCheck": 4,
+        "xernCheck": 1,
+        "rayCheck": 1,
+        "zygCheck": 7,
+        "marshCheck": 3,
+        "ultraCheck": 7,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Sableye-Mega",
+            "item": "Sablenite",
+            "ability": "Prankster",
+            "evs": "248 HP / 252 Def / 8 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Fake Out",
+                "Toxic",
+                "Recover",
+                "Foul Play"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 6,
+        "marshCheck": 7,
+        "ultraCheck": 9,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Skarmory",
+            "item": "Shed Shell",
+            "ability": "Sturdy",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Whirlwind",
+                "Roost",
+                "Spikes",
+                "Toxic"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 3,
+        "rayCheck": 8,
+        "zygCheck": 7,
+        "marshCheck": 8,
+        "ultraCheck": 9,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Tyranitar",
+            "item": "Shuca Berry",
+            "ability": "Sand Stream",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Pursuit",
+                "Foul Play",
+                "Rock Tomb",
+                "Stealth Rock"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 4,
+        "xernCheck": 0,
+        "rayCheck": 9,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 8,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Chansey",
+            "item": "Eviolite",
+            "ability": "Natural Cure",
+            "evs": "4 HP / 252 Def / 252 SpD",
+            "nature": "Calm",
+            "moves": [
+                "Confide",
+                "Soft-Boiled",
+                "Toxic",
+                "Heal Bell"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 10,
+        "donCheck": 0,
+        "xernCheck": 10,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false,
+        "cleric": true
+    },
+    {
+        "set": {
+            "name": "Lugia",
+            "item": "Leftovers",
+            "ability": "Multiscale",
+            "evs": "248 HP / 252 Def / 8 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Whirlwind",
+                "Substitute",
+                "Roost",
+                "Toxic"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 2,
+        "donCheck": 5,
+        "xernCheck": 1,
+        "rayCheck": 8,
+        "zygCheck": 7,
+        "marshCheck": 4,
+        "ultraCheck": 9,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Mewtwo-Mega-Y",
+            "item": "Mewtwonite Y",
+            "ability": "Unnerve",
+            "evs": "80 Def / 252 SpA / 176 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Psystrike",
+                "Fire Blast",
+                "Recover"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 3,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 4,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Naganadel",
+            "item": "Dragonium Z",
+            "ability": "Beast Boost",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Nasty Plot",
+                "Draco Meteor",
+                "Fire Blast",
+                "Sludge Wave"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 2,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Ghost",
+            "item": "Ghostium Z",
+            "ability": "Multitype",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Extreme Speed",
+                "Brick Break",
+                "Shadow Force"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Ditto",
+            "item": "Choice Scarf",
+            "ability": "Imposter",
+            "evs": "248 HP / 8 Atk / 252 Def",
+            "nature": "Impish",
+            "moves": [
+                "Transform",
+                "Transform",
+                "Transform",
+                "Transform"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 5,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Kyogre",
+            "item": "Choice Scarf",
+            "ability": "Drizzle",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Water Spout",
+                "Ice Beam",
+                "Thunder",
+                "Origin Pulse"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 2,
+        "donCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 3,
+        "marshCheck": 0,
+        "ultraCheck": 5,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Blissey",
+            "item": "Shed Shell",
+            "ability": "Natural Cure",
+            "evs": "4 HP / 252 Def / 252 SpD",
+            "nature": "Calm",
+            "moves": [
+                "Heal Bell",
+                "Soft-Boiled",
+                "Toxic",
+                "Confide"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 8,
+        "donCheck": 0,
+        "xernCheck": 8,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false,
+        "cleric":true
+    },
+    {
+        "set": {
+            "name": "Toxapex",
+            "item": "Black Sludge",
+            "ability": "Regenerator",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Bold",
+            "moves": [
+                "Toxic",
+                "Toxic Spikes",
+                "Recover",
+                "Haze"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 4,
+        "donCheck": 0,
+        "xernCheck": 8,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "marshCheck": 5,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Tapu Koko",
+            "item": "Choice Specs",
+            "ability": "Electric Surge",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Volt Switch",
+                "Thunderbolt",
+                "Dazzling Gleam",
+                "Grass Knot"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 3,
+        "donCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 4,
+        "marshCheck": 4,
+        "ultraCheck": 4,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    }
+]
