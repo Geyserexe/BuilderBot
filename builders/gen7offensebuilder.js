@@ -51,8 +51,10 @@ function getRandomInt(max) {
 }
 
 function isValid(mon, team) {
-    if (mon.set.name.toLowerCase() === config.monToAvoid.toLowerCase()) {
-        return false;
+    for (let i = 0; i < config.monsToAvoid.length; i++) {
+        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+            return false;
+        }
     }
     for (let i = 0; i < team.length; i++) {
         if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {

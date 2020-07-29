@@ -596,7 +596,7 @@
     {
         "set": {
             "name": "Arceus-Ground",
-            "item": "Pixie Plate",
+            "item": "Earth Plate",
             "ability": "Multitype",
             "evs": "252 HP / 248 Def / 8 Spe",
             "nature": "Bold",
@@ -1056,9 +1056,9 @@
     {
         "set": {
             "name": "Yveltal",
-            "item": "Rocky Helmet",
+            "item": "Leftovers",
             "ability": "Dark Aura",
-            "evs": "252 HP / 252 Def / 4 SpD",
+            "evs": "252 HP / 176 Def / 84 Spe",
             "nature": "Bold",
             "moves": [
                 "Foul Play",
