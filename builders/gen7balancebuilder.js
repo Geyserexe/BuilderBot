@@ -104,7 +104,13 @@ function buildTeam() {
                     prunedArray.push(getRandomMon(team));
                 }
             }
-            team.push(prunedArray[getRandomInt(prunedArray.length)])
+            while (true) {
+                let rand = prunedArray[getRandomInt(prunedArray.length)];
+                if (isValid(rand, team)) {
+                    team.push(rand);
+                    break;
+                }
+            }
             updateStats(team);
 
         }

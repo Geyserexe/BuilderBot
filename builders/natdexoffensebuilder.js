@@ -25,13 +25,12 @@ function buildTeam() {
             if (prunedArray.length > 0) {
                 team.push(prunedArray[getRandomInt(prunedArray.length)]);
             } else {
-                let foundMon = false;
                 let reps = 1;
-                while (!foundMon) {
+                while (true) {
                     let newList = getMons(reps, team);
                     if (newList.length > 1) {
                         team.push(newList[getRandomInt(length)]);
-                        foundMon = true;
+                        break;
                     }
                     reps++;
                 }

@@ -104,7 +104,13 @@ function buildTeam() {
                     prunedArray.push(getRandomMon(team));
                 }
             }
-            team.push(prunedArray[getRandomInt(prunedArray.length)])
+            while (true) {
+                let rand = prunedArray[getRandomInt(prunedArray.length)];
+                if (isValid(rand, team)) {
+                    team.push(rand);
+                    break;
+                }
+            }
             updateStats(team);
 
         }
@@ -188,7 +194,7 @@ function isValid(mon, team) {
         }
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+        if (mon.set.name.toLowerCase().includes(config.monsToAvoid[i].toLowerCase())) {
             return false;
         }
     }
