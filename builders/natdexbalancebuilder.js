@@ -47,7 +47,7 @@ function buildTeam() {
             let currentValue = 11;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue + 1) {
+                if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
