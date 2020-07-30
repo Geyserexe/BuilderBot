@@ -47,7 +47,7 @@ function buildTeam() {
             let currentValue = 11;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue + 1) {
+                if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
@@ -104,7 +104,13 @@ function buildTeam() {
                     prunedArray.push(getRandomMon(team));
                 }
             }
-            team.push(prunedArray[getRandomInt(prunedArray.length)])
+            while (true) {
+                let rand = prunedArray[getRandomInt(prunedArray.length)];
+                if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
+                    team.push(rand);
+                    break;
+                }
+            }
             updateStats(team);
 
         }
@@ -226,7 +232,7 @@ function getRandomMon(team) {
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(set.length - 1)])
+            return (sets[getRandomInt(sets.length - 1)])
         }
     }
 }
