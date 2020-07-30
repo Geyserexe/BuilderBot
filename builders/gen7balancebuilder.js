@@ -106,7 +106,7 @@ function buildTeam() {
             }
             while (true) {
                 let rand = prunedArray[getRandomInt(prunedArray.length)];
-                if (isValid(rand, team)) {
+                if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
                     team.push(rand);
                     break;
                 }
@@ -194,7 +194,7 @@ function isValid(mon, team) {
         }
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+        if (mon.set.name.toLowerCase().includes(config.monsToAvoid[i].toLowerCase())) {
             return false;
         }
     }

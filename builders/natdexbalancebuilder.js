@@ -106,7 +106,7 @@ function buildTeam() {
             }
             while (true) {
                 let rand = prunedArray[getRandomInt(prunedArray.length)];
-                if (isValid(rand, team)) {
+                if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
                     team.push(rand);
                     break;
                 }
