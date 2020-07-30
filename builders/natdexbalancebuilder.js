@@ -60,7 +60,7 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (isValid(pruneArray[a].set.name, team) && zMegaCheckPassed(pruneArray[a]) && clericTest(pruneArray[a])) {
+                if (isValid(pruneArray[a], team) && zMegaCheckPassed(pruneArray[a]) && clericTest(pruneArray[a])) {
                     if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && pruneArray[a].rocks) {
                             prunedArray.push(pruneArray[a]);
@@ -91,7 +91,7 @@ function buildTeam() {
                     prunedArray.push(mon);
                 } else if (rejected) {
                     for (let i = 0; i < rejected.length; i++) {
-                        if (rejected[i] && isValid(rejected[i].set.name, team) && zMegaCheckPassed(rejected[i]) && clericTest(rejected[i])) {
+                        if (rejected[i] && isValid(rejected[i], team) && zMegaCheckPassed(rejected[i]) && clericTest(rejected[i])) {
                             if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
                                 prunedArray.push(rejected[i]);
                             }
@@ -104,7 +104,13 @@ function buildTeam() {
                     prunedArray.push(getRandomMon(team));
                 }
             }
-            team.push(prunedArray[getRandomInt(prunedArray.length)])
+            while (true) {
+                let rand = prunedArray[getRandomInt(prunedArray.length)];
+                if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
+                    team.push(rand);
+                    break;
+                }
+            }
             updateStats(team);
 
         }
@@ -179,16 +185,18 @@ function updateStats(team) {
 
 function isValid(mon, team) {
     for (let i = 0; i < team.length; i++) {
-        if (mon.includes(team[i].set.name) || team[i].set.name.includes(mon)) {
+        if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon)) {
             return false;
         }
 
-        if ((mon.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))) {
+        if ((mon.set.name.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))) {
             return false;
         }
     }
-    if (mon.toLowerCase() === config.monToAvoid.toLowerCase()) {
-        return false;
+    for (let i = 0; i < config.monsToAvoid.length; i++) {
+        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+            return false;
+        }
     }
     return true;
 }
@@ -217,14 +225,14 @@ function getRandomMon(team) {
     let completed = false;
     while (!completed) {
         let rand = sets[getRandomInt(sets.length - 1)];
-        if (isValid(rand.set.name, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
+        if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
             if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
                 return (rand);
             }
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(set.length - 1)])
+            return (sets[getRandomInt(sets.length - 1)])
         }
     }
 }

@@ -25,13 +25,12 @@ function buildTeam() {
             if (prunedArray.length > 0) {
                 team.push(prunedArray[getRandomInt(prunedArray.length)]);
             } else {
-                let foundMon = false;
                 let reps = 1;
-                while (!foundMon) {
+                while (true) {
                     let newList = getMons(reps, team);
                     if (newList.length > 1) {
                         team.push(newList[getRandomInt(length)]);
-                        foundMon = true;
+                        break;
                     }
                     reps++;
                 }
@@ -51,8 +50,10 @@ function getRandomInt(max) {
 }
 
 function isValid(mon, team) {
-    if (mon.set.name.toLowerCase() === config.monToAvoid.toLowerCase()) {
-        return false;
+    for (let i = 0; i < config.monsToAvoid.length; i++) {
+        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+            return false;
+        }
     }
     for (let i = 0; i < team.length; i++) {
         if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {
