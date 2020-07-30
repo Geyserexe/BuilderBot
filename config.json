@@ -2,9 +2,9 @@
     "teamNumber": 1,
     "cutoff": 7,
     "teamLength": 6,
-    "tier":"gen8natdexag",
+    "tier":"gen8nationaldexag",
     "builder": "natdexbalance",
-    "monsToAvoid": ["chansey"],
+    "monsToAvoid": [""],
     "startMon": {
 
     }

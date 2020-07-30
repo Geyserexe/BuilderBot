@@ -194,7 +194,7 @@ function isValid(mon, team) {
         }
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase().includes(config.monsToAvoid[i].toLowerCase())) {
+        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
             return false;
         }
     }
@@ -232,7 +232,7 @@ function getRandomMon(team) {
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(set.length - 1)])
+            return (sets[getRandomInt(sets.length - 1)])
         }
     }
 }
