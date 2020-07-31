@@ -1,4 +1,4 @@
-const sets = require("../mon-sets/natdexsets.json");
+const sets = require("./mon-sets/natdexsets.json");
 const config = require("../config.json");
 
 let stats = {
