@@ -1,4 +1,4 @@
-const sets = require("../mon-sets/gen7.json");
+const sets = require("../mon-sets/gen7sets.json");
 const config = require("../config.json");
 
 let stats = {
@@ -32,7 +32,7 @@ function buildTeam() {
         }
 
         if (!config.startMon.set) {
-            team[0] = sets[getRandomInt(sets.length - 1)];
+            team[0] = getRandomMon(team);
         } else {
             team[0] = config.startMon;
         }
