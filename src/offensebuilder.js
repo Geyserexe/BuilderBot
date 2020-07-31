@@ -1,6 +1,6 @@
 const config = require("../config.json");
-const leads = require(`../mon-sets/${config.gen}leads.json`);
-const sets = require(`../mon-sets/${config.gen}sets.json`);
+const leads = require(`./mon-sets/${config.gen}leads.json`);
+const sets = require(`./mon-sets/${config.gen}sets.json`);
 
 
 

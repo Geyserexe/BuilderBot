@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // {
 //     "set": {
 //         "name":"",
@@ -27,9 +29,9 @@ const config = require("./config.json");
 let teamString = "";
 
 if(config.mode.toLowerCase() != "offense"){
-    teamString = require(`./builders/${config.gen}${config.mode.toLowerCase()}builder.js`);
+    teamString = require(`./src/${config.gen}${config.mode.toLowerCase()}builder.js`);
 } else {
-    teamString = require(`./builders/offensebuilder.js`);
+    teamString = require(`./src/offensebuilder.js`);
 }
 
 console.log(teamString);
