@@ -32,7 +32,7 @@
             "item": "Life Orb",
             "ability": "Delta Stream",
             "evs": "252 Atk / 4 SpA / 252 Spe",
-            "nature": "Hasty",
+            "nature": "Naive",
             "moves": [
                 "Draco Meteor",
                 "Dragon Ascent",
@@ -59,7 +59,7 @@
             "item": "Choice Scarf",
             "ability": "Delta Stream",
             "evs": "252 Atk / 4 SpA / 252 Spe",
-            "nature": "Hasty",
+            "nature": "Naive",
             "moves": [
                 "Draco Meteor",
                 "Dragon Ascent",
@@ -139,6 +139,33 @@
             "name": "Necrozma-Dusk-Mane",
             "item": "Ultranecrozium Z",
             "ability": "Prism Armor",
+            "evs": "248 Atk / 8 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Photon Geyser",
+                "Earthquake",
+                "Outrage"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 3,
+        "donCheck": 2,
+        "xernCheck": 5,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": true,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Ultranecrozium Z",
+            "ability": "Prism Armor",
             "evs": "252 SpA / 4 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
@@ -173,6 +200,33 @@
                 "Substitute",
                 "Perish Song",
                 "Shadow Ball"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 0,
+        "donCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 3,
+        "marshCheck": 0,
+        "ultraCheck": 6,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Gengar-Mega",
+            "item": "Gengarite",
+            "ability": "Cursed Body",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Hex",
+                "Substitute",
+                "Sludge Wave",
+                "Focus Blast"
             ]
         },
         "breaker": 7,
@@ -542,6 +596,33 @@
     {
         "set": {
             "name": "Arceus",
+            "item": "Normalium Z",
+            "ability": "Multitype",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Earthquake",
+                "Giga Impact",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 1,
+        "donCheck": 2,
+        "xernCheck": 4,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus",
             "item": "Leftovers",
             "ability": "Multitype",
             "evs": "252 Atk / 4 Def / 252 Spe",
@@ -571,7 +652,7 @@
             "name": "Arceus-Fairy",
             "item": "Pixie Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 248 Def / 8 Spe",
+            "evs": "248 HP / 244 Def / 16 Spe",
             "nature": "Bold",
             "moves": [
                 "Judgment",
@@ -598,7 +679,7 @@
             "name": "Arceus-Ground",
             "item": "Earth Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 248 Def / 8 Spe",
+            "evs": "248 HP / 244 Def / 16 Spe",
             "nature": "Bold",
             "moves": [
                 "Judgment",
@@ -619,6 +700,33 @@
         "z": false,
         "rocks": false,
         "defog": true
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Solganium Z",
+            "ability": "Prism Armor",
+            "evs": "248 HP / 8 Atk / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Stealth Rock",
+                "Toxic",
+                "Morning Sun",
+                "Sunsteel Strike"
+            ]
+        },
+        "breaker": 4,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 10,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 2,
+        "mega": false,
+        "z": true,
+        "rocks": true,
+        "defog": false
     },
     {
         "set": {
@@ -731,6 +839,33 @@
     {
         "set": {
             "name": "Xerneas",
+            "item": "Power Herb",
+            "ability": "Fairy Aura",
+            "evs": "168 Def / 252 SpA / 88 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Geomancy",
+                "Moonblast",
+                "Thunder",
+                "Focus Blast"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 4,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Xerneas",
             "item": "Choice Scarf",
             "ability": "Fairy Aura",
             "evs": "252 Spa / 4 Def / 252 Spe",
@@ -761,7 +896,7 @@
             "name": "Arceus-Dark",
             "item": "Dread Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 248 Def / 8 Spe",
+            "evs": "248 HP / 244 Def / 16 Spe",
             "nature": "Bold",
             "moves": [
                 "Judgment",
@@ -1139,7 +1274,7 @@
             "name": "Arceus-Steel",
             "item": "Iron Plate",
             "ability": "Multitype",
-            "evs": "252 Spa / 4 SpD / 252 SpE",
+            "evs": "252 Spa / 4 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
@@ -1166,7 +1301,7 @@
             "name": "Giratina",
             "item": "Leftovers",
             "ability": "Pressure",
-            "evs": "252 HP / 252 Def / 4 SpD",
+            "evs": "252 HP / 204 Def / 52 SpD",
             "nature": "Bold",
             "moves": [
                 "Will-O-Wisp",
@@ -1217,6 +1352,33 @@
     },
     {
         "set": {
+            "name": "Mewtwo",
+            "item": "Life Orb",
+            "ability": "Pressure",
+            "evs": "252 HP / 4 Def / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Taunt",
+                "Flamethrower",
+                "Ice Beam",
+                "Psystrike"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "xernCheck": 1,
+        "rayCheck": 1,
+        "zygCheck": 2,
+        "marshCheck": 0,
+        "ultraCheck": 7,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Sableye-Mega",
             "item": "Sablenite",
             "ability": "Prankster",
@@ -1252,7 +1414,7 @@
             "moves": [
                 "Whirlwind",
                 "Roost",
-                "Spikes",
+                "Iron Defense",
                 "Toxic"
             ]
         },
@@ -1545,7 +1707,7 @@
             "name": "Arceus-Grass",
             "item": "Meadow Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 4 SpA / 252 SpD",
+            "evs": "248 HP / 244 SpD / 16 Spe",
             "nature": "Calm",
             "moves": [
                 "Grass Knot",
