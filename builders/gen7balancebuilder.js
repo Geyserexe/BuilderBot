@@ -1,4 +1,4 @@
-const sets = require("../mon-sets/gen7.json");
+const sets = require("../mon-sets/gen7sets.json");
 const config = require("../config.json");
 
 let stats = {
@@ -32,7 +32,7 @@ function buildTeam() {
         }
 
         if (!config.startMon.set) {
-            team[0] = sets[getRandomInt(sets.length - 1)];
+            team[0] = getRandomMon(team);
         } else {
             team[0] = config.startMon;
         }
@@ -47,7 +47,7 @@ function buildTeam() {
             let currentValue = 11;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue + 1) {
+                if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
@@ -194,7 +194,7 @@ function isValid(mon, team) {
         }
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase().includes(config.monsToAvoid[i].toLowerCase())) {
+        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
             return false;
         }
     }
@@ -232,7 +232,7 @@ function getRandomMon(team) {
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(set.length - 1)])
+            return (sets[getRandomInt(sets.length - 1)])
         }
     }
 }
