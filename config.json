@@ -5,7 +5,7 @@
     "tier":"gen8nationaldexag",
     "gen": "natdex",
     "mode": "balance",
-    "monsToAvoid": ["s"],
+    "monsToAvoid": [""],
     "startMon": {
 
     }
