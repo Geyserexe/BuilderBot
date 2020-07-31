@@ -1,6 +1,7 @@
-const leads = require("../mon-sets/leads.json");
-const sets = require("../mon-sets/sets.json");
 const config = require("../config.json");
+const leads = require(`../mon-sets/${config.gen}leads.json`);
+const sets = require(`../mon-sets/${config.gen}sets.json`);
+
 
 
 module.exports = buildTeam();
@@ -33,6 +34,9 @@ function buildTeam() {
                         break;
                     }
                     reps++;
+                    if (reps > 10){
+                        break;
+                    }
                 }
             }
         }

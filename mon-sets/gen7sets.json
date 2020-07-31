@@ -333,7 +333,7 @@
             "moves": [
                 "Rock Polish",
                 "Fire Blast",
-                "Stone Edge",
+                "Hidden Power [Ice]",
                 "Precipice Blades"
             ]
         },
@@ -706,7 +706,7 @@
             "name": "Necrozma-Dusk-Mane",
             "item": "Solganium Z",
             "ability": "Prism Armor",
-            "evs": "248 HP / 8 Atk / 252 SpD",
+            "evs": "248 HP / 8 Def / 252 SpD",
             "nature": "Careful",
             "moves": [
                 "Stealth Rock",
@@ -733,7 +733,7 @@
             "name": "Necrozma-Dusk-Mane",
             "item": "Leftovers",
             "ability": "Prism Armor",
-            "evs": "248 HP / 8 Atk / 252 SpD",
+            "evs": "248 HP / 8 Def / 252 SpD",
             "nature": "Careful",
             "moves": [
                 "Stealth Rock",
@@ -1442,7 +1442,7 @@
                 "Pursuit",
                 "Foul Play",
                 "Rock Tomb",
-                "Stealth Rock"
+                "Rest"
             ]
         },
         "breaker": 0,
@@ -1455,7 +1455,7 @@
         "ultraCheck": 8,
         "mega": false,
         "z": false,
-        "rocks": true,
+        "rocks": false,
         "defog": false
     },
     {

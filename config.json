@@ -3,8 +3,9 @@
     "cutoff": 7,
     "teamLength": 6,
     "tier":"gen8nationaldexag",
-    "builder": "natdexbalance",
-    "monsToAvoid": [""],
+    "gen": "natdex",
+    "mode": "balance",
+    "monsToAvoid": ["s"],
     "startMon": {
 
     }
