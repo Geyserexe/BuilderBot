@@ -1620,5 +1620,59 @@
         "z": false,
         "rocks": false,
         "defog": false
+    },
+    {
+        "set":{
+            "name":"Gengar-Mega",
+            "item":"Gengarite",
+            "ability":"Shadow Tag",
+            "evs":"252 SpA / 4 SpD / 252 Spe",
+            "nature":"Timid",
+            "moves":[
+                "Substitute",
+                "Encore",
+                "Nasty Plot",
+                "Shadow Ball"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 1,
+        "zacCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set":{
+            "name":"Steelix-Mega",
+            "item":"Steelixite",
+            "ability":"Sheer Force",
+            "evs":"252 HP / 252 SpD / 4 SpD",
+            "nature":"Bold",
+            "moves":[
+                "Rest",
+                "Iron Defense",
+                "Body Press",
+                "Fissure"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 5,
+        "zygCheck": 2,
+        "zacCheck": 5,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
     }
 ]

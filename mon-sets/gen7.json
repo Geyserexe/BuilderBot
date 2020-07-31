@@ -490,8 +490,8 @@
             "name": "Zygarde",
             "item": "Leftovers",
             "ability": "Power Construct",
-            "evs": "16 HP / 224 Atk / 36 Def / 232 Spe",
-            "nature": "Impish",
+            "evs": "16 HP / 216 Atk / 48 SpD / 232 Spe",
+            "nature": "Adamant",
             "moves": [
                 "Substitute",
                 "Dragon Dance",
@@ -544,8 +544,8 @@
             "name": "Arceus",
             "item": "Leftovers",
             "ability": "Multitype",
-            "evs": "252 HP / 252 Atk / 4 Def",
-            "nature": "Adamant",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Jolly",
             "moves": [
                 "Substitute",
                 "Earthquake",
@@ -1085,8 +1085,8 @@
             "name": "Arceus-Rock",
             "item": "Stone Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 252 Def / 4 SpA",
-            "nature": "Bold",
+            "evs": "252 HP / 40 Def / 216 Spe",
+            "nature": "Timid",
             "moves": [
                 "Judgment",
                 "Will-O-Wisp",
@@ -1535,6 +1535,60 @@
         "zygCheck": 4,
         "marshCheck": 4,
         "ultraCheck": 4,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Grass",
+            "item": "Meadow Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 4 SpA / 252 SpD",
+            "nature": "Calm",
+            "moves": [
+                "Grass Knot",
+                "Recover",
+                "Defog",
+                "Roar"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 9,
+        "donCheck": 1,
+        "xernCheck": 5,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "marshCheck": 2,
+        "ultraCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": true
+    },
+    {
+        "set": {
+            "name": "Marshadow",
+            "item": "Choice Scarf",
+            "ability": "Technician",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Spectral Thief",
+                "Shadow Sneak",
+                "Pursuit",
+                "Close Combat"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 1,
+        "donCheck": 0,
+        "xernCheck": 4,
+        "rayCheck": 4,
+        "zygCheck": 0,
+        "marshCheck": 0,
+        "ultraCheck": 6,
         "mega": false,
         "z": false,
         "rocks": false,
