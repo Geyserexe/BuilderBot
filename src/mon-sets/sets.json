@@ -24,7 +24,8 @@
         "mega": false,
         "z": false,
         "rocks": false,
-        "defog": false
+        "defog": false,
+        "priority": 9
     },
     {
         "set": {

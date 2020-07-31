@@ -1,6 +1,6 @@
-const leads = require("../mon-sets/gen7leads.json");
-const sets = require("../mon-sets/gen7.json");
-const config = require("../config.json");
+import leads from "./mon-sets/leads.json"
+import sets from "./mon-sets/sets.json";
+import config from "../config.json";
 
 
 module.exports = buildTeam();
@@ -29,7 +29,7 @@ function buildTeam() {
                 while (true) {
                     let newList = getMons(reps, team);
                     if (newList.length > 1) {
-                        team.push(newList[getRandomInt(length)]);
+                        team.push(newList[getRandomInt(newList.length)]);
                         break;
                     }
                     reps++;
@@ -37,19 +37,19 @@ function buildTeam() {
             }
         }
 
-        for (let i = 0; i < team.length; i++) {
-            set = team[i].set;
+        for (let TEAM of team) {
+            let set: any = TEAM.set;
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
     }
     return (teamString);
 }
 
-function getRandomInt(max) {
+function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function isValid(mon, team) {
+function isValid(mon: any, team: any) {
     for (let i = 0; i < config.monsToAvoid.length; i++) {
         if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
             return false;
@@ -66,7 +66,7 @@ function isValid(mon, team) {
     return true;
 }
 
-function getMons(num, team) {
+function getMons(num: any, team: any) {
     let prunedArray = [];
     for (var a = 0; a < sets.length; a++) {
         let mon = sets[a];

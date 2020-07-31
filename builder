@@ -1,3 +1,5 @@
+#!usr/bin/env node
+
 // {
 //     "set": {
 //         "name":"",
@@ -21,11 +23,14 @@
 //     "defog":
 // },
 
+console.log('building.....');
+
+require('child_process').execSync('tsc');
 
 const config = require("./config.json");
 
 let teamString = "";
 
-teamString = require(`./builders/${config.builder.toLowerCase()}builder.js`);
+teamString = require(`./dist/src/${config.builder.toLowerCase()}builder.js`);
 
 console.log(teamString);

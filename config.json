@@ -6,6 +6,6 @@
     "builder": "natdexbalance",
     "monsToAvoid": [""],
     "startMon": {
-
+        "set": ""
     }
 }

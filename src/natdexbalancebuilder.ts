@@ -1,14 +1,15 @@
-const sets = require("../mon-sets/gen7.json");
-const config = require("../config.json");
+import sets from "./mon-sets/sets.json";
+import config from "../config.json";
+
 
 let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        marshCheck: 0,
+        zacCheck: 0,
         donCheck: 0,
         breaker: 0,
-        ultraCheck: 0,
+        ygodCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -53,9 +54,9 @@ function buildTeam() {
                 }
             }
 
-            for (let a = 0; a < sets.length; a++) {
-                if (sets[a][priority] >= config.cutoff) {
-                    pruneArray.push(sets[a]);
+            for (let SET of sets) {
+                if (SET.priority && SET.priority >= config.cutoff) {
+                    pruneArray.push(SET);
                 }
             }
 
@@ -81,7 +82,7 @@ function buildTeam() {
                 if (!stats.defog && config.cutoff <= 2) {
                     let mon = getRandomMon(team);
                     let a = 0;
-                    while (!mon.defog) {
+                    while (!mon!.defog) {
                         mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
@@ -105,7 +106,7 @@ function buildTeam() {
                 }
             }
             while (true) {
-                let rand = prunedArray[getRandomInt(prunedArray.length)];
+                let rand: any = prunedArray[getRandomInt(prunedArray.length)];
                 if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
                     team.push(rand);
                     break;
@@ -115,8 +116,8 @@ function buildTeam() {
 
         }
 
-        for (let i = 0; i < team.length; i++) {
-            set = team[i].set;
+        for (let TEAM of team) {
+            let set: any = TEAM.set;
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
@@ -129,18 +130,18 @@ function buildTeam() {
     return (teamString);
 }
 
-function getRandomInt(max) {
+function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function updateStats(team) {
+function updateStats(team: string | any[]) {
     stats = {
         ints: {
             rayCheck: 0,
             zygCheck: 0,
-            marshCheck: 0,
+            zacCheck: 0,
             donCheck: 0,
-            ultraCheck: 0,
+            ygodCheck: 0,
             xernCheck: 0,
             ogreCheck: 0,
             breaker: 0,
@@ -148,16 +149,17 @@ function updateStats(team) {
         mega: false,
         z: false,
         rocks: false,
-        defog: false
+        defog: false,
+        cleric: false
     };
 
     for (let i = 0; i < team.length; i++) {
         if (team[i].breaker) { stats.ints.breaker += team[i].breaker; }
         if (team[i].rayCheck) { stats.ints.rayCheck += team[i].rayCheck; }
         if (team[i].zygCheck) { stats.ints.zygCheck += team[i].zygCheck; }
-        if (team[i].marshCheck) { stats.ints.marshCheck += team[i].marshCheck; }
+        if (team[i].zacCheck) { stats.ints.zacCheck += team[i].zacCheck; }
         if (team[i].donCheck) { stats.ints.donCheck += team[i].donCheck; }
-        if (team[i].ultraCheck) { stats.ints.ultraCheck += team[i].ultraCheck; }
+        if (team[i].ygodCheck) { stats.ints.ygodCheck += team[i].ygodCheck; }
         if (team[i].xernCheck) { stats.ints.xernCheck += team[i].xernCheck; }
         if (team[i].ogreCheck) { stats.ints.ogreCheck += team[i].ogreCheck; }
 
@@ -183,7 +185,7 @@ function updateStats(team) {
     }
 }
 
-function isValid(mon, team) {
+function isValid(mon: any, team: any) {
     for (let i = 0; i < team.length; i++) {
         if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon)) {
             return false;
@@ -201,7 +203,7 @@ function isValid(mon, team) {
     return true;
 }
 
-function zMegaCheckPassed(mon) {
+function zMegaCheckPassed(mon: any) {
     if (!stats.mega && !stats.z) {
         return true;
     } else if (stats.mega && !mon.mega) {
@@ -213,14 +215,14 @@ function zMegaCheckPassed(mon) {
     return false;
 }
 
-function clericTest(mon) {
+function clericTest(mon: any) {
     if (stats.cleric && mon.cleric) {
         return false;
     }
     return true;
 }
 
-function getRandomMon(team) {
+function getRandomMon(team: any[]) {
     let a = 0;
     let completed = false;
     while (!completed) {
