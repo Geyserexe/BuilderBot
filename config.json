@@ -4,12 +4,11 @@
     "teamLength": 6,
     "tier": "gen8nationaldexag",
     "gen": "natdex",
-    "mode": "optimize",
+    "mode": "balance",
     "monsToAvoid": [
         ""
     ],
     "startMon": {
 
-    },
-    "teamToOptimize": "Rayquaza-Mega||lifeorb|deltastream|swordsdance,dragonascent,vcreate,extremespeed|Jolly|,252,4,,,252|||||]Groudon-Primal||redorb|desolateland|precipiceblades,stealthrock,stoneedge,toxic|Impish|252,,252,,4,|||||]Arceus-Fairy||pixieplate|multitype|judgment,recover,refresh,willowisp|Calm|244,,,,176,88|||||]Eternatus||lifeorb|pressure|dynamaxcannon,flamethrower,sludgebomb,recover|Timid|,,4,252,,252|||||]Yveltal||choiceband|darkaura|knockoff,suckerpunch,uturn,foulplay|Adamant|,252,,,4,252|||||]Chansey||eviolite|naturalcure|healbell,softboiled,toxic,confide|Calm|4,,252,,252,|||||"
+    }
 }
