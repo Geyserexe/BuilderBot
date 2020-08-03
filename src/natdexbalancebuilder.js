@@ -1,5 +1,6 @@
 const sets = require("./mon-sets/natdexsets.json");
 const config = require("../config.json");
+const cores = require("./mon-sets/natdexcores.json")
 
 let stats = {
     ints: {
@@ -31,11 +32,18 @@ function buildTeam() {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        if (!config.startMon.set) {
+        if (!config.startMon.set && !config.coreMode) {
             team[0] = getRandomMon(team);
+        } else if (config.coreMode) {
+            let core = cores[getRandomInt(cores.length)];
+            for (let i = 0; i < core.length; i++) {
+                team.push(core[i]);
+            }
+            config.teamLength -= core.length - 1;
         } else {
             team[0] = config.startMon;
         }
+
 
         updateStats(team);
 
@@ -185,7 +193,7 @@ function updateStats(team) {
 
 function isValid(mon, team) {
     for (let i = 0; i < team.length; i++) {
-        if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon)) {
+        if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {
             return false;
         }
 

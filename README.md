@@ -7,7 +7,8 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 
 - Note: dev branch may be unreliable / produce really bad teams
 
-###### TODO ######
+##### TODO #####
+
 - Add more sets
 - Automatically upload teams to Pokepaste
 - Add gen6 support
