@@ -1751,7 +1751,7 @@
         "rayCheck": 0,
         "zygCheck": 2,
         "zacCheck": 2,
-        "mega": false,
+        "mega": true,
         "z": false,
         "rocks": false,
         "defog": true
