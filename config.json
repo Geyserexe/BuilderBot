@@ -6,6 +6,8 @@
     "gen": "natdex",
     "mode": "balance",
     "coreMode": false,
+    "breakerWeight": 10,
+    "breakerOverride": true,
     "monsToAvoid": [
         ""
     ],
