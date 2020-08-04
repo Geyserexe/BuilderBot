@@ -244,6 +244,33 @@
     },
     {
         "set": {
+            "name": "Zygarde",
+            "item": "Weakness Policy",
+            "ability": "Power Construct",
+            "evs": "12 HP / 208 Atk / 48 SpD / 240 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Dragon Dance",
+                "Thousand Arrows",
+                "Stone Edge",
+                "Outrage"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 3,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Necrozma-Dusk-Mane",
             "item": "Leftovers",
             "ability": "Prism Armor",
@@ -261,7 +288,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 8,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 9,
         "mega": false,
@@ -288,7 +315,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 6,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 10,
         "mega": false,
@@ -586,7 +613,7 @@
         "ygodCheck": 1,
         "xernCheck": 0,
         "rayCheck": 7,
-        "zygCheck": 5,
+        "zygCheck": 7,
         "zacCheck": 6,
         "mega": false,
         "z": false,
@@ -661,11 +688,38 @@
                 "Recover"
             ]
         },
-        "breaker": 6,
+        "breaker": 8,
         "ogreCheck": 2,
         "donCheck": 2,
         "ygodCheck": 2,
         "xernCheck": 1,
+        "rayCheck": 2,
+        "zygCheck": 2,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Eternatus",
+            "item": "Life Orb",
+            "ability": "Pressure",
+            "evs": "4 Def / 252 SpA / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Dynamax Cannon",
+                "Flamethrower",
+                "Toxic Spikes",
+                "Recover"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 2,
+        "donCheck": 2,
+        "ygodCheck": 2,
+        "xernCheck": 0,
         "rayCheck": 2,
         "zygCheck": 2,
         "zacCheck": 0,
@@ -747,7 +801,7 @@
         "donCheck": 7,
         "ygodCheck": 2,
         "xernCheck": 0,
-        "rayCheck": 5,
+        "rayCheck": 7,
         "zygCheck": 9,
         "zacCheck": 2,
         "mega": false,
@@ -771,11 +825,11 @@
         },
         "breaker": 0,
         "ogreCheck": 5,
-        "donCheck": 6,
-        "ygodCheck": 8,
+        "donCheck": 8,
+        "ygodCheck": 5,
         "xernCheck": 0,
-        "rayCheck": 2,
-        "zygCheck": 6,
+        "rayCheck": 7,
+        "zygCheck": 7,
         "zacCheck": 3,
         "mega": false,
         "z": false,
@@ -801,7 +855,7 @@
         "donCheck": 7,
         "ygodCheck": 2,
         "xernCheck": 0,
-        "rayCheck": 5,
+        "rayCheck": 7,
         "zygCheck": 10,
         "zacCheck": 2,
         "mega": false,
@@ -1613,7 +1667,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 8,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 10,
         "mega": false,
@@ -1653,7 +1707,7 @@
             "name":"Steelix-Mega",
             "item":"Steelixite",
             "ability":"Sheer Force",
-            "evs":"252 HP / 252 SpD / 4 SpD",
+            "evs":"252 HP / 252 Def / 4 SpD",
             "nature":"Bold",
             "moves":[
                 "Rest",
@@ -1674,5 +1728,32 @@
         "z": false,
         "rocks": false,
         "defog": false
+    },
+    {
+        "set": {
+            "name": "Salamence-Mega",
+            "item": "Salamencite",
+            "ability": "Intimidate",
+            "evs": "252 HP / 240 Def / 16 Spe",
+            "nature": "Impish",
+            "moves": [
+                "Defog",
+                "Refresh",
+                "Roost",
+                "Body Slam"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "donCheck": 7,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "zacCheck": 2,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": true
     }
 ]
