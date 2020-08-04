@@ -83,7 +83,7 @@
     {
         "set": {
             "name": "Shuckle",
-            "item": "Red Card",
+            "item": "Mental Herb",
             "ability": "Sturdy",
             "evs": "252 HP / 252 Def / 4 SpD",
             "nature": "Bold",

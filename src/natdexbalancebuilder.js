@@ -24,9 +24,11 @@ module.exports = buildTeam();
 
 function buildTeam() {
 
+    let length = config.teamLength;
     let teamString = "";
 
     for (var b = 0; b < config.teamNumber; b++) {
+        config.teamLength = length;
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
@@ -55,15 +57,38 @@ function buildTeam() {
             let currentValue = 11;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue) {
+                if (value <= currentValue && !config.breakerOverride) {
+                    if (config.breakerWeight > 7 && Math.round(Math.random()) === 1) {
+                        currentValue = value;
+                        priority = key;
+                    } else if (config.breakerWeight > 7) {
+                        currentValue = 0;
+                        priority = "breaker";
+                    } else if (config.breakerWeight > 3 || (config.breakerWeight < 3 && key.toLowerCase() != "breaker")) {
+                        currentValue = value;
+                        priority = key;
+                    }
+                } else if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
             }
 
             for (let a = 0; a < sets.length; a++) {
-                if (sets[a][priority] >= config.cutoff) {
-                    pruneArray.push(sets[a]);
+                if (config.breakerOverride) {
+                    if (sets[a][priority] >= config.cutoff) {
+                        pruneArray.push(sets[a]);
+                    }
+                } else {
+                    if (config.breakerWeight < 3) {
+                        if (sets[a].set.ability.toLowerCase().includes("bounce")) {
+                            pruneArray.push(sets[a])
+                        } else if ((sets[a][priority] >= config.cutoff) && (sets[a].breaker <= config.breakerWeight)) {
+                            pruneArray.push(sets[a])
+                        }
+                    } else if (sets[a][priority] >= config.cutoff) {
+                        pruneArray.push(sets[a]);
+                    }
                 }
             }
 
@@ -233,9 +258,17 @@ function getRandomMon(team) {
     let completed = false;
     while (!completed) {
         let rand = sets[getRandomInt(sets.length - 1)];
-        if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
-            if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
-                return (rand);
+        if (config.breakerOverride) {
+            if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
+                if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                    return (rand);
+                }
+            }
+        } else {
+            if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand) && rand.breaker <= config.breakerWeight) {
+                if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                    return (rand);
+                }
             }
         }
         a++;
