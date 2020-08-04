@@ -137,6 +137,60 @@
     {
         "set": {
             "name": "Yveltal",
+            "item": "Life Orb",
+            "ability": "Dark Aura",
+            "evs": "4 Atk / 252 SpA / 252 Spe",
+            "nature": "Rash",
+            "moves": [
+                "Dark Pulse",
+                "Oblivion Wing",
+                "Heat Wave",
+                "Knock Off"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 4,
+        "ygodCheck": 0,
+        "xernCheck": 1,
+        "rayCheck": 3,
+        "zygCheck": 3,
+        "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Yveltal",
+            "item": "Life Orb",
+            "ability": "Dark Aura",
+            "evs": "4 Def / 252 SpA / 252 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Dark Pulse",
+                "Oblivion Wing",
+                "Heat Wave",
+                "Focus Blast"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 4,
+        "ygodCheck": 0,
+        "xernCheck": 1,
+        "rayCheck": 3,
+        "zygCheck": 3,
+        "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Yveltal",
             "item": "Choice Band",
             "ability": "Dark Aura",
             "evs": "252 Atk / 4 SpD / 252 Spe",
@@ -244,6 +298,33 @@
     },
     {
         "set": {
+            "name": "Zygarde",
+            "item": "Weakness Policy",
+            "ability": "Power Construct",
+            "evs": "12 HP / 208 Atk / 48 SpD / 240 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Dragon Dance",
+                "Thousand Arrows",
+                "Stone Edge",
+                "Outrage"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "donCheck": 3,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Necrozma-Dusk-Mane",
             "item": "Leftovers",
             "ability": "Prism Armor",
@@ -261,7 +342,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 8,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 9,
         "mega": false,
@@ -288,7 +369,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 6,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 10,
         "mega": false,
@@ -515,6 +596,33 @@
     {
         "set": {
             "name": "Rayquaza-Mega",
+            "item": "Choice Band",
+            "ability": "Delta Stream",
+            "evs": "4 Def / 252 Atk / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Outrage",
+                "Dragon Ascent",
+                "V-create",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 5,
+        "donCheck": 5,
+        "ygodCheck": 1,
+        "xernCheck": 1,
+        "rayCheck": 0,
+        "zygCheck": 1,
+        "zacCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
             "item": "Life Orb",
             "ability": "Delta Stream",
             "evs": "252 Atk / 4 Spa / 252 Spe",
@@ -586,7 +694,7 @@
         "ygodCheck": 1,
         "xernCheck": 0,
         "rayCheck": 7,
-        "zygCheck": 5,
+        "zygCheck": 7,
         "zacCheck": 6,
         "mega": false,
         "z": false,
@@ -661,11 +769,38 @@
                 "Recover"
             ]
         },
-        "breaker": 6,
+        "breaker": 8,
         "ogreCheck": 2,
         "donCheck": 2,
         "ygodCheck": 2,
         "xernCheck": 1,
+        "rayCheck": 2,
+        "zygCheck": 2,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Eternatus",
+            "item": "Life Orb",
+            "ability": "Pressure",
+            "evs": "4 Def / 252 SpA / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Dynamax Cannon",
+                "Flamethrower",
+                "Toxic Spikes",
+                "Recover"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 2,
+        "donCheck": 2,
+        "ygodCheck": 2,
+        "xernCheck": 0,
         "rayCheck": 2,
         "zygCheck": 2,
         "zacCheck": 0,
@@ -747,7 +882,7 @@
         "donCheck": 7,
         "ygodCheck": 2,
         "xernCheck": 0,
-        "rayCheck": 5,
+        "rayCheck": 7,
         "zygCheck": 9,
         "zacCheck": 2,
         "mega": false,
@@ -771,11 +906,11 @@
         },
         "breaker": 0,
         "ogreCheck": 5,
-        "donCheck": 6,
-        "ygodCheck": 8,
+        "donCheck": 8,
+        "ygodCheck": 5,
         "xernCheck": 0,
-        "rayCheck": 2,
-        "zygCheck": 6,
+        "rayCheck": 7,
+        "zygCheck": 7,
         "zacCheck": 3,
         "mega": false,
         "z": false,
@@ -801,7 +936,7 @@
         "donCheck": 7,
         "ygodCheck": 2,
         "xernCheck": 0,
-        "rayCheck": 5,
+        "rayCheck": 7,
         "zygCheck": 10,
         "zacCheck": 2,
         "mega": false,
@@ -830,6 +965,33 @@
         "xernCheck": 0,
         "rayCheck": 4,
         "zygCheck": 5,
+        "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Water",
+            "item": "Splash Plate",
+            "ability": "Multitype",
+            "evs": "248 HP / 236 Def / 24 Spe",
+            "nature": "Bold",
+            "moves": [
+                "Judgment",
+                "Calm Mind",
+                "Recover",
+                "Refresh"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 5,
+        "donCheck": 0,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 6,
         "zacCheck": 1,
         "mega": false,
         "z": false,
@@ -878,6 +1040,33 @@
             ]
         },
         "breaker": 7,
+        "ogreCheck": 2,
+        "donCheck": 5,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Kyogre",
+            "item": "Life Orb",
+            "ability": "Primordial Sea",
+            "evs": "4 Def / 252 SpA / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Calm Mind",
+                "Origin Pulse",
+                "Ice Beam",
+                "Mud Slap"
+            ]
+        },
+        "breaker": 8,
         "ogreCheck": 2,
         "donCheck": 5,
         "ygodCheck": 0,
@@ -1108,6 +1297,60 @@
     },
     {
         "set": {
+            "name": "Tyranitar",
+            "item": "Leftovers",
+            "ability": "Sand Stream",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Pursuit",
+                "Foul Play",
+                "Stealth Rock",
+                "Rest"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "ygodCheck": 8,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Tyranitar",
+            "item": "Babiri Berry",
+            "ability": "Sand Stream",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Pursuit",
+                "Foul Play",
+                "Rock Tomb",
+                "Rest"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "ygodCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 2,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Tyranitar-Mega",
             "item": "Tyranitarite",
             "ability": "Sand Stream",
@@ -1131,6 +1374,33 @@
         "mega": true,
         "z": false,
         "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Tyranitar-Mega",
+            "item": "Tyranitarite",
+            "ability": "Sand Stream",
+            "evs": "252 HP / 4 Atk / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Pursuit",
+                "Rock Tomb",
+                "Stealth Rock",
+                "Rest"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "donCheck": 1,
+        "ygodCheck": 9,
+        "xernCheck": 0,
+        "rayCheck": 3,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": true,
         "defog": false
     },
     {
@@ -1281,6 +1551,33 @@
                 "Psystrike",
                 "Fire Blast",
                 "Focus Blast"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 1,
+        "zacCheck": 5,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Mewtwo-Mega-Y",
+            "item": "Mewtwonite Y",
+            "ability": "Unnerve",
+            "evs": "80 Def / 252 SpA / 176 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Nasty Plot",
+                "Psystrike",
+                "Fire Blast",
+                "Ice Beam"
             ]
         },
         "breaker": 9,
@@ -1596,6 +1893,33 @@
     },
     {
         "set": {
+            "name": "Arceus-Ghost",
+            "item": "Spooky Plate",
+            "ability": "Multitype",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Shadow Force",
+                "Brick Break",
+                "Stone Edge"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "ygodCheck": 2,
+        "xernCheck": 0,
+        "rayCheck": 3,
+        "zygCheck": 1,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Necrozma-Dusk-Mane",
             "item": "Leftovers",
             "ability": "Prism Armor",
@@ -1613,7 +1937,7 @@
         "donCheck": 1,
         "ygodCheck": 0,
         "xernCheck": 8,
-        "rayCheck": 6,
+        "rayCheck": 7,
         "zygCheck": 0,
         "zacCheck": 10,
         "mega": false,
@@ -1653,7 +1977,7 @@
             "name":"Steelix-Mega",
             "item":"Steelixite",
             "ability":"Sheer Force",
-            "evs":"252 HP / 252 SpD / 4 SpD",
+            "evs":"252 HP / 252 Def / 4 SpD",
             "nature":"Bold",
             "moves":[
                 "Rest",
@@ -1674,5 +1998,32 @@
         "z": false,
         "rocks": false,
         "defog": false
+    },
+    {
+        "set": {
+            "name": "Salamence-Mega",
+            "item": "Salamencite",
+            "ability": "Intimidate",
+            "evs": "252 HP / 240 Def / 16 Spe",
+            "nature": "Impish",
+            "moves": [
+                "Defog",
+                "Refresh",
+                "Roost",
+                "Body Slam"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "donCheck": 7,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 2,
+        "zacCheck": 2,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": true
     }
 ]
