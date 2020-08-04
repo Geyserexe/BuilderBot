@@ -24,9 +24,11 @@ module.exports = buildTeam();
 
 function buildTeam() {
 
+    let length = config.teamLength;
     let teamString = "";
 
     for (var b = 0; b < config.teamNumber; b++) {
+        config.teamLength = length;
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
