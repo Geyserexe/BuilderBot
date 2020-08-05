@@ -10,7 +10,7 @@
     "breakerOverride": true,
     "recurseThreshold": 10,
     "monsToAvoid": [
-        "chansey"
+        ""
     ],
     "startMon": {
 
