@@ -34,7 +34,7 @@ function buildTeam() {
                         break;
                     }
                     reps++;
-                    if (reps > 10){
+                    if (reps > 10) {
                         break;
                     }
                 }
@@ -54,10 +54,8 @@ function getRandomInt(max) {
 }
 
 function isValid(mon, team) {
-    for (let i = 0; i < mon.set.moves.length; i++){
-        if(mon.set.moves[i].toLowerCase().includes("choice")){
-            return false;
-        }
+    if (mon.set.item.toLowerCase().includes("choice")) {
+        return false;
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
         if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {

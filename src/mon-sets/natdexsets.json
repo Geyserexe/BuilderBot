@@ -2094,7 +2094,7 @@
                 "Recover"
             ]
         },
-        "breaker": 7,
+        "breaker": 6,
         "ogreCheck": 1,
         "donCheck": 0,
         "ygodCheck": 2,
