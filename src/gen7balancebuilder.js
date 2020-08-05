@@ -21,7 +21,15 @@ let stats = {
     cleric: false
 };
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return (buildTeam());
+    } catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 

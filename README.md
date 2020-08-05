@@ -18,6 +18,7 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 - "coreMode" controls whether or not the builder uses an experimental, currently natdex-only, building mode where the team starts with a pre-chosen set of 3 Pokémon.
 - "breakerWeight" controls the priority given to breakers on a team.  Lower levels result in stallier builds, while higher levels result in more offensive builds.  This feature is experimental and any feedback on it is welcome.  This feature has no effect on building offense.
 - "breakerOverride" allows the user to bypass breakerWeight's impact on teambuilding, and opens the full sets file, restricted only by "cutoff", to the builder.  This is on by default to maximize building variety.  This feature has no effect on building offense.
+- "recurseThreshold" is the minimum value for a given stat below which the builder will rebuild a team.  If this value is set too high, an error will likely appear.  Higher values will lead to better teams, but only up to a point.
 - "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.  This field is not case-sensitive.
 - "startMon" allows the user to provide a set around which to build a team.  This setting is incompatible with coreMode.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
 

@@ -22,7 +22,15 @@ let stats = {
     cleric: false
 };
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return (buildTeam());
+    } catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 
@@ -155,10 +163,10 @@ function buildTeam() {
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
-        for(let [key, value] of Object.entries(stats.ints)){
-            if (value < config.recurseThreshold){
-                if(recursions > 1000){
-                    throw("recurseThreshold too high")
+        for (let [key, value] of Object.entries(stats.ints)) {
+            if (value < config.recurseThreshold) {
+                if (recursions > 1000) {
+                    throw ("recurseThreshold too high")
                 }
                 recursions++;
                 console.log(`recurse #${recursions}`)
