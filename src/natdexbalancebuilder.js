@@ -28,7 +28,7 @@ function tryBuild() {
     try {
         return (buildTeam());
     } catch (err) {
-        return(`error: ${err}`);
+        return (`error: ${err}`);
     }
 }
 
@@ -44,8 +44,8 @@ function buildTeam() {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        if(config.startMon.set && config.coreMode){
-            throw("startMon and coreMode functionality are incompatible.")
+        if (config.startMon.set && config.coreMode) {
+            throw ("startMon and coreMode functionality are incompatible.")
         }
 
         if (!config.startMon.set && !config.coreMode) {
@@ -132,7 +132,7 @@ function buildTeam() {
                         mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
-                            throw("Not enough defoggers - try again or add more defoggers.");
+                            throw ("Not enough defoggers - try again or add more defoggers.");
                         }
                     }
                     prunedArray.push(mon);
@@ -173,13 +173,12 @@ function buildTeam() {
                     throw ("recurseThreshold too high")
                 }
                 recursions++;
-                console.log(`recurse #${recursions}`)
+                //console.log(`recursion #${recursions}`);
                 teamString = buildTeam();
                 break;
             }
         }
     }
-
     return (teamString);
 }
 

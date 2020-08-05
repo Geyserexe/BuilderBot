@@ -8,9 +8,9 @@
     "coreMode": false,
     "breakerWeight": 10,
     "breakerOverride": true,
-    "recurseThreshold": 10,
+    "recurseThreshold": 17,
     "monsToAvoid": [
-        ""
+        "chansey"
     ],
     "startMon": {
 
