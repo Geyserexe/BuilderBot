@@ -3,13 +3,13 @@
 
 const config = require("./config.json");
 
-let teamString = "";
+let team = "";
 
 
 if (config.mode.toLowerCase() != "offense") {
-    teamString = require(`./src/${config.gen}${config.mode.toLowerCase()}builder.js`);
+    team = require(`./src/${config.gen}${config.mode.toLowerCase()}builder.js`);
 } else {
-    teamString = require(`./src/offensebuilder.js`);
+    team = require(`./src/offensebuilder.js`);
 }
 
-console.log(teamString);
+console.log(team);

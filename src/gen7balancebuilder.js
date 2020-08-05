@@ -159,7 +159,7 @@ function buildTeam() {
                     throw("recurseThreshold too high")
                 }
                 recursions++;
-                console.log(`recurse #${recursions}`)
+                //console.log(`recursion #${recursions}`);
                 teamString = buildTeam();
                 break;
             }
