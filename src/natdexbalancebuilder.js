@@ -2,6 +2,8 @@ const sets = require("./mon-sets/natdexsets.json");
 const config = require("../config.json");
 const cores = require("./mon-sets/natdexcores.json")
 
+let recursions = 0;
+
 let stats = {
     ints: {
         rayCheck: 0,
@@ -153,12 +155,19 @@ function buildTeam() {
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
-        if (config.teamNumber === 1) {
-            for (let [key, value] of Object.entries(stats.ints)) {
-                console.log(key, value);
+        for(let [key, value] of Object.entries(stats.ints)){
+            if (value < config.recurseThreshold){
+                if(recursions > 1000){
+                    throw("recurseThreshold too high")
+                }
+                recursions++;
+                console.log(`recurse #${recursions}`)
+                teamString = buildTeam();
+                break;
             }
         }
     }
+
     return (teamString);
 }
 
