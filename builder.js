@@ -22,7 +22,7 @@ function makeRequest(){
             path: '/create',
             method: 'POST', 
             accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            body: {name: "BuilderBotExport",teamString, author: "Geysers' BuilderBot", notes: `cutoff:${config.cutoff}\nbuilder:${config.builder}\ntier:${config.tier}\nhttps://github.com/Geyserexe/BuilderBot`},
+            body: {name: "BuilderBotExport",paste: teamString, author: "Geysers' BuilderBot", notes: `cutoff:${config.cutoff}\nbuilder:${config.builder}\ntier:${config.tier}\nhttps://github.com/Geyserexe/BuilderBot`},
         };
 
 
