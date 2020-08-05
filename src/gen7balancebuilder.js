@@ -1,6 +1,8 @@
 const sets = require("./mon-sets/gen7sets.json");
 const config = require("../config.json");
 
+let recursions = 0;
+
 let stats = {
     ints: {
         rayCheck: 0,
