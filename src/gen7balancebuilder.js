@@ -1,6 +1,8 @@
 const sets = require("./mon-sets/gen7sets.json");
 const config = require("../config.json");
 
+let recursions = 0;
+
 let stats = {
     ints: {
         rayCheck: 0,
@@ -19,7 +21,15 @@ let stats = {
     cleric: false
 };
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return (buildTeam());
+    } catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 
@@ -47,15 +57,38 @@ function buildTeam() {
             let currentValue = 11;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue) {
+                if (value <= currentValue && !config.breakerOverride) {
+                    if (config.breakerWeight > 7 && Math.round(Math.random()) === 1) {
+                        currentValue = value;
+                        priority = key;
+                    } else if (config.breakerWeight > 7) {
+                        currentValue = 0;
+                        priority = "breaker";
+                    } else if (config.breakerWeight > 3 || (config.breakerWeight < 3 && key.toLowerCase() != "breaker")) {
+                        currentValue = value;
+                        priority = key;
+                    }
+                } else if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
             }
 
             for (let a = 0; a < sets.length; a++) {
-                if (sets[a][priority] >= config.cutoff) {
-                    pruneArray.push(sets[a]);
+                if (config.breakerOverride) {
+                    if (sets[a][priority] >= config.cutoff) {
+                        pruneArray.push(sets[a]);
+                    }
+                } else {
+                    if (config.breakerWeight < 3) {
+                        if (sets[a].set.ability.toLowerCase().includes("bounce")) {
+                            pruneArray.push(sets[a])
+                        } else if ((sets[a][priority] >= config.cutoff) && (sets[a].breaker <= config.breakerWeight)) {
+                            pruneArray.push(sets[a])
+                        }
+                    } else if (sets[a][priority] >= config.cutoff) {
+                        pruneArray.push(sets[a]);
+                    }
                 }
             }
 
@@ -85,7 +118,7 @@ function buildTeam() {
                         mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
-                            break;
+                            throw("Not enough defoggers - try again or add more defoggers.");
                         }
                     }
                     prunedArray.push(mon);
@@ -120,9 +153,15 @@ function buildTeam() {
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
-        if (config.teamNumber === 1) {
-            for (let [key, value] of Object.entries(stats.ints)) {
-                console.log(key, value);
+        for(let [key, value] of Object.entries(stats.ints)){
+            if (value < config.recurseThreshold){
+                if(recursions > 1000){
+                    throw("recurseThreshold too high")
+                }
+                recursions++;
+                console.log(`recurse #${recursions}`)
+                teamString = buildTeam();
+                break;
             }
         }
     }
@@ -224,15 +263,23 @@ function getRandomMon(team) {
     let a = 0;
     let completed = false;
     while (!completed) {
-        let rand = sets[getRandomInt(sets.length - 1)];
-        if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
-            if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
-                return (rand);
+        let rand = sets[getRandomInt(sets.length)];
+        if (config.breakerOverride) {
+            if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
+                if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                    return (rand);
+                }
+            }
+        } else {
+            if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand) && rand.breaker <= config.breakerWeight) {
+                if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                    return (rand);
+                }
             }
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(sets.length - 1)])
+            return (sets[getRandomInt(sets.length)])
         }
     }
 }

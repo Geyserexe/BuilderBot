@@ -4,7 +4,16 @@ const sets = require(`./mon-sets/${config.gen}sets.json`);
 
 
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return buildTeam();
+    }
+    catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 
@@ -34,8 +43,8 @@ function buildTeam() {
                         break;
                     }
                     reps++;
-                    if (reps > 10){
-                        break;
+                    if (reps > 10) {
+                        throw("Error finding breakers.  Add more or try again.")
                     }
                 }
             }
@@ -54,10 +63,8 @@ function getRandomInt(max) {
 }
 
 function isValid(mon, team) {
-    for (let i = 0; i < mon.set.moves.length; i++){
-        if(mon.set.moves[i].toLowerCase().includes("choice")){
-            return false;
-        }
+    if (mon.set.item.toLowerCase().includes("choice")) {
+        return false;
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
         if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
@@ -69,6 +76,9 @@ function isValid(mon, team) {
             return false;
         }
         if ((mon.z && team[i].z) || (mon.mega && team[i].mega)) {
+            return false;
+        }
+        if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
             return false;
         }
     }

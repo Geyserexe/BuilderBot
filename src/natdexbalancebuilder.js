@@ -2,6 +2,8 @@ const sets = require("./mon-sets/natdexsets.json");
 const config = require("../config.json");
 const cores = require("./mon-sets/natdexcores.json")
 
+let recursions = 0;
+
 let stats = {
     ints: {
         rayCheck: 0,
@@ -20,7 +22,15 @@ let stats = {
     cleric: false
 };
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return (buildTeam());
+    } catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 
@@ -32,6 +42,10 @@ function buildTeam() {
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
+        }
+
+        if(config.startMon.set && config.coreMode){
+            throw("startMon and coreMode functionality are incompatible.")
         }
 
         if (!config.startMon.set && !config.coreMode) {
@@ -118,7 +132,7 @@ function buildTeam() {
                         mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
-                            break;
+                            throw("Not enough defoggers - try again or add more defoggers.");
                         }
                     }
                     prunedArray.push(mon);
@@ -153,12 +167,19 @@ function buildTeam() {
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
-        if (config.teamNumber === 1) {
-            for (let [key, value] of Object.entries(stats.ints)) {
-                console.log(key, value);
+        for (let [key, value] of Object.entries(stats.ints)) {
+            if (value < config.recurseThreshold) {
+                if (recursions > 1000) {
+                    throw ("recurseThreshold too high")
+                }
+                recursions++;
+                console.log(`recurse #${recursions}`)
+                teamString = buildTeam();
+                break;
             }
         }
     }
+
     return (teamString);
 }
 
@@ -257,7 +278,7 @@ function getRandomMon(team) {
     let a = 0;
     let completed = false;
     while (!completed) {
-        let rand = sets[getRandomInt(sets.length - 1)];
+        let rand = sets[getRandomInt(sets.length)];
         if (config.breakerOverride) {
             if (isValid(rand, team) && zMegaCheckPassed(rand) && clericTest(rand)) {
                 if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
@@ -273,7 +294,7 @@ function getRandomMon(team) {
         }
         a++;
         if (a > 1000) {
-            return (sets[getRandomInt(sets.length - 1)])
+            return (sets[getRandomInt(sets.length)])
         }
     }
 }

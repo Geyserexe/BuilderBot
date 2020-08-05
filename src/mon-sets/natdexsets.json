@@ -1083,7 +1083,7 @@
         "set": {
             "name": "Kyogre",
             "item": "Life Orb",
-            "ability": "Primordial Sea",
+            "ability": "Drizzle",
             "evs": "4 Def / 252 SpA / 252 Spe",
             "nature": "Timid",
             "moves": [
@@ -1625,7 +1625,7 @@
             "name": "Arceus-Dark",
             "item": "Dread Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 156 Def / 100 Spe",
+            "evs": "252 HP / 156 SpD / 100 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
@@ -1733,7 +1733,7 @@
             "name": "Arceus-Fairy",
             "item": "Pixie Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 156 Def / 100 Spe",
+            "evs": "252 HP / 156 SpD / 100 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
@@ -1896,7 +1896,7 @@
             "name": "Quagsire",
             "item": "Leftovers",
             "ability": "Unaware",
-            "evs": "252 HP / 4 Atk/ 252 Def",
+            "evs": "252 HP / 4 Atk / 252 Def",
             "nature": "Impish",
             "moves": [
                 "Earthquake",
@@ -2094,11 +2094,11 @@
                 "Recover"
             ]
         },
-        "breaker": 7,
+        "breaker": 6,
         "ogreCheck": 1,
         "donCheck": 0,
         "ygodCheck": 2,
-        "xernCheck": 7,
+        "xernCheck": 6,
         "rayCheck": 2,
         "zygCheck": 0,
         "zacCheck": 0,
