@@ -69,6 +69,9 @@ function isValid(mon, team) {
         if ((mon.z && team[i].z) || (mon.mega && team[i].mega)) {
             return false;
         }
+        if((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")){
+            return false;
+        }
     }
     return true;
 }

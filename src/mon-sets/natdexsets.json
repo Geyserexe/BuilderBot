@@ -1083,7 +1083,7 @@
         "set": {
             "name": "Kyogre",
             "item": "Life Orb",
-            "ability": "Primordial Sea",
+            "ability": "Drizzle",
             "evs": "4 Def / 252 SpA / 252 Spe",
             "nature": "Timid",
             "moves": [
@@ -1896,7 +1896,7 @@
             "name": "Quagsire",
             "item": "Leftovers",
             "ability": "Unaware",
-            "evs": "252 HP / 4 Atk/ 252 Def",
+            "evs": "252 HP / 4 Atk / 252 Def",
             "nature": "Impish",
             "moves": [
                 "Earthquake",
@@ -2098,7 +2098,7 @@
         "ogreCheck": 1,
         "donCheck": 0,
         "ygodCheck": 2,
-        "xernCheck": 7,
+        "xernCheck": 6,
         "rayCheck": 2,
         "zygCheck": 0,
         "zacCheck": 0,
