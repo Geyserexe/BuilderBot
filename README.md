@@ -16,9 +16,9 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 - "gen" controls which gen the builder builds for.  Current options are gen7 and natdex.
 - "mode" controls what type of teams the builder will create.  Current options are balance and offense.
 - "coreMode" controls whether or not the builder uses an experimental, currently natdex-only, building mode where the team starts with a pre-chosen set of 3 Pokémon.
-- "breakerWeight" controls the priority given to breakers on a team.  Lower levels result in stallier builds, while higher levels result in more offensive builds.  This feature is experimental and currently natdex-only.
-- "breakerOverride" allows the user to bypass breakerWeight's impact on teambuilding, and opens the full sets file, restricted only by "cutoff", to the builder.  This is on by default.  This feature is experimental and currently natdex-only.
-- "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.
+- "breakerWeight" controls the priority given to breakers on a team.  Lower levels result in stallier builds, while higher levels result in more offensive builds.  This feature is experimental and any feedback on it is welcome.
+- "breakerOverride" allows the user to bypass breakerWeight's impact on teambuilding, and opens the full sets file, restricted only by "cutoff", to the builder.  This is on by default to maximize building variety.
+- "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.  This field is not case-sensitive.
 - "startMon" allows the user to provide a set around which to build a team.  This setting is incompatible with coreMode.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
 
 
