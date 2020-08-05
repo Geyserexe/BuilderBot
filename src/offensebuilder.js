@@ -4,7 +4,16 @@ const sets = require(`./mon-sets/${config.gen}sets.json`);
 
 
 
-module.exports = buildTeam();
+module.exports = tryBuild();
+
+function tryBuild() {
+    try {
+        return buildTeam();
+    }
+    catch (err) {
+        return(`error: ${err}`);
+    }
+}
 
 function buildTeam() {
 
@@ -35,7 +44,7 @@ function buildTeam() {
                     }
                     reps++;
                     if (reps > 10) {
-                        break;
+                        throw("Error finding breakers.  Add more or try again.")
                     }
                 }
             }
@@ -69,7 +78,7 @@ function isValid(mon, team) {
         if ((mon.z && team[i].z) || (mon.mega && team[i].mega)) {
             return false;
         }
-        if((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")){
+        if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
             return false;
         }
     }
