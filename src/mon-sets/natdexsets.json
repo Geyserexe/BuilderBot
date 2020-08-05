@@ -1625,7 +1625,7 @@
             "name": "Arceus-Dark",
             "item": "Dread Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 156 Def / 100 Spe",
+            "evs": "252 HP / 156 SpD / 100 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
@@ -1733,7 +1733,7 @@
             "name": "Arceus-Fairy",
             "item": "Pixie Plate",
             "ability": "Multitype",
-            "evs": "252 HP / 156 Def / 100 Spe",
+            "evs": "252 HP / 156 SpD / 100 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
