@@ -47,20 +47,20 @@ function buildTeam() {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        if (config.startMon.set && config.coreMode) {
-            throw ("startMon and coreMode functionality are incompatible.")
+        if (config.startMon.set) {
+            team[0] = config.startMon;
         }
-
-        if (!config.startMon.set && !config.coreMode) {
-            team[0] = getRandomMon(team);
-        } else if (config.coreMode) {
+        if (config.coreMode) {
             let core = cores[getRandomInt(cores.length)];
             for (let i = 0; i < core.length; i++) {
                 team.push(core[i]);
             }
             config.teamLength -= core.length - 1;
-        } else {
-            team[0] = config.startMon;
+            if(config.startMon.set) {
+                config.teamLength --;
+            }
+        } else if (!config.startMon.set){
+            team[0] = sets[getRandomInt(sets.length)];
         }
 
 
