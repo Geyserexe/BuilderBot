@@ -3,45 +3,40 @@ const sets = require(`./mon-sets/${config.gen}sets.json`);
 
 class Util {
 
+    init(stats){
+        this.statsTemplate = stats;
+        this.stats = this.statsTemplate;
+    }
+
     getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    updateStats(team, stats) {
-        if (config.gen = "gen7") {
-            let stats = {
-                ints: { rayCheck: 0, zygCheck: 0, marshCheck: 0, donCheck: 0, breaker: 0, ultraCheck: 0, xernCheck: 0, ogreCheck: 0 },
-                mega: false,
-                z: false,
-                rocks: false,
-                defog: false,
-                cleric: false
-            };
-        } else {
-            stats = {
-                ints: { rayCheck: 0, zygCheck: 0, zacCheck: 0, donCheck: 0, ygodCheck: 0, xernCheck: 0, ogreCheck: 0, breaker: 0 },
-                mega: false,
-                z: false,
-                rocks: false,
-                defog: false
-            };
+    updateStats(team) {
+        this.stats = {};
+        for(let [key, value] of Object.entries(this.statsTemplate)){
+            this.stats[key] = false;
+        }
+            this.stats.ints = {};
+        for(let [key, value] of Object.entries(this.statsTemplate.ints)){
+            this.stats.ints[key] = 0;
         }
 
         for (let i = 0; i < team.length; i++) {
-            for (let [key, value] of Object.entries(stats.ints)) {
+            for (let [key, value] of Object.entries(this.statsTemplate.ints)) {
                 if (team[i][key]) {
-                    stats.ints[key] += team[i][key];
+                    this.stats.ints[key] += team[i][key];
                 }
             }
 
-            for (let [key, value] of Object.entries(stats)) {
+            for (let [key, value] of Object.entries(this.statsTemplate)) {
                 if (key != "ints" && team[i][key]) {
-                    stats[key] = true;
+                    this.stats[key] = true;
                 }
             }
         }
 
-        return stats;
+        return this.stats;
     }
 
     isValid(mon, team) {
@@ -73,20 +68,20 @@ class Util {
         return true;
     }
 
-    getRandomMon(team, stats) {
+    getRandomMon(team) {
         let a = 0;
         let completed = false;
         while (!completed) {
             let rand = sets[this.getRandomInt(sets.length)];
             if (config.breakerOverride) {
-                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand, stats) && this.clericTest(rand, stats)) {
-                    if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand) && this.clericTest(rand)) {
+                    if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
                 }
             } else {
-                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand, stats) && this.clericTest(rand, stats) && rand.breaker <= config.breakerWeight) {
-                    if ((!stats.rocks) || (stats.rocks && !rand.rocks)) {
+                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand) && this.clericTest(rand) && rand.breaker <= config.breakerWeight) {
+                    if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
                 }
@@ -98,20 +93,20 @@ class Util {
         }
     }
 
-    zMegaCheckPassed(mon, stats) {
-        if (!stats.mega && !stats.z) {
+    zMegaCheckPassed(mon) {
+        if (!this.stats.mega && !this.stats.z) {
             return true;
-        } else if (stats.mega && !mon.mega) {
+        } else if (this.stats.mega && !mon.mega) {
             return true;
-        } else if (stats.z && !mon.z) {
+        } else if (this.stats.z && !mon.z) {
             return true;
         }
 
         return false;
     }
 
-    clericTest(mon, stats) {
-        if (stats.cleric && mon.cleric) {
+    clericTest(mon) {
+        if (this.stats.cleric && mon.cleric) {
             return false;
         }
         return true;

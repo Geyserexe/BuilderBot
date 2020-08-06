@@ -27,6 +27,7 @@ module.exports = tryBuild();
 
 function tryBuild() {
     try {
+        util.init(stats);
         return (buildTeam());
     } catch (err) {
         return (`error: ${err}`);
@@ -39,6 +40,24 @@ function buildTeam() {
     let teamString = "";
 
     for (var b = 0; b < config.teamNumber; b++) {
+
+        stats = {
+            ints: {
+                rayCheck: 0,
+                zygCheck: 0,
+                zacCheck: 0,
+                donCheck: 0,
+                breaker: 0,
+                ygodCheck: 0,
+                xernCheck: 0,
+                ogreCheck: 0
+            },
+            mega: false,
+            z: false,
+            rocks: false,
+            defog: false,
+            cleric: false
+        };
 
         recursions = 0;
 
@@ -61,11 +80,11 @@ function buildTeam() {
                 config.teamLength --;
             }
         } else if (!config.startMon.set){
-            team[0] = util.getRandomMon([], stats);
+            team[0] = util.getRandomMon([]);
         }
 
 
-        stats = util.updateStats(team, stats);
+        stats = util.updateStats(team);
 
         for (let i = 1; i < config.teamLength; i++) {
 
@@ -111,7 +130,7 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a], team) && util.zMegaCheckPassed(pruneArray[a], stats) && util.clericTest(pruneArray[a], stats)) {
+                if (util.isValid(pruneArray[a], team) && util.zMegaCheckPassed(pruneArray[a]) && util.clericTest(pruneArray[a])) {
                     if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && pruneArray[a].rocks) {
                             prunedArray.push(pruneArray[a]);
@@ -130,10 +149,10 @@ function buildTeam() {
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
-                    let mon = getRandomMon(team, stats);
+                    let mon = getRandomMon(team);
                     let a = 0;
                     while (!mon.defog) {
-                        mon = getRandomMon(team, stats);
+                        mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
                             throw ("Not enough defoggers - try again or add more defoggers.");
@@ -142,27 +161,27 @@ function buildTeam() {
                     prunedArray.push(mon);
                 } else if (rejected) {
                     for (let i = 0; i < rejected.length; i++) {
-                        if (rejected[i] && util.isValid(rejected[i], team) && util.zMegaCheckPassed(rejected[i], stats) && util.clericTest(rejected[i], stats)) {
+                        if (rejected[i] && util.isValid(rejected[i], team) && util.zMegaCheckPassed(rejected[i]) && util.clericTest(rejected[i])) {
                             if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
                                 prunedArray.push(rejected[i]);
                             }
                         }
                     }
                     if (prunedArray.length === 0) {
-                        prunedArray.push(util.getRandomMon(team, stats));
+                        prunedArray.push(util.getRandomMon(team));
                     }
                 } else {
-                    prunedArray.push(util.getRandomMon(team, stats));
+                    prunedArray.push(util.getRandomMon(team));
                 }
             }
             while (true) {
                 let rand = prunedArray[util.getRandomInt(prunedArray.length)];
-                if (util.isValid(rand, team) && util.zMegaCheckPassed(rand, stats) && util.clericTest(rand, stats)) {
+                if (util.isValid(rand, team) && util.zMegaCheckPassed(rand) && util.clericTest(rand)) {
                     team.push(rand);
                     break;
                 }
             }
-            stats = util.updateStats(team, stats);
+            stats = util.updateStats(team);
 
         }
 
