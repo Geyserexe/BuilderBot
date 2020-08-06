@@ -173,7 +173,6 @@ function buildTeam() {
                     throw ("recurseThreshold too high")
                 }
                 recursions++;
-                //console.log(`recursion #${recursions}`);
                 teamString = buildTeam();
                 break;
             }
@@ -245,12 +244,23 @@ function isValid(mon, team) {
         if ((mon.set.name.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))) {
             return false;
         }
+        
+        for(let a = 0; a < team[i].set.moves.length; a++){
+            if(team[i].set.moves[a].toLowerCase().includes("whirlpool")){
+                for(let b = 0; b < mon.set.moves.length; b++){
+                    if(mon.set.moves[b].toLowerCase().includes("whirlpool")){
+                        return false;
+                    }
+                }
+            }
+        }
     }
     for (let i = 0; i < config.monsToAvoid.length; i++) {
         if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
             return false;
         }
     }
+
     return true;
 }
 
