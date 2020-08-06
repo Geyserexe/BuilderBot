@@ -490,33 +490,6 @@
             "name": "Groudon-Primal",
             "item": "Red Orb",
             "ability": "Desolate Land",
-            "evs": "252 HP / 56 Def / 200 SpD",
-            "nature": "Careful",
-            "moves": [
-                "Precipice Blades",
-                "Rest",
-                "Stone Edge",
-                "Sleep Talk"
-            ]
-        },
-        "breaker": 1,
-        "ogreCheck": 8,
-        "donCheck": 0,
-        "ygodCheck": 1,
-        "xernCheck": 4,
-        "rayCheck": 2,
-        "zygCheck": 0,
-        "zacCheck": 5,
-        "mega": false,
-        "z": false,
-        "rocks": true,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Groudon-Primal",
-            "item": "Red Orb",
-            "ability": "Desolate Land",
             "evs": "252 HP / 252 Def / 4 SpD",
             "nature": "Impish",
             "moves": [
@@ -1114,7 +1087,7 @@
             "evs": "252 HP / 4 SpA / 252 Spe",
             "nature": "Timid",
             "moves": [
-                "Judgmemt",
+                "Judgment",
                 "Recover",
                 "Calm Mind",
                 "Refresh"

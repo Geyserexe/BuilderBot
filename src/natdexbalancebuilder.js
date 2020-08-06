@@ -60,7 +60,7 @@ function buildTeam() {
                 config.teamLength --;
             }
         } else if (!config.startMon.set){
-            team[0] = sets[getRandomInt(sets.length)];
+            team[0] = getRandomMon([]);
         }
 
 
