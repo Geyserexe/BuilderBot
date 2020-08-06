@@ -1,7 +1,7 @@
 const config = require("../config.json");
 const leads = require(`./mon-sets/${config.gen}leads.json`);
 const sets = require(`./mon-sets/${config.gen}sets.json`);
-
+const util = require("./util.js");
 
 
 module.exports = tryBuild();
@@ -28,18 +28,18 @@ function buildTeam() {
         if (config.startMon.set) {
             team[0] = config.startMon;
         } else {
-            team[0] = leads[getRandomInt(leads.length)]
+            team[0] = leads[util.getRandomInt(leads.length)]
         }
         for (let i = 1; i < config.teamLength; i++) {
             let prunedArray = getMons(0, team);
             if (prunedArray.length > 0) {
-                team.push(prunedArray[getRandomInt(prunedArray.length)]);
+                team.push(prunedArray[util.getRandomInt(prunedArray.length)]);
             } else {
                 let reps = 1;
                 while (true) {
                     let newList = getMons(reps, team);
                     if (newList.length > 1) {
-                        team.push(newList[getRandomInt(length)]);
+                        team.push(newList[util.getRandomInt(length)]);
                         break;
                     }
                     reps++;
@@ -56,10 +56,6 @@ function buildTeam() {
         }
     }
     return (teamString);
-}
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
 }
 
 function isValid(mon, team) {

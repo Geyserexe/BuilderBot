@@ -516,7 +516,7 @@
         "set": {
             "name": "Sableye-Mega",
             "item": "Sablenite",
-            "ability": "Prankster",
+            "ability": "Magic Bounce",
             "evs": "248 HP / 252 Def / 8 SpD",
             "nature": "Impish",
             "moves": [
@@ -1733,7 +1733,7 @@
         "set": {
             "name": "Diancie-Mega",
             "item": "Diancite",
-            "ability": "Clear Body",
+            "ability": "Magic Bounce",
             "evs": "248 HP / 8 Def / 252 Spd",
             "nature": "Calm",
             "moves": [
