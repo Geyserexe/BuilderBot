@@ -36,6 +36,9 @@ function buildTeam() {
     let teamString = "";
 
     for (var b = 0; b < config.teamNumber; b++) {
+
+        recursions = 0;
+
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
@@ -154,8 +157,8 @@ function buildTeam() {
         }
 
         for(let [key, value] of Object.entries(stats.ints)){
-            if (value < config.recurseThreshold){
-                if(recursions > 1000){
+            if (value < config.recurseThreshold && config.teamNumber === 1){
+                if(recursions > 1500){
                     throw("recurseThreshold too high")
                 }
                 recursions++;
