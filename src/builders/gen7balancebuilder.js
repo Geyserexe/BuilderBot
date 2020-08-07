@@ -1,7 +1,6 @@
-const sets = require("./mon-sets/natdexsets.json");
-const config = require("../config.json");
-const cores = require("./mon-sets/natdexcores.json")
-const util = require("./util.js");
+const sets = require("../mon-sets/gen7sets.json");
+const config = require("../../config.json");
+const util = require("../util.js");
 
 let recursions = 0;
 
@@ -9,10 +8,10 @@ let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        zacCheck: 0,
+        marshCheck: 0,
         donCheck: 0,
         breaker: 0,
-        ygodCheck: 0,
+        ultraCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -36,53 +35,22 @@ function tryBuild() {
 
 function buildTeam() {
 
-    let length = config.teamLength;
     let teamString = "";
 
     for (var b = 0; b < config.teamNumber; b++) {
 
-        stats = {
-            ints: {
-                rayCheck: 0,
-                zygCheck: 0,
-                zacCheck: 0,
-                donCheck: 0,
-                breaker: 0,
-                ygodCheck: 0,
-                xernCheck: 0,
-                ogreCheck: 0
-            },
-            mega: false,
-            z: false,
-            rocks: false,
-            defog: false,
-            cleric: false
-        };
-
         recursions = 0;
 
-        config.teamLength = length;
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        if (config.startMon.set) {
+        if (!config.startMon.set) {
+            team[0] = util.getRandomMon(team);
+        } else {
             team[0] = config.startMon;
         }
-        if (config.coreMode) {
-            let core = cores[util.getRandomInt(cores.length)];
-            for (let i = 0; i < core.length; i++) {
-                team.push(core[i]);
-            }
-            config.teamLength -= core.length - 1;
-            if (config.startMon.set) {
-                config.teamLength--;
-            }
-        } else if (!config.startMon.set) {
-            team[0] = util.getRandomMon([]);
-        }
-
 
         stats = util.updateStats(team);
 
@@ -149,10 +117,10 @@ function buildTeam() {
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
-                    let mon = getRandomMon(team);
+                    let mon = util.getRandomMon(team);
                     let a = 0;
                     while (!mon.defog) {
-                        mon = getRandomMon(team);
+                        mon = util.getRandomMon(team);
                         a++;
                         if (a > 1000) {
                             throw ("Not enough defoggers - try again or add more defoggers.");
@@ -186,13 +154,13 @@ function buildTeam() {
         }
 
         for (let i = 0; i < team.length; i++) {
-            let set = team[i].set;
+            set = team[i].set;
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
 
         for (let [key, value] of Object.entries(stats.ints)) {
             if (value < config.recurseThreshold && config.teamNumber === 1) {
-                if (recursions > 1500 || ((config.coreMode && config.startMon) && recursions > 500)) {
+                if (recursions > 1250 || (config.startMon.set && recursions > 1000)) {
                     throw ("recurseThreshold too high")
                 }
                 recursions++;
