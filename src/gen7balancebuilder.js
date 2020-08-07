@@ -98,7 +98,7 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a]) && util.zMegaCheckPassed(pruneArray[a]) && util.clericTest(pruneArray[a])) {
+                if (util.isValid(pruneArray[a], team) && util.zMegaCheckPassed(pruneArray[a]) && util.clericTest(pruneArray[a])) {
                     if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && pruneArray[a].rocks) {
                             prunedArray.push(pruneArray[a]);

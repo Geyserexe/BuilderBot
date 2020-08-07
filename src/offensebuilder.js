@@ -62,7 +62,7 @@ function isValid(mon, team) {
     if (mon.set.item.toLowerCase().includes("choice")) {
         return false;
     }
-    if (!util.isValid()) {
+    if (!util.isValid(mon, team)) {
         return false;
     }
     for (let i = 0; i < team.length; i++) {
