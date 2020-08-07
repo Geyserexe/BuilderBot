@@ -9,18 +9,18 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 
 #### Config Info ####
 
-- "teamNumber" controls the number of teams built.  Whenevever more than one team is built, they'll be exported in a bulk format, but without individual team data. Conversely, when building only one team, information will be included about how well the team fulfills individual roles.
+- "teamNumber" controls the number of teams built.  Whenever multiple teams are built, they'll be exported in a bulk format.
 - "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels
 - "teamLength" controls the number of Pokémon in a team, on the off chance that you want more / fewer than 6
 - "tier" controls the team tiers when building in bulk.  While it doesn't actually impact the building process, it's good practice to make sure it lines up with the gen setting below.
 - "gen" controls which gen the builder builds for.  Current options are gen7 and natdex.
-- "mode" controls what type of teams the builder will create.  Current options are balance and offense.
+- "mode" controls what type of teams the builder will create.  Current options are balance, offense, and stall for natdex only.
 - "coreMode" controls whether or not the builder uses an experimental, currently natdex-only, building mode where the team starts with a pre-chosen set of 3 Pokémon.
 - "breakerWeight" controls the priority given to breakers on a team.  Lower levels result in stallier builds, while higher levels result in more offensive builds.  This feature is experimental and any feedback on it is welcome.  This feature has no effect on building offense.
 - "breakerOverride" allows the user to bypass breakerWeight's impact on teambuilding, and opens the full sets file, restricted only by "cutoff", to the builder.  This is on by default to maximize building variety.  This feature has no effect on building offense.
-- "recurseThreshold" is the minimum value for a given stat below which the builder will rebuild a team.  If this value is set too high, an error will likely appear.  Higher values will lead to better teams, but only up to a point.  Optimal values for this field are integers between 10 and 20.
+- "recurseThreshold" is the minimum value for a given stat below which the builder will rebuild a team.  If this value is set too high, an error will likely appear.  Higher values will lead to better teams, but only up to a point.  Optimal values for this field are integers between 10 and 20.  This feature does nothing if teamNumber is greater than 1, owing to stack size limitations.
 - "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.  This field is not case-sensitive.
-- "startMon" allows the user to provide a set around which to build a team.  This setting is incompatible with coreMode.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
+- "startMon" allows the user to provide a set around which to build a team.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
 
 
 #### Set Formatting ####
