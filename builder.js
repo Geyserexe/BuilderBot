@@ -5,7 +5,7 @@ const upload = require('./uploadtopokepaste.js');
 
 let team = "";
 
-
+console.log("building...");
 if (config.mode.toLowerCase() != "offense") {
     team = require(`./src/builders/${config.gen}${config.mode.toLowerCase()}builder.js`);
 } else {

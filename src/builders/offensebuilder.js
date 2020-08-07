@@ -18,7 +18,7 @@ function tryBuild() {
 function buildTeam() {
 
     let teamString = "";
-    for (var b = 0; b < config.teamNumber; b++) {
+    for (var b = 1; b < config.teamNumber+1; b++) {
         let team = [];
 
         if (config.teamNumber > 1) {

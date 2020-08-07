@@ -7,7 +7,7 @@ exports.uploadToPokepaste = function (text, output) {
 		switch (typeof text) {
 			case 'string': {
 				text = {
-                    title: config.mode,
+                    title: `${config.teamNumber} ${config.mode} team(s)`,
 					author: 'Geysers\' BuilderBot',
 					notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}`,
 					paste: text.replace(/\n(?:[^\r]|$)/g, match => match.replace(/\n/g, '\r\n'))

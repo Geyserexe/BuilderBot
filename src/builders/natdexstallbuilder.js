@@ -37,7 +37,7 @@ function buildTeam() {
 
     let teamString = "";
 
-    for (let i = 0; i < config.teamNumber; i++) {
+    for (let i = 1; i < config.teamNumber+1; i++) {
 
         team = [];
 

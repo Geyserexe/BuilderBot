@@ -703,7 +703,7 @@
     },
     {
         "set": {
-            "name": "Arceus Ground",
+            "name": "Arceus-Ground",
             "item": "Groundium Z",
             "ability": "Multitype",
             "evs": "252 Atk / 4 Def / 252 Spe",
@@ -1390,7 +1390,7 @@
                 "Substitute"
             ]
         },
-        "breaker": 6,
+        "breaker": 4,
         "ogreCheck": 0,
         "donCheck": 0,
         "ygodCheck": 0,
