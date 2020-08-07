@@ -1709,7 +1709,7 @@
             "evs": "248 HP / 8 Def / 252 Spd",
             "nature": "Calm",
             "moves": [
-                "Heal Bell",
+                "Stealth Rock",
                 "Moonblast",
                 "Power Gem",
                 "Rest"
@@ -1726,8 +1726,7 @@
         "mega": false,
         "z": false,
         "rocks": false,
-        "defog": false,
-        "cleric": true
+        "defog": false
     },
     {
         "set": {

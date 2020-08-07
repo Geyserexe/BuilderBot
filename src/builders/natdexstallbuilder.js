@@ -47,14 +47,22 @@ function buildTeam() {
 
         prepTeam();
 
-        util.updateStats(team, stats);
-
         for (let a = 0; a < config.teamLength; a++) {
-
+            stats = util.updateStats(team, stats);
+            let priority = getPriority(team);
+            let options = [];
+            for (let b = 0; b < sets.length; b++) {
+                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b])) {
+                    if ((!stats.defog && !stats.rocks) || (stats.rocks && !sets[b].rocks)) {
+                        options.push(sets[b]);
+                    }
+                }
+            }
+            team.push(options[util.getRandomInt(options.length)]);
         }
 
-        for (let i = 0; i < team.length; i++) {
-            let set = team[i].set;
+        for (let a = 0; a < team.length; a++) {
+            let set = team[a].set;
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
         }
     }
@@ -68,25 +76,33 @@ function prepTeam() {
     } else {
         let bouncers = [];
         for (let a = 0; a < sets.length; a++) {
-            if (sets[a].set.ability.toLowerCase() === "magic bounce" && util.isValid(sets[a], team)) {
+            if (sets[a].set.ability.toLowerCase() === "magic bounce" && util.isValid(sets[a], [])) {
                 bouncers.push(sets[a]);
             }
         }
-        if(bouncers){
+        if (bouncers) {
             team.push(bouncers[util.getRandomInt(bouncers.length)]);
-        } else {
-            config.teamLength++;
+            config.teamLength--;
         }
     }
 
-    let clerics = [];
-    for (let b = 0; b < sets.length; b++){
-        if(sets[b].cleric && util.isValid(sets[b], team)){
-            clerics.push(sets[b]);
+    stats = util.updateStats(team, stats);
+
+    for (let i = 0; i < sets.length; i++) {
+        if (sets[i].set.name.toLowerCase().includes("chansey")) {
+            team.push(sets[i]);
+            config.teamLength--;
         }
     }
-    if(clerics){
-        team.push(clerics[util.getRandomInt(clerics.length)]);
-        config.teamLength--;
+}
+
+function getPriority() {
+    let currentValue = 100;
+    for (let [key, value] of Object.entries(stats.ints)) {
+        if (value < currentValue) {
+            currentValue = value;
+            priority = key;
+        }
     }
+    return (priority);
 }
