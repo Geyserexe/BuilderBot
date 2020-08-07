@@ -30,6 +30,7 @@ function buildTeam() {
         } else {
             team[0] = leads[util.getRandomInt(leads.length)]
         }
+        
         for (let i = 1; i < config.teamLength; i++) {
             let prunedArray = getMons(0, team);
             if (prunedArray.length > 0) {
