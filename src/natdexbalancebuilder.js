@@ -76,10 +76,10 @@ function buildTeam() {
                 team.push(core[i]);
             }
             config.teamLength -= core.length - 1;
-            if(config.startMon.set) {
-                config.teamLength --;
+            if (config.startMon.set) {
+                config.teamLength--;
             }
-        } else if (!config.startMon.set){
+        } else if (!config.startMon.set) {
             team[0] = util.getRandomMon([]);
         }
 

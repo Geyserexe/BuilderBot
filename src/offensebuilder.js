@@ -11,7 +11,7 @@ function tryBuild() {
         return buildTeam();
     }
     catch (err) {
-        return(`error: ${err}`);
+        return (`error: ${err}`);
     }
 }
 
@@ -44,7 +44,7 @@ function buildTeam() {
                     }
                     reps++;
                     if (reps > 10) {
-                        throw("Error finding breakers.  Add more or try again.")
+                        throw ("Error finding breakers.  Add more or try again.")
                     }
                 }
             }
@@ -62,18 +62,10 @@ function isValid(mon, team) {
     if (mon.set.item.toLowerCase().includes("choice")) {
         return false;
     }
-    for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
-            return false;
-        }
+    if (!util.isValid()) {
+        return false;
     }
     for (let i = 0; i < team.length; i++) {
-        if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {
-            return false;
-        }
-        if ((mon.z && team[i].z) || (mon.mega && team[i].mega)) {
-            return false;
-        }
         if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
             return false;
         }

@@ -3,7 +3,7 @@ const sets = require(`./mon-sets/${config.gen}sets.json`);
 
 class Util {
 
-    init(stats){
+    init(stats) {
         this.statsTemplate = stats;
         this.stats = this.statsTemplate;
     }
@@ -14,11 +14,11 @@ class Util {
 
     updateStats(team) {
         this.stats = {};
-        for(let [key, value] of Object.entries(this.statsTemplate)){
+        for (let [key, value] of Object.entries(this.statsTemplate)) {
             this.stats[key] = false;
         }
-            this.stats.ints = {};
-        for(let [key, value] of Object.entries(this.statsTemplate.ints)){
+        this.stats.ints = {};
+        for (let [key, value] of Object.entries(this.statsTemplate.ints)) {
             this.stats.ints[key] = 0;
         }
 

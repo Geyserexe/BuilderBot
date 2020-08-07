@@ -25,6 +25,7 @@ module.exports = tryBuild();
 
 function tryBuild() {
     try {
+        util.init(stats);
         return buildTeam();
     }
     catch (e) {
