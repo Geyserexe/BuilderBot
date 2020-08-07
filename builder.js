@@ -14,8 +14,12 @@ if (config.mode.toLowerCase() != "offense") {
 
 async function exportTeam() {
     console.log("exporting");
-    const result = await upload.uploadToPokepaste(team);
-    console.log(result);
+    if(team.includes("error")){
+        console.log(team);
+    } else {
+        const result = await upload.uploadToPokepaste(team);
+        console.log(result);
+    }
 }
 
 exportTeam();
