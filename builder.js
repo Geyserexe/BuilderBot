@@ -7,9 +7,9 @@ let team = "";
 
 
 if (config.mode.toLowerCase() != "offense") {
-    team = require(`./src/${config.gen}${config.mode.toLowerCase()}builder.js`);
+    team = require(`./src/builders/${config.gen}${config.mode.toLowerCase()}builder.js`);
 } else {
-    team = require(`./src/offensebuilder.js`);
+    team = require(`./src/builders/offensebuilder.js`);
 }
 
 console.log(team);

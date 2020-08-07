@@ -1,7 +1,7 @@
-const config = require("../config.json");
+const config = require("../../config.json");
 const leads = require(`./mon-sets/${config.gen}leads.json`);
 const sets = require(`./mon-sets/${config.gen}sets.json`);
-const util = require("./util.js");
+const util = require("../util.js");
 
 
 module.exports = tryBuild();
