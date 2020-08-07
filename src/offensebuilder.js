@@ -1,7 +1,7 @@
 const config = require("../config.json");
 const leads = require(`./mon-sets/${config.gen}leads.json`);
 const sets = require(`./mon-sets/${config.gen}sets.json`);
-
+const util = require("./util.js");
 
 
 module.exports = tryBuild();
@@ -11,7 +11,7 @@ function tryBuild() {
         return buildTeam();
     }
     catch (err) {
-        return(`error: ${err}`);
+        return (`error: ${err}`);
     }
 }
 
@@ -28,23 +28,23 @@ function buildTeam() {
         if (config.startMon.set) {
             team[0] = config.startMon;
         } else {
-            team[0] = leads[getRandomInt(leads.length)]
+            team[0] = leads[util.getRandomInt(leads.length)]
         }
         for (let i = 1; i < config.teamLength; i++) {
             let prunedArray = getMons(0, team);
             if (prunedArray.length > 0) {
-                team.push(prunedArray[getRandomInt(prunedArray.length)]);
+                team.push(prunedArray[util.getRandomInt(prunedArray.length)]);
             } else {
                 let reps = 1;
                 while (true) {
                     let newList = getMons(reps, team);
                     if (newList.length > 1) {
-                        team.push(newList[getRandomInt(length)]);
+                        team.push(newList[util.getRandomInt(length)]);
                         break;
                     }
                     reps++;
                     if (reps > 10) {
-                        throw("Error finding breakers.  Add more or try again.")
+                        throw ("Error finding breakers.  Add more or try again.")
                     }
                 }
             }
@@ -58,26 +58,14 @@ function buildTeam() {
     return (teamString);
 }
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-}
-
 function isValid(mon, team) {
     if (mon.set.item.toLowerCase().includes("choice")) {
         return false;
     }
-    for (let i = 0; i < config.monsToAvoid.length; i++) {
-        if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
-            return false;
-        }
+    if (!util.isValid(mon, team)) {
+        return false;
     }
     for (let i = 0; i < team.length; i++) {
-        if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {
-            return false;
-        }
-        if ((mon.z && team[i].z) || (mon.mega && team[i].mega)) {
-            return false;
-        }
         if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
             return false;
         }

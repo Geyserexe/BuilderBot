@@ -490,33 +490,6 @@
             "name": "Groudon-Primal",
             "item": "Red Orb",
             "ability": "Desolate Land",
-            "evs": "252 HP / 56 Def / 200 SpD",
-            "nature": "Careful",
-            "moves": [
-                "Precipice Blades",
-                "Rest",
-                "Stone Edge",
-                "Sleep Talk"
-            ]
-        },
-        "breaker": 1,
-        "ogreCheck": 8,
-        "donCheck": 0,
-        "ygodCheck": 1,
-        "xernCheck": 4,
-        "rayCheck": 2,
-        "zygCheck": 0,
-        "zacCheck": 5,
-        "mega": false,
-        "z": false,
-        "rocks": true,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Groudon-Primal",
-            "item": "Red Orb",
-            "ability": "Desolate Land",
             "evs": "252 HP / 252 Def / 4 SpD",
             "nature": "Impish",
             "moves": [
@@ -543,7 +516,7 @@
         "set": {
             "name": "Sableye-Mega",
             "item": "Sablenite",
-            "ability": "Prankster",
+            "ability": "Magic Bounce",
             "evs": "248 HP / 252 Def / 8 SpD",
             "nature": "Impish",
             "moves": [
@@ -926,33 +899,6 @@
             "nature": "Bold",
             "moves": [
                 "Ice Beam",
-                "Recover",
-                "Defog",
-                "Refresh"
-            ]
-        },
-        "breaker": 0,
-        "ogreCheck": 5,
-        "donCheck": 8,
-        "ygodCheck": 5,
-        "xernCheck": 0,
-        "rayCheck": 7,
-        "zygCheck": 7,
-        "zacCheck": 3,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": true
-    },
-    {
-        "set": {
-            "name": "Arceus-Water",
-            "item": "Splash Plate",
-            "ability": "Multitype",
-            "evs": "248 HP / 240 Def / 20 Spe",
-            "nature": "Bold",
-            "moves": [
-                "Ice Beam",
                 "Whirlpool",
                 "Recover",
                 "Perish Song"
@@ -1141,7 +1087,7 @@
             "evs": "252 HP / 4 SpA / 252 Spe",
             "nature": "Timid",
             "moves": [
-                "Judgmemt",
+                "Judgment",
                 "Recover",
                 "Calm Mind",
                 "Refresh"
@@ -1787,7 +1733,7 @@
         "set": {
             "name": "Diancie-Mega",
             "item": "Diancite",
-            "ability": "Clear Body",
+            "ability": "Magic Bounce",
             "evs": "248 HP / 8 Def / 252 Spd",
             "nature": "Calm",
             "moves": [
