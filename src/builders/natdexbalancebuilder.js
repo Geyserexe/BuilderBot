@@ -192,7 +192,7 @@ function buildTeam() {
 
         for (let [key, value] of Object.entries(stats.ints)) {
             if (value < config.recurseThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon) && recursions > 500)) {
+                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold too high")
                 }
                 recursions++;

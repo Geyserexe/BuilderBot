@@ -1,6 +1,6 @@
 const axios = require('axios');
 const querystring = require('querystring');
-const config = require('./config.json');
+const config = require('../config.json');
 
 exports.uploadToPokepaste = function (text, output) {
 	return new Promise((resolve, reject) => {
@@ -9,7 +9,7 @@ exports.uploadToPokepaste = function (text, output) {
 				text = {
                     title: `${config.teamNumber} ${config.mode} team(s)`,
 					author: 'Geysers\' BuilderBot',
-					notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}`,
+					notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}\nhttps://github.com/Geyserexe/BuilderBot`,
 					paste: text.replace(/\n(?:[^\r]|$)/g, match => match.replace(/\n/g, '\r\n'))
 				}
 				break;

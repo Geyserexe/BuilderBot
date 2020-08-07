@@ -4,6 +4,8 @@ const util = require("../util.js");
 
 let team = [];
 
+let recursions = 0;
+
 let stats = {
     ints: {
         rayCheck: 0,
@@ -37,7 +39,7 @@ function buildTeam() {
 
     let teamString = "";
 
-    for (let i = 1; i < config.teamNumber+1; i++) {
+    for (let i = 1; i < config.teamNumber + 1; i++) {
 
         team = [];
 
@@ -52,13 +54,27 @@ function buildTeam() {
             let priority = getPriority(team);
             let options = [];
             for (let b = 0; b < sets.length; b++) {
+                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) { 
+                    options.push(sets[b])
+                }
                 if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b])) {
-                    if ((!stats.defog && !stats.rocks) || (stats.rocks && !sets[b].rocks)) {
+                    if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
                         options.push(sets[b]);
                     }
                 }
             }
             team.push(options[util.getRandomInt(options.length)]);
+        }
+
+        for (let [key, value] of Object.entries(stats.ints)) {
+            if (value < config.recurseThreshold && config.teamNumber === 1) {
+                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("recurseThreshold too high - lower it or try again")
+                }
+                recursions++;
+                teamString = buildTeam();
+                break;
+            }
         }
 
         for (let a = 0; a < team.length; a++) {
