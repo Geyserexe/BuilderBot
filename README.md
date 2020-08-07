@@ -57,5 +57,4 @@ All builder and set files are located within "src".  You shouldn't touch the .vs
 #### TODO ####
 
 - Add more sets
-- Automatically upload teams to Pokepaste
 - Add gen6 support
