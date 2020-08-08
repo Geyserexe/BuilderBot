@@ -57,7 +57,7 @@ function buildTeam() {
                 if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) {
                     options.push(sets[b])
                 }
-                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.clericTest(sets[b])) {
+                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team)) {
                     if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
                         options.push(sets[b]);
                     }

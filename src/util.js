@@ -66,6 +66,10 @@ class Util {
             if (team[i].z && mon.z) {
                 return false;
             }
+
+            if (team[i].cleric && mon.cleric) {
+                return false;
+            }
         }
         for (let i = 0; i < config.monsToAvoid.length; i++) {
             if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
@@ -82,13 +86,13 @@ class Util {
         while (!completed) {
             let rand = sets[this.getRandomInt(sets.length)];
             if (config.breakerOverride) {
-                if (this.isValid(rand, team) && this.clericTest(rand)) {
+                if (this.isValid(rand, team)) {
                     if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
                 }
             } else {
-                if (this.isValid(rand, team) && this.clericTest(rand) && rand.breaker <= config.breakerWeight) {
+                if (this.isValid(rand, team) && rand.breaker <= config.breakerWeight) {
                     if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
@@ -99,14 +103,6 @@ class Util {
                 return (sets[this.getRandomInt(sets.length)])
             }
         }
-    }
-
-
-    clericTest(mon) {
-        if (this.stats.cleric && mon.cleric) {
-            return false;
-        }
-        return true;
     }
 }
 
