@@ -3,7 +3,6 @@ const leads = require(`../mon-sets/${config.gen}leads.json`);
 const sets = require(`../mon-sets/${config.gen}sets.json`);
 const util = require("../util.js");
 
-
 module.exports = tryBuild();
 
 function tryBuild() {
@@ -18,7 +17,7 @@ function tryBuild() {
 function buildTeam() {
 
     let teamString = "";
-    for (var b = 1; b < config.teamNumber+1; b++) {
+    for (var b = 1; b < config.teamNumber + 1; b++) {
         let team = [];
 
         if (config.teamNumber > 1) {
@@ -28,9 +27,9 @@ function buildTeam() {
         if (config.startMon.set) {
             team[0] = config.startMon;
         } else {
-            team[0] = leads[util.getRandomInt(leads.length)]
+            team[0] = leads[util.getRandomInt(leads.length)];
         }
-        
+
         for (let i = 1; i < config.teamLength; i++) {
             let prunedArray = getMons(0, team);
             if (prunedArray.length > 0) {
@@ -54,7 +53,7 @@ function buildTeam() {
         for (let i = 0; i < team.length; i++) {
             let set = team[i].set;
             let moves = "";
-            for(let a = 0; a < set.moves.length; a++){
+            for (let a = 0; a < set.moves.length; a++) {
                 moves += `\n- ${set.moves[a]}`
             }
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
@@ -72,6 +71,12 @@ function isValid(mon, team) {
     }
     for (let i = 0; i < team.length; i++) {
         if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
+            return false;
+        }
+        if (mon.mega && team[i].mega) {
+            return false;
+        }
+        if (mon.z && team[i].z) {
             return false;
         }
     }

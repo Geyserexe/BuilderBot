@@ -41,7 +41,7 @@ class Util {
 
     isValid(mon, team) {
         for (let i = 0; i < team.length; i++) {
-            if (mon.set.name.includes(team[i].set.name) || team[i].set.name.includes(mon.set.name)) {
+            if (mon.set.name.toLowerCase().includes(team[i].set.name.toLowerCase()) || team[i].set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
                 return false;
             }
 
