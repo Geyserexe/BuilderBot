@@ -78,7 +78,7 @@ function buildTeam() {
         }
 
         for (let a = 0; a < team.length; a++) {
-            let set = team[i].set;
+            let set = team[a].set;
             let moves = "";
             for (let a = 0; a < set.moves.length; a++) {
                 moves += `\n- ${set.moves[a]}`
