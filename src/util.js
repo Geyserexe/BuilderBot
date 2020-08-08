@@ -58,6 +58,14 @@ class Util {
                     }
                 }
             }
+
+            if (team[i].mega && mon.mega) {
+                return false;
+            }
+
+            if (team[i].z && mon.z) {
+                return false;
+            }
         }
         for (let i = 0; i < config.monsToAvoid.length; i++) {
             if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
@@ -74,13 +82,13 @@ class Util {
         while (!completed) {
             let rand = sets[this.getRandomInt(sets.length)];
             if (config.breakerOverride) {
-                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand) && this.clericTest(rand)) {
+                if (this.isValid(rand, team) && this.clericTest(rand)) {
                     if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
                 }
             } else {
-                if (this.isValid(rand, team) && this.zMegaCheckPassed(rand) && this.clericTest(rand) && rand.breaker <= config.breakerWeight) {
+                if (this.isValid(rand, team) && this.clericTest(rand) && rand.breaker <= config.breakerWeight) {
                     if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
                         return (rand);
                     }
@@ -93,17 +101,6 @@ class Util {
         }
     }
 
-    zMegaCheckPassed(mon) {
-        if (!this.stats.mega && !this.stats.z) {
-            return true;
-        } else if (this.stats.mega && !mon.mega) {
-            return true;
-        } else if (this.stats.z && !mon.z) {
-            return true;
-        }
-
-        return false;
-    }
 
     clericTest(mon) {
         if (this.stats.cleric && mon.cleric) {

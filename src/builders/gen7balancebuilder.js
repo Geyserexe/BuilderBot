@@ -98,7 +98,7 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a], team) && util.zMegaCheckPassed(pruneArray[a]) && util.clericTest(pruneArray[a])) {
+                if (util.isValid(pruneArray[a], team) && util.clericTest(pruneArray[a])) {
                     if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && pruneArray[a].rocks) {
                             prunedArray.push(pruneArray[a]);
@@ -129,7 +129,7 @@ function buildTeam() {
                     prunedArray.push(mon);
                 } else if (rejected) {
                     for (let i = 0; i < rejected.length; i++) {
-                        if (rejected[i] && util.isValid(rejected[i], team) && util.zMegaCheckPassed(rejected[i]) && util.clericTest(rejected[i])) {
+                        if (rejected[i] && util.isValid(rejected[i], team) && util.clericTest(rejected[i])) {
                             if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
                                 prunedArray.push(rejected[i]);
                             }
@@ -144,7 +144,7 @@ function buildTeam() {
             }
             while (true) {
                 let rand = prunedArray[util.getRandomInt(prunedArray.length)];
-                if (util.isValid(rand, team) && util.zMegaCheckPassed(rand) && util.clericTest(rand)) {
+                if (util.isValid(rand, team) && util.clericTest(rand)) {
                     team.push(rand);
                     break;
                 }
