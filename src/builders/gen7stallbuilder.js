@@ -1,5 +1,5 @@
 const config = require("../../config.json");
-const sets = require("../mon-sets/natdexsets.json");
+const sets = require("../mon-sets/gen7sets.json");
 const util = require("../util.js");
 
 let team = [];
@@ -10,9 +10,9 @@ let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        zacCheck: 0,
+        marshCheck: 0,
         donCheck: 0,
-        ygodCheck: 0,
+        ultraCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -54,10 +54,10 @@ function buildTeam() {
             let priority = getPriority(team);
             let options = [];
             for (let b = 0; b < sets.length; b++) {
-                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) {
+                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) { 
                     options.push(sets[b])
                 }
-                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b])) {
+                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b]) && sets[b].breaker < 5) {
                     if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
                         options.push(sets[b]);
                     }
@@ -78,10 +78,10 @@ function buildTeam() {
         }
 
         for (let a = 0; a < team.length; a++) {
-            let set = team[i].set;
+            let set = team[a].set;
             let moves = "";
-            for (let a = 0; a < set.moves.length; a++) {
-                moves += `\n- ${set.moves[a]}`
+            for(let b = 0; b < set.moves.length; b++){
+                moves += `\n- ${set.moves[b]}`
             }
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
         }

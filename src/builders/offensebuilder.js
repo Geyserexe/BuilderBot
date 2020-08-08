@@ -30,6 +30,7 @@ function buildTeam() {
         } else {
             team[0] = leads[util.getRandomInt(leads.length)]
         }
+        
         for (let i = 1; i < config.teamLength; i++) {
             let prunedArray = getMons(0, team);
             if (prunedArray.length > 0) {
@@ -51,8 +52,12 @@ function buildTeam() {
         }
 
         for (let i = 0; i < team.length; i++) {
-            set = team[i].set;
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+            let set = team[i].set;
+            let moves = "";
+            for(let a = 0; a < set.moves.length; a++){
+                moves += `\n- ${set.moves[a]}`
+            }
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
         }
     }
     return (teamString);
