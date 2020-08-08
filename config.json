@@ -8,6 +8,7 @@
     "coreMode": false,
     "breakerWeight": 10,
     "breakerOverride": true,
+    "breakerThreshold": 35,
     "recurseThreshold": 10,
     "monsToAvoid": [
         ""
