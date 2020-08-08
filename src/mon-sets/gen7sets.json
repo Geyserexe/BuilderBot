@@ -1381,7 +1381,7 @@
         "set": {
             "name": "Sableye-Mega",
             "item": "Sablenite",
-            "ability": "Prankster",
+            "ability": "Magic Bounce",
             "evs": "248 HP / 252 Def / 8 SpD",
             "nature": "Impish",
             "moves": [
