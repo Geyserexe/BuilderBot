@@ -1602,9 +1602,6 @@
             "evs": "248 HP / 8 Atk / 252 Def",
             "nature": "Impish",
             "moves": [
-                "Transform",
-                "Transform",
-                "Transform",
                 "Transform"
             ]
         },

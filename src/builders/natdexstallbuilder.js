@@ -54,7 +54,7 @@ function buildTeam() {
             let priority = getPriority(team);
             let options = [];
             for (let b = 0; b < sets.length; b++) {
-                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) { 
+                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) {
                     options.push(sets[b])
                 }
                 if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b])) {
@@ -78,8 +78,12 @@ function buildTeam() {
         }
 
         for (let a = 0; a < team.length; a++) {
-            let set = team[a].set;
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+            let set = team[i].set;
+            let moves = "";
+            for (let a = 0; a < set.moves.length; a++) {
+                moves += `\n- ${set.moves[a]}`
+            }
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
         }
     }
 

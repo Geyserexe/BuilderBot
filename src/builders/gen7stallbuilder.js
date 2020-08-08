@@ -79,7 +79,11 @@ function buildTeam() {
 
         for (let a = 0; a < team.length; a++) {
             let set = team[a].set;
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature\n- ${set.moves[0]}\n- ${set.moves[1]}\n- ${set.moves[2]}\n- ${set.moves[3]}\n\n`
+            let moves = "";
+            for(let b = 0; b < set.moves.length; b++){
+                moves += `\n- ${set.moves[b]}`
+            }
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
         }
     }
 
