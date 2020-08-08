@@ -616,7 +616,7 @@
         "marshCheck": 0,
         "ultraCheck": 3,
         "mega": false,
-        "z": false,
+        "z": true,
         "rocks": false,
         "defog": false
     },
