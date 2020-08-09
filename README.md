@@ -10,7 +10,7 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 #### Config Info ####
 
 - "teamNumber" controls the number of teams built.  Whenever multiple teams are built, they'll be exported in a bulk format.
-- "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels
+- "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels.  Cutoff 10 is likely to results in glitchy or inconsistent building.
 - "teamLength" controls the number of Pokémon in a team, on the off chance that you want more / fewer than 6
 - "tier" controls the team tiers when building in bulk.  While it doesn't actually impact the building process, it's good practice to make sure it lines up with the gen setting below.
 - "gen" controls which gen the builder builds for.  Current options are gen7 and natdex.

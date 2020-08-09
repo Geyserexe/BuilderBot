@@ -74,12 +74,19 @@ function buildTeam() {
                 recursions++;
                 teamString = buildTeam();
                 break;
+            } else if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
+                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("recurseThreshold too high")
+                }
+                recursions++
+                teamString = buildTeam();
+                break;
             }
         }
 
         for (let a = 0; a < team.length; a++) {
-            if(team[a] == null){
-                throw("cutoff too high")
+            if (team[a] == null) {
+                throw ("cutoff too high")
             }
             let set = team[a].set;
             let moves = "";

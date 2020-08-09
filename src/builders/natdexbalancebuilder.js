@@ -186,8 +186,8 @@ function buildTeam() {
         }
 
         for (let i = 0; i < team.length; i++) {
-            if(team[a] == null){
-                throw("cutoff too high")
+            if (team[i] == null) {
+                throw ("cutoff too high")
             }
             let set = team[i].set;
             let moves = "";
@@ -210,6 +210,13 @@ function buildTeam() {
                     throw ("breakerThreshold too high")
                 }
                 recursions++;
+                teamString = buildTeam();
+                break;
+            } else if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
+                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("recurseThreshold too high")
+                }
+                recursions++
                 teamString = buildTeam();
                 break;
             }
