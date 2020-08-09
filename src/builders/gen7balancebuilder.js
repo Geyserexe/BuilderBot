@@ -30,7 +30,7 @@ function tryBuild() {
         return (buildTeam());
     } catch (err) {
         if(String(err).includes("RangeError")){
-            return ("error: recurseThreshold or breakerThreshold too high - try again or lower them.");
+            return ("error: recurseThreshold too high - try again or lower it.");
         }
         return (`error: ${err}`);
     }
