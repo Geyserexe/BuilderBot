@@ -42,6 +42,8 @@ function buildTeam() {
 
     let teamString = "";
 
+    let length = config.teamLength;
+
     for (let i = 1; i < config.teamNumber + 1; i++) {
 
         team = [];
@@ -51,6 +53,8 @@ function buildTeam() {
         }
 
         prepTeam();
+
+        config.teamLength = length;
 
         for (let a = 0; a < config.teamLength; a++) {
             stats = util.updateStats(team, stats);
