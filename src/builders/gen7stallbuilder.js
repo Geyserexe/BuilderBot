@@ -47,7 +47,7 @@ function buildTeam() {
         team = [];
 
         if (config.teamNumber > 1) {
-            teamString += `=== [${config.tier}] team${b} ===\n\n`;
+            teamString += `=== [${config.tier}] team${i} ===\n\n`;
         }
 
         prepTeam();
