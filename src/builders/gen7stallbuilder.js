@@ -92,7 +92,7 @@ function buildTeam() {
 
 function prepTeam() {
     if (config.startMon.set) {
-        team.push(startMon);
+        team.push(config.startMon);
     } else {
         let bouncers = [];
         for (let a = 0; a < sets.length; a++) {
