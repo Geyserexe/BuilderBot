@@ -51,6 +51,9 @@ function buildTeam() {
         }
 
         for (let i = 0; i < team.length; i++) {
+            if(team[a] == null){
+                throw("cutoff too high")
+            }
             let set = team[i].set;
             let moves = "";
             for (let a = 0; a < set.moves.length; a++) {
