@@ -54,10 +54,10 @@ function buildTeam() {
             let priority = getPriority(team);
             let options = [];
             for (let b = 0; b < sets.length; b++) {
-                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b])) {
+                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) {
                     options.push(sets[b])
                 }
-                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && util.zMegaCheckPassed(sets[b]) && util.clericTest(sets[b])) {
+                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team)) {
                     if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
                         options.push(sets[b]);
                     }

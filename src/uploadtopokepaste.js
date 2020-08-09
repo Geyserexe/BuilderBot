@@ -7,9 +7,9 @@ exports.uploadToPokepaste = function (text, output) {
 		switch (typeof text) {
 			case 'string': {
 				text = {
-                    title: `${config.teamNumber} ${config.mode} team(s)`,
+					title: `${config.teamNumber} ${config.mode} team(s)`,
 					author: 'Geysers\' BuilderBot',
-					notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}\nhttps://github.com/Geyserexe/BuilderBot`,
+					notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}\nBreaker Threshold: ${config.breakerThreshold}\nhttps://github.com/Geyserexe/BuilderBot`,
 					paste: text.replace(/\n(?:[^\r]|$)/g, match => match.replace(/\n/g, '\r\n'))
 				}
 				break;

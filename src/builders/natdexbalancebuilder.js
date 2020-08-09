@@ -130,7 +130,7 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a], team) && util.zMegaCheckPassed(pruneArray[a]) && util.clericTest(pruneArray[a])) {
+                if (util.isValid(pruneArray[a], team)) {
                     if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && pruneArray[a].rocks) {
                             prunedArray.push(pruneArray[a]);
@@ -161,7 +161,7 @@ function buildTeam() {
                     prunedArray.push(mon);
                 } else if (rejected) {
                     for (let i = 0; i < rejected.length; i++) {
-                        if (rejected[i] && util.isValid(rejected[i], team) && util.zMegaCheckPassed(rejected[i]) && util.clericTest(rejected[i])) {
+                        if (rejected[i] && util.isValid(rejected[i], team)) {
                             if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
                                 prunedArray.push(rejected[i]);
                             }
@@ -176,7 +176,7 @@ function buildTeam() {
             }
             while (true) {
                 let rand = prunedArray[util.getRandomInt(prunedArray.length)];
-                if (util.isValid(rand, team) && util.zMegaCheckPassed(rand) && util.clericTest(rand)) {
+                if (util.isValid(rand, team)) {
                     team.push(rand);
                     break;
                 }
@@ -195,9 +195,16 @@ function buildTeam() {
         }
 
         for (let [key, value] of Object.entries(stats.ints)) {
-            if (value < config.recurseThreshold && config.teamNumber === 1) {
+            if (key.toLowerCase() != "breaker" && value < config.recurseThreshold && config.teamNumber === 1) {
                 if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold too high")
+                }
+                recursions++;
+                teamString = buildTeam();
+                break;
+            } else if (key.toLowerCase() === "breaker" && value < config.breakerThreshold && config.teamNumber === 1) {
+                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("breakerThreshold too high")
                 }
                 recursions++;
                 teamString = buildTeam();
