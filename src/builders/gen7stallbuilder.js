@@ -52,11 +52,11 @@ function buildTeam() {
             teamString += `=== [${config.tier}] team${i} ===\n\n`;
         }
 
-        prepTeam();
-
         config.teamLength = length;
 
-        for (let a = 0; a < config.teamLength; a++) {
+        prepTeam();
+
+        for (let a = 0; a < config.teamLength-1; a++) {
             stats = util.updateStats(team, stats);
             let priority = getPriority(team);
             let options = [];
@@ -112,7 +112,6 @@ function prepTeam() {
         }
         if (bouncers) {
             team.push(bouncers[util.getRandomInt(bouncers.length)]);
-            config.teamLength--;
         }
     }
 
