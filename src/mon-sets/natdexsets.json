@@ -928,13 +928,13 @@
                 "Refresh"
             ]
         },
-        "breaker": 6,
+        "breaker": 5,
         "ogreCheck": 5,
         "donCheck": 0,
         "ygodCheck": 1,
         "xernCheck": 0,
         "rayCheck": 2,
-        "zygCheck": 6,
+        "zygCheck": 5,
         "zacCheck": 1,
         "mega": false,
         "z": false,
