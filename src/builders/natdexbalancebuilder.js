@@ -30,6 +30,9 @@ function tryBuild() {
         util.init(stats);
         return (buildTeam());
     } catch (err) {
+        if(String(err).includes("RangeError")){
+            return ("error: recurseThreshold or breakerThreshold too high - try again or lower them.");
+        }
         return (`error: ${err}`);
     }
 }
@@ -206,7 +209,7 @@ function buildTeam() {
                 teamString = buildTeam();
                 break;
             } else if (key.toLowerCase() === "breaker" && value < config.breakerThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                if (recursions > 1000 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("breakerThreshold too high")
                 }
                 recursions++;
