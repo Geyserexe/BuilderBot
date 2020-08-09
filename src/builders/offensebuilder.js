@@ -44,19 +44,22 @@ function buildTeam() {
                     }
                     reps++;
                     if (reps > 10) {
-                        throw ("Error finding breakers.  Add more or try again.")
+                        throw ("Error finding breakers.  Add more or try again.");
                     }
                 }
             }
         }
 
         for (let i = 0; i < team.length; i++) {
+            if(team[i] == null){
+                throw("cutoff too high");
+            }
             let set = team[i].set;
             let moves = "";
             for (let a = 0; a < set.moves.length; a++) {
-                moves += `\n- ${set.moves[a]}`
+                moves += `\n- ${set.moves[a]}`;
             }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
         }
     }
     return (teamString);

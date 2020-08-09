@@ -29,6 +29,9 @@ function tryBuild() {
         util.init(stats);
         return (buildTeam());
     } catch (err) {
+        if(String(err).includes("RangeError")){
+            return ("error: recurseThreshold too high - try again or lower it.");
+        }
         return (`error: ${err}`);
     }
 }
@@ -154,27 +157,37 @@ function buildTeam() {
         }
 
         for (let i = 0; i < team.length; i++) {
+            if (team[i] == null) {
+                throw ("cutoff too high");
+            }
             let set = team[i].set;
             let moves = "";
             for (let a = 0; a < set.moves.length; a++) {
-                moves += `\n- ${set.moves[a]}`
+                moves += `\n- ${set.moves[a]}`;
             }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
         }
 
         for (let [key, value] of Object.entries(stats.ints)) {
             if (value < config.recurseThreshold && config.teamNumber === 1) {
                 if (recursions > 1250 || (config.startMon.set && recursions > 1000)) {
-                    throw ("recurseThreshold too high")
+                    throw ("recurseThreshold too high");
                 }
                 recursions++;
                 teamString = buildTeam();
                 break;
             } else if (key.toLowerCase() === "breaker" && value < config.breakerThreshold && config.teamNumber === 1) {
                 if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("breakerThreshold too high")
+                    throw ("breakerThreshold too high");
                 }
                 recursions++;
+                teamString = buildTeam();
+                break;
+            } else if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
+                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("recurseThreshold too high");
+                }
+                recursions++
                 teamString = buildTeam();
                 break;
             }
