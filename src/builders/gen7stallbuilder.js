@@ -58,7 +58,7 @@ function buildTeam() {
             let options = [];
             for (let b = 0; b < sets.length; b++) {
                 if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) { 
-                    options.push(sets[b])
+                    options.push(sets[b]);
                 }
                 if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && sets[b].breaker < 5) {
                     if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
@@ -72,7 +72,7 @@ function buildTeam() {
         for (let [key, value] of Object.entries(stats.ints)) {
             if (value < config.recurseThreshold && config.teamNumber === 1) {
                 if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high - lower it or try again")
+                    throw ("recurseThreshold too high - lower it or try again");
                 }
                 recursions++;
                 teamString = buildTeam();
@@ -82,14 +82,14 @@ function buildTeam() {
 
         for (let a = 0; a < team.length; a++) {
             if(team[a] == null){
-                throw("cutoff too high")
+                throw("cutoff too high");
             }
             let set = team[a].set;
             let moves = "";
             for(let b = 0; b < set.moves.length; b++){
-                moves += `\n- ${set.moves[b]}`
+                moves += `\n- ${set.moves[b]}`;
             }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
         }
     }
 
