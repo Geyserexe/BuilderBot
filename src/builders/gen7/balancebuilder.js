@@ -1,6 +1,6 @@
-const sets = require("../mon-sets/gen7sets.json");
-const config = require("../../config.json");
-const util = require("../util.js");
+const sets = require("../../mon-sets/gen7sets.json");
+const config = require("../../../config.json");
+const util = require("../../util.js");
 
 let recursions = 0;
 
