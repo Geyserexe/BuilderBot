@@ -66,22 +66,19 @@ function buildTeam() {
 }
 
 function isValid(mon, team) {
-    if (mon.set.item.toLowerCase().includes("choice")) {
-        return false;
-    }
     if (!util.isValid(mon, team)) {
         return false;
     }
     for (let i = 0; i < team.length; i++) {
-        if ((mon.set.name.toLowerCase() === "xerneas" && team[i].set.name.toLowerCase() === "yveltal") || (team[i].set.name.toLowerCase() === "xerneas" && mon.set.name.toLowerCase() === "yveltal")) {
-            return false;
-        }
         if (mon.mega && team[i].mega) {
             return false;
         }
         if (mon.z && team[i].z) {
             return false;
         }
+    }
+    if (mon.set.item.toLowerCase().includes("choice")) {
+        return false;
     }
     return true;
 }

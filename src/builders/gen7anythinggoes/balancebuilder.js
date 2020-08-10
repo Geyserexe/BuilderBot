@@ -42,6 +42,24 @@ function buildTeam() {
 
     for (var b = 1; b < config.teamNumber + 1; b++) {
 
+        stats = {
+            ints: {
+                rayCheck: 0,
+                zygCheck: 0,
+                marshCheck: 0,
+                donCheck: 0,
+                breaker: 0,
+                ultraCheck: 0,
+                xernCheck: 0,
+                ogreCheck: 0
+            },
+            mega: false,
+            z: false,
+            rocks: false,
+            defog: false,
+            cleric: false
+        };
+
         recursions = 0;
 
         let team = [];
