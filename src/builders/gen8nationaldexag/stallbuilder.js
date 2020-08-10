@@ -1,5 +1,5 @@
 const config = require("../../../config.json");
-const sets = require("../../mon-sets/natdexsets.json");
+const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
 const util = require("../../util.js");
 
 let team = [];

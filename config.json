@@ -3,7 +3,6 @@
     "cutoff": 7,
     "teamLength": 6,
     "tier": "gen8nationaldexag",
-    "gen": "natdex",
     "mode": "balance",
     "coreMode": false,
     "breakerWeight": 10,

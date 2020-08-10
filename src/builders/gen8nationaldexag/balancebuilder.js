@@ -1,6 +1,6 @@
-const sets = require("../../mon-sets/natdexsets.json");
+const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
 const config = require("../../../config.json");
-const cores = require("../../mon-sets/natdexcores.json")
+const cores = require("../../mon-sets/gen8nationaldexag/cores.json")
 const util = require("../../util.js");
 
 let recursions = 0;
