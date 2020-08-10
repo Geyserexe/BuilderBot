@@ -1,6 +1,7 @@
-const sets = require("../mon-sets/gen7sets.json");
-const config = require("../../config.json");
-const util = require("../util.js");
+const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
+const config = require("../../../config.json");
+const cores = require("../../mon-sets/gen8nationaldexag/cores.json")
+const util = require("../../util.js");
 
 let recursions = 0;
 
@@ -8,10 +9,10 @@ let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        marshCheck: 0,
+        zacCheck: 0,
         donCheck: 0,
         breaker: 0,
-        ultraCheck: 0,
+        ygodCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -30,7 +31,7 @@ function tryBuild() {
         return (buildTeam());
     } catch (err) {
         if(String(err).includes("RangeError")){
-            return ("error: recurseThreshold too high - try again or lower it.");
+            return ("error: recurseThreshold or breakerThreshold too high - try again or lower them.");
         }
         return (`error: ${err}`);
     }
@@ -38,22 +39,53 @@ function tryBuild() {
 
 function buildTeam() {
 
+    let length = config.teamLength;
     let teamString = "";
 
     for (var b = 1; b < config.teamNumber + 1; b++) {
 
+        stats = {
+            ints: {
+                rayCheck: 0,
+                zygCheck: 0,
+                zacCheck: 0,
+                donCheck: 0,
+                breaker: 0,
+                ygodCheck: 0,
+                xernCheck: 0,
+                ogreCheck: 0
+            },
+            mega: false,
+            z: false,
+            rocks: false,
+            defog: false,
+            cleric: false
+        };
+
         recursions = 0;
 
+        config.teamLength = length;
         let team = [];
         if (config.teamNumber > 1) {
             teamString += `=== [${config.tier}] team${b} ===\n\n`;
         }
 
-        if (!config.startMon.set) {
-            team[0] = util.getRandomMon(team);
-        } else {
+        if (config.startMon.set) {
             team[0] = config.startMon;
         }
+        if (config.coreMode) {
+            let core = cores[util.getRandomInt(cores.length)];
+            for (let i = 0; i < core.length; i++) {
+                team.push(core[i]);
+            }
+            config.teamLength -= core.length - 1;
+            if (config.startMon.set) {
+                config.teamLength--;
+            }
+        } else if (!config.startMon.set) {
+            team[0] = util.getRandomMon([]);
+        }
+
 
         stats = util.updateStats(team);
 
@@ -90,9 +122,9 @@ function buildTeam() {
                 } else {
                     if (config.breakerWeight < 3) {
                         if (sets[a].set.ability.toLowerCase().includes("bounce")) {
-                            pruneArray.push(sets[a])
+                            pruneArray.push(sets[a]);
                         } else if ((sets[a][priority] >= config.cutoff) && (sets[a].breaker <= config.breakerWeight)) {
-                            pruneArray.push(sets[a])
+                            pruneArray.push(sets[a]);
                         }
                     } else if (sets[a][priority] >= config.cutoff) {
                         pruneArray.push(sets[a]);
@@ -120,10 +152,10 @@ function buildTeam() {
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
-                    let mon = util.getRandomMon(team);
+                    let mon = getRandomMon(team);
                     let a = 0;
                     while (!mon.defog) {
-                        mon = util.getRandomMon(team);
+                        mon = getRandomMon(team);
                         a++;
                         if (a > 1000) {
                             throw ("Not enough defoggers - try again or add more defoggers.");
@@ -169,15 +201,15 @@ function buildTeam() {
         }
 
         for (let [key, value] of Object.entries(stats.ints)) {
-            if (value < config.recurseThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || (config.startMon.set && recursions > 1000)) {
+            if (key.toLowerCase() != "breaker" && value < config.recurseThreshold && config.teamNumber === 1) {
+                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold too high");
                 }
                 recursions++;
                 teamString = buildTeam();
                 break;
             } else if (key.toLowerCase() === "breaker" && value < config.breakerThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                if (recursions > 1000 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("breakerThreshold too high");
                 }
                 recursions++;

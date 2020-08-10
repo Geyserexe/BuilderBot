@@ -1,5 +1,5 @@
 const config = require("../config.json");
-const sets = require(`./mon-sets/${config.gen}sets.json`);
+const sets = require(`./mon-sets/${config.tier}/sets.json`);
 
 class Util {
 

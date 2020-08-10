@@ -1,6 +1,6 @@
-const config = require("../../config.json");
-const sets = require("../mon-sets/natdexsets.json");
-const util = require("../util.js");
+const config = require("../../../config.json");
+const sets = require("../../mon-sets/gen7anythinggoes/sets.json");
+const util = require("../../util.js");
 
 let team = [];
 
@@ -10,9 +10,9 @@ let stats = {
     ints: {
         rayCheck: 0,
         zygCheck: 0,
-        zacCheck: 0,
+        marshCheck: 0,
         donCheck: 0,
-        ygodCheck: 0,
+        ultraCheck: 0,
         xernCheck: 0,
         ogreCheck: 0
     },
@@ -32,7 +32,7 @@ function tryBuild() {
     }
     catch (err) {
         if(String(err).includes("RangeError")){
-            return ("error: recurseThreshold too high - try again or lower it.");
+            return ("error: recurseThreshold or breakerThreshold too high - try again or lower them.");
         }
         return (`error: ${err}`);
     }
@@ -42,6 +42,8 @@ function buildTeam() {
 
     let teamString = "";
 
+    let length = config.teamLength;
+
     for (let i = 1; i < config.teamNumber + 1; i++) {
 
         team = [];
@@ -50,17 +52,19 @@ function buildTeam() {
             teamString += `=== [${config.tier}] team${i} ===\n\n`;
         }
 
+        config.teamLength = length;
+
         prepTeam();
 
-        for (let a = 0; a < config.teamLength; a++) {
+        for (let a = 0; a < config.teamLength-1; a++) {
             stats = util.updateStats(team, stats);
             let priority = getPriority(team);
             let options = [];
             for (let b = 0; b < sets.length; b++) {
-                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) {
+                if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) { 
                     options.push(sets[b]);
                 }
-                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team)) {
+                if (sets[b][priority] >= config.cutoff && util.isValid(sets[b], team) && sets[b].breaker < 5) {
                     if ((!stats.rocks) || (stats.rocks && !sets[b].rocks)) {
                         options.push(sets[b]);
                     }
@@ -77,23 +81,16 @@ function buildTeam() {
                 recursions++;
                 teamString = buildTeam();
                 break;
-            } else if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
-                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high");
-                }
-                recursions++
-                teamString = buildTeam();
-                break;
             }
         }
 
         for (let a = 0; a < team.length; a++) {
-            if (team[a] == null) {
-                throw ("cutoff too high");
+            if(team[a] == null){
+                throw("cutoff too high");
             }
             let set = team[a].set;
             let moves = "";
-            for (let b = 0; b < set.moves.length; b++) {
+            for(let b = 0; b < set.moves.length; b++){
                 moves += `\n- ${set.moves[b]}`;
             }
             teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
@@ -115,7 +112,6 @@ function prepTeam() {
         }
         if (bouncers) {
             team.push(bouncers[util.getRandomInt(bouncers.length)]);
-            config.teamLength--;
         }
     }
 
