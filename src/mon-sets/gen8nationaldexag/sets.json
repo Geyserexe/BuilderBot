@@ -412,7 +412,7 @@
             "evs": "108 Def / 252 SpA / 148 Spe",
             "nature": "Modest",
             "moves": [
-                "Substitute",
+                "Hidden Power Fire",
                 "Geomancy",
                 "Moonblast",
                 "Thunder"
@@ -1006,7 +1006,7 @@
                 "Calm Mind",
                 "Origin Pulse",
                 "Ice Beam",
-                "Mud Slap"
+                "Hidden Power Flying"
             ]
         },
         "breaker": 8,
