@@ -215,7 +215,10 @@ function buildTeam() {
                 recursions++;
                 teamString = buildTeam();
                 break;
-            } else if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
+            }
+        }
+        for (let [key, value] of Object.entries(stats)){
+            if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
                 if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold too high");
                 }
