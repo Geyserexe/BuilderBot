@@ -1460,7 +1460,7 @@
             "name": "Mewtwo",
             "item": "Life Orb",
             "ability": "Unnerve",
-            "evs": "252 Spa / 4 SpD / 252 Spe",
+            "evs": "252 SpAs / 4 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
                 "Nasty Plot",
