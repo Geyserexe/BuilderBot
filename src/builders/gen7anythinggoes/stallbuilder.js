@@ -1,4 +1,4 @@
-const config = require("../../../config.json");
+const config = require("../../../config.js");
 const sets = require("../../mon-sets/gen7anythinggoes/sets.json");
 const util = require("../../util.js");
 

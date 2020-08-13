@@ -26,26 +26,26 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 #### Set Formatting ####
 
 {
-    "set": {
-        "name":"",
-        "item":"",
-        "ability":"",
-        "evs":"",
-        "nature":"",
-        "moves":["", "", "", ""]
+    set: {
+        name:"",
+        item:"",
+        ability:"",
+        evs:"",
+        nature:"",
+        moves:["", "", "", ""]
      },
-    "breaker":,
-    "ogreCheck":,
-    "donCheck":,
-    "ygodCheck":,
-    "xernCheck":,
-    "rayCheck":,
-    "zygCheck":,
-    "zacCheck":,
-    "mega":,
-    "z":,
-    "rocks":,
-    "defog":
+    breaker:,
+    ogreCheck:,
+    donCheck:,
+    ygodCheck:,
+    xernCheck:,
+    rayCheck:,
+    zygCheck:,
+    zacCheck:,
+    mega:,
+    z:,
+    rocks:,
+    defog:
 }
 
 All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.json or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
