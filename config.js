@@ -1,35 +1,33 @@
-module.exports = (
-    {
-        teamNumber: 1,
+module.exports = ({
+    teamNumber: 1,
 
-        // integer between 0 - 10
-        cutoff: 7,
+    // integer between 0 - 10
+    cutoff: 7,
 
-        teamLength: 6,
+    teamLength: 6,
 
-        tier: "gen8nationaldexag",
+    tier: "gen8nationaldexag",
 
-        mode: "balance",
+    mode: "balance",
 
-        coreMode: false,
+    coreMode: false,
 
-        // integer between 0 - 10
-        breakerWeight: 10,
+    // integer between 0 - 10
+    breakerWeight: 10,
 
-        breakerOverride: true,
+    breakerOverride: true,
 
-        // integer between 0 - 50
-        breakerThreshold: 15,
+    // integer between 0 - 50
+    breakerThreshold: 15,
 
-        // integer between 0 - 20
-        recurseThreshold: 10,
+    // integer between 0 - 20
+    recurseThreshold: 10,
 
-        monsToAvoid: [
-            ""
-        ],
+    monsToAvoid: [
+        ""
+    ],
 
-        startMon: {
+    startMon: {
 
-        }
     }
-);
+});
