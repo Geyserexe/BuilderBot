@@ -544,7 +544,7 @@
             "name": "Zygarde",
             "item": "Leftovers",
             "ability": "Power Construct",
-            "evs": "16 HP / 216 Atk / 48 SpD / 232 Spe",
+            "evs": "16 HP / 216 Atk / 44 SpD / 232 Spe",
             "nature": "Adamant",
             "moves": [
                 "Substitute",
