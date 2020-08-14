@@ -1,5 +1,5 @@
 const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
-const config = require("../../../config.json");
+const config = require("../../../config.js");
 const cores = require("../../mon-sets/gen8nationaldexag/cores.json")
 const util = require("../../util.js");
 
@@ -201,28 +201,18 @@ function buildTeam() {
         }
 
         for (let [key, value] of Object.entries(stats.ints)) {
-            if (key.toLowerCase() != "breaker" && value < config.recurseThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high");
+            if (config.teamNumber === 1 && (value < config.recurseThreshold || !stats.defog)) {
+                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                    throw ("recurseThreshold too high - lower it or try again");
                 }
                 recursions++;
                 teamString = buildTeam();
                 break;
-            } else if (key.toLowerCase() === "breaker" && value < config.breakerThreshold && config.teamNumber === 1) {
+            } else if (stats.breaker < config.breakerThreshold && config.teamNumber === 1) {
                 if (recursions > 1000 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("breakerThreshold too high");
                 }
                 recursions++;
-                teamString = buildTeam();
-                break;
-            }
-        }
-        for (let [key, value] of Object.entries(stats)){
-            if (key.toLowerCase() === "defog" && value == false && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high");
-                }
-                recursions++
                 teamString = buildTeam();
                 break;
             }
