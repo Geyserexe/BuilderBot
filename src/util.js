@@ -42,7 +42,7 @@ class Util {
     isValid(mon, team) {
 
         for (const a of config.monsToAvoid){
-            if(mon.set.name.toLowerCase().includes(a.toLowerCase())){
+            if(a && mon.set.name.toLowerCase().includes(a.toLowerCase())){
                 return false;
             }
         }
