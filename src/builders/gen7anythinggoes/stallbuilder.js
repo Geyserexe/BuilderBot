@@ -84,7 +84,7 @@ function buildTeam() {
         }
     
 
-        teamString = util.parseTeam(team);
+        teamString += util.parseTeam(team);
     }
 
     return (teamString);

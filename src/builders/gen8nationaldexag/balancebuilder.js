@@ -188,7 +188,7 @@ function buildTeam() {
 
         }
 
-        teamString = util.parseTeam(team);
+        teamString += util.parseTeam(team);
 
         for (let [key, value] of Object.entries(stats.ints)) {
             if (config.teamNumber === 1 && (value < config.recurseThreshold || !stats.defog)) {
