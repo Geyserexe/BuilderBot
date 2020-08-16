@@ -7,7 +7,7 @@ let team = "";
 
 console.log("building...");
 
-team = require(`./src/builders/${config.tier}/${config.mode.toLowerCase()}builder.js`);
+team = require(`./src/builders/${config.tier.toLowerCase()}/${config.mode.toLowerCase()}builder.js`);
 
 async function exportTeam() {
     if(team.includes("error")){

@@ -17,7 +17,7 @@ module.exports = ({
 
     breakerOverride: true,
 
-    // integer between 0 - 50
+    // integer between 0 - 30
     breakerThreshold: 15,
 
     // integer between 0 - 20

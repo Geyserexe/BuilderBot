@@ -188,29 +188,12 @@ function buildTeam() {
 
         }
 
-        for (let i = 0; i < team.length; i++) {
-            if (team[i] == null) {
-                throw ("cutoff too high");
-            }
-            let set = team[i].set;
-            let moves = "";
-            for (let a = 0; a < set.moves.length; a++) {
-                moves += `\n- ${set.moves[a]}`;
-            }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
-        }
+        teamString += util.parseTeam(team);
 
         for (let [key, value] of Object.entries(stats.ints)) {
-            if (config.teamNumber === 1 && (value < config.recurseThreshold || !stats.defog)) {
+            if (config.teamNumber === 1 && ((value < config.recurseThreshold || !stats.defog) || stats.ints.breaker < config.breakerThreshold)) {
                 if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high - lower it or try again");
-                }
-                recursions++;
-                teamString = buildTeam();
-                break;
-            } else if (stats.breaker < config.breakerThreshold && config.teamNumber === 1) {
-                if (recursions > 1000 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("breakerThreshold too high");
+                    throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
                 recursions++;
                 teamString = buildTeam();

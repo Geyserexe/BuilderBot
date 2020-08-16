@@ -79,18 +79,8 @@ function buildTeam() {
                 break;
             }
         }
-
-        for (let a = 0; a < team.length; a++) {
-            if (team[a] == null) {
-                throw ("cutoff too high");
-            }
-            let set = team[a].set;
-            let moves = "";
-            for (let b = 0; b < set.moves.length; b++) {
-                moves += `\n- ${set.moves[b]}`;
-            }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
-        }
+        
+        teamString += util.parseTeam(team);
     }
 
     return (teamString);

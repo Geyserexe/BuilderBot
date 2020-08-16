@@ -40,41 +40,40 @@ class Util {
     }
 
     isValid(mon, team) {
-        for (let i = 0; i < team.length; i++) {
-            if (mon.set.name.toLowerCase().includes(team[i].set.name.toLowerCase()) || team[i].set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
-                return false;
-            }
 
-            if ((mon.set.name.includes("Tyranitar") && team[i].set.name === "Shedinja") || (mon === "Shedinja" && team[i].set.name.includes("Tyranitar"))) {
-                return false;
-            }
-
-            for (let a = 0; a < team[i].set.moves.length; a++) {
-                if (team[i].set.moves[a].toLowerCase().includes("whirlpool")) {
-                    for (let b = 0; b < mon.set.moves.length; b++) {
-                        if (mon.set.moves[b].toLowerCase().includes("whirlpool")) {
-                            return false;
-                        }
-                    }
-                }
-            }
-
-            if (team[i].mega && mon.mega) {
-                return false;
-            }
-
-            if (team[i].z && mon.z) {
-                return false;
-            }
-
-            if (team[i].cleric && mon.cleric) {
+        for (const a of config.monsToAvoid){
+            if(a && mon.set.name.toLowerCase().includes(a.toLowerCase())){
                 return false;
             }
         }
-        for (let i = 0; i < config.monsToAvoid.length; i++) {
-            if (mon.set.name.toLowerCase() === config.monsToAvoid[i].toLowerCase()) {
+
+        for (const a of team){
+
+            if(mon.mega && a.mega){
                 return false;
             }
+            if(mon.z && a.z){
+                return false;
+            }
+            if (a.cleric && mon.cleric) {
+                return false;
+            }
+            if (mon.set.name.toLowerCase().includes(a.set.name.toLowerCase()) || a.set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
+                return false;
+            }
+            if ((mon.set.name.includes("Tyranitar") && a.set.name === "Shedinja") || (mon === "Shedinja" && a.set.name.includes("Tyranitar"))) {
+                return false;
+            }
+
+            a.set.moves.forEach(move => {
+                if (move.toLowerCase().includes("whirlpool")) {
+                    mon.set.moves.forEach(move2 => {
+                        if(move2.toLowerCase().includes("whirlpool")){
+                            return false;
+                        }
+                    });
+                }
+            });
         }
 
         return true;
@@ -103,6 +102,25 @@ class Util {
                 return (sets[this.getRandomInt(sets.length)])
             }
         }
+    }
+
+    parseTeam(team) {
+
+        let teamString = "";
+
+        for (let i = 0; i < team.length; i++) {
+            if (team[i] == null) {
+                throw ("cutoff too high");
+            }
+            let set = team[i].set;
+            let moves = "";
+            for (let a = 0; a < set.moves.length; a++) {
+                moves += `\n- ${set.moves[a]}`;
+            }
+            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
+        }
+
+        return (teamString);
     }
 }
 
