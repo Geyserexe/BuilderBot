@@ -177,16 +177,9 @@ function buildTeam() {
         teamString += util.parseTeam(team);
 
         for (let [key, value] of Object.entries(stats.ints)) {
-            if (config.teamNumber === 1 && (value < config.recurseThreshold || !stats.defog)) {
+            if (config.teamNumber === 1 && ((value < config.recurseThreshold || !stats.defog) || stats.ints.breaker < config.breakerThreshold)) {
                 if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("recurseThreshold too high - lower it or try again");
-                }
-                recursions++;
-                teamString = buildTeam();
-                break;
-            } else if (stats.breaker < config.breakerThreshold && config.teamNumber === 1) {
-                if (recursions > 1250 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
-                    throw ("breakerThreshold too high");
+                    throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
                 recursions++;
                 teamString = buildTeam();
