@@ -598,7 +598,7 @@
             "name": "Rayquaza-Mega",
             "item": "Life Orb",
             "ability": "Delta Stream",
-            "evs": "252 Atk / 4 Spa / 252 Spe",
+            "evs": "252 Atk / 4 SpA / 252 Spe",
             "nature": "Naive",
             "moves": [
                 "Extreme Speed",
@@ -1676,7 +1676,7 @@
             "name": "Diancie",
             "item": "Leftovers",
             "ability": "Clear Body",
-            "evs": "248 HP / 8 Def / 252 Spd",
+            "evs": "248 HP / 8 Def / 252 SpD",
             "nature": "Calm",
             "moves": [
                 "Stealth Rock",
@@ -1703,7 +1703,7 @@
             "name": "Diancie-Mega",
             "item": "Diancite",
             "ability": "Magic Bounce",
-            "evs": "248 HP / 8 Def / 252 Spd",
+            "evs": "248 HP / 8 Def / 252 SpD",
             "nature": "Calm",
             "moves": [
                 "Stealth Rock",

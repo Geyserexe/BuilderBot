@@ -868,7 +868,7 @@
             "name": "Xerneas",
             "item": "Choice Scarf",
             "ability": "Fairy Aura",
-            "evs": "252 Spa / 4 Def / 252 Spe",
+            "evs": "252 SpA / 4 Def / 252 Spe",
             "nature": "Modest",
             "moves": [
                 "Defog",
@@ -1274,7 +1274,7 @@
             "name": "Arceus-Steel",
             "item": "Iron Plate",
             "ability": "Multitype",
-            "evs": "252 Spa / 4 SpD / 252 Spe",
+            "evs": "252 SpA / 4 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
                 "Calm Mind",
