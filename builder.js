@@ -13,9 +13,8 @@ async function exportTeam() {
     if(team.includes("error")){
         console.log(team);
     } else {
-        console.log("exporting...");
-        const result = await upload.uploadToPokepaste(team);
-        console.log(result);
+        console.log("exporting..."); 
+        console.log(await upload.uploadToPokepaste(team));
     }
 }
 
