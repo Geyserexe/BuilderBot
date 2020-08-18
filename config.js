@@ -1,4 +1,4 @@
-module.exports = ({
+let config = {
     teamNumber: 1,
 
     // integer between 0 - 10
@@ -30,4 +30,13 @@ module.exports = ({
     startMon: {
 
     }
-});
+}
+
+
+for (let [key, value] of Object.entries(config)) {
+    if (typeof value == "string") {
+        config[key] = value.toLowerCase();
+    }
+}
+
+module.exports = (config);

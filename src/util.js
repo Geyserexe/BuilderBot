@@ -76,6 +76,10 @@ class Util {
             });
         }
 
+        if (mon.set.item.toLowerCase().includes("choice") && config.mode.toLowerCase() === "offense") {
+            return false;
+        }
+
         return true;
     }
 
