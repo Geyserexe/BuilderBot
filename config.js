@@ -1,4 +1,5 @@
 let config = null
+
 try {
     config = require("../../builderconfig");
 } catch(e){

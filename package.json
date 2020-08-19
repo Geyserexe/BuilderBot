@@ -1,6 +1,6 @@
 {
   "name": "teambuilder",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "pokemon teambuilder",
   "main": "builder.js",
   "scripts": {
