@@ -18,4 +18,4 @@ async function exportTeam() {
     }
 }
 
-exportTeam();
+exports.buildTeam = function(){ exportTeam();};
