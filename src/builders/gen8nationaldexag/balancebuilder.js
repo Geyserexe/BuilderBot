@@ -16,8 +16,6 @@ let stats = {
         xernCheck: 0,
         ogreCheck: 0
     },
-    mega: false,
-    z: false,
     rocks: false,
     defog: false,
     cleric: false
@@ -55,8 +53,6 @@ function buildTeam() {
                 xernCheck: 0,
                 ogreCheck: 0
             },
-            mega: false,
-            z: false,
             rocks: false,
             defog: false,
             cleric: false
