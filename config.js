@@ -12,11 +12,6 @@ let config = {
 
     coreMode: false,
 
-    // integer between 0 - 10
-    breakerWeight: 10,
-
-    breakerOverride: true,
-
     // integer between 0 - 30
     breakerThreshold: 15,
 
