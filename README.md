@@ -9,6 +9,8 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 
 #### Config Info ####
 
+Create a builderconfig.json file in the main directory of your project to control teams that are built by this package.  An example of formatting for the builderconfig file can be found as "configtemplate.json".
+
 - "teamNumber" controls the number of teams built.  Whenever multiple teams are built, they'll be exported in a bulk format.
 - "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels.  Cutoff 10 is likely to results in glitchy or inconsistent building.
 - "teamLength" controls the number of Pokémon in a team, on the off chance that you want more / fewer than 6
