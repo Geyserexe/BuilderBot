@@ -70,7 +70,7 @@ function buildTeam() {
             }
             team.push(options[util.getRandomInt(options.length)]);
         }
-        for (let [key, value] of Object.entries(stats.ints)) {
+        for (let value of Object.values(stats.ints)) {
             if (config.teamNumber === 1 && (value < config.recurseThreshold || !stats.defog)) {
                 if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold too high - lower it or try again");
