@@ -15,8 +15,6 @@ let stats = {
         xernCheck: 0,
         ogreCheck: 0
     },
-    mega: false,
-    z: false,
     rocks: false,
     defog: false,
     cleric: false
@@ -29,7 +27,7 @@ function tryBuild() {
         util.init(stats);
         return (buildTeam());
     } catch (err) {
-        if(String(err).includes("RangeError")){
+        if (String(err).includes("RangeError")) {
             return ("error: recurseThreshold too high - try again or lower it.");
         }
         return (`error: ${err}`);
@@ -53,8 +51,6 @@ function buildTeam() {
                 xernCheck: 0,
                 ogreCheck: 0
             },
-            mega: false,
-            z: false,
             rocks: false,
             defog: false,
             cleric: false
@@ -83,36 +79,15 @@ function buildTeam() {
             let currentValue = 100;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
-                if (value <= currentValue && !config.breakerOverride) {
-                    if (config.breakerWeight > 7 && Math.round(Math.random()) === 1) {
-                        currentValue = value;
-                        priority = key;
-                    } else if (config.breakerWeight > 7) {
-                        currentValue = 0;
-                        priority = "breaker";
-                    } else if (config.breakerWeight > 3 || (config.breakerWeight < 3 && key.toLowerCase() != "breaker")) {
-                        currentValue = value;
-                        priority = key;
-                    }
-                } else if (value <= currentValue) {
+                if (value <= currentValue) {
                     currentValue = value;
                     priority = key;
                 }
             }
 
             for (let a = 0; a < sets.length; a++) {
-                if (config.breakerOverride) {
+                for (let a = 0; a < sets.length; a++) {
                     if (sets[a][priority] >= config.cutoff) {
-                        pruneArray.push(sets[a]);
-                    }
-                } else {
-                    if (config.breakerWeight < 3) {
-                        if (sets[a].set.ability.toLowerCase().includes("bounce")) {
-                            pruneArray.push(sets[a])
-                        } else if ((sets[a][priority] >= config.cutoff) && (sets[a].breaker <= config.breakerWeight)) {
-                            pruneArray.push(sets[a])
-                        }
-                    } else if (sets[a][priority] >= config.cutoff) {
                         pruneArray.push(sets[a]);
                     }
                 }
@@ -176,7 +151,7 @@ function buildTeam() {
 
         teamString += util.parseTeam(team);
 
-        for (let [key, value] of Object.entries(stats.ints)) {
+        for (let value of Object.values(stats.ints)) {
             if (config.teamNumber === 1 && ((value < config.recurseThreshold || !stats.defog) || stats.ints.breaker < config.breakerThreshold)) {
                 if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
                     throw ("recurseThreshold or breakerThreshold too high - lower one or try again");

@@ -1,4 +1,4 @@
-module.exports = ({
+let config = {
     teamNumber: 1,
 
     // integer between 0 - 10
@@ -11,11 +11,6 @@ module.exports = ({
     mode: "balance",
 
     coreMode: false,
-
-    // integer between 0 - 10
-    breakerWeight: 10,
-
-    breakerOverride: true,
 
     // integer between 0 - 30
     breakerThreshold: 15,
@@ -30,4 +25,13 @@ module.exports = ({
     startMon: {
 
     }
-});
+}
+
+
+for (let [key, value] of Object.entries(config)) {
+    if (typeof value == "string") {
+        config[key] = value.toLowerCase();
+    }
+}
+
+module.exports = (config);

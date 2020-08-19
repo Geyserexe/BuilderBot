@@ -14,22 +14,22 @@ class Util {
 
     updateStats(team) {
         this.stats = {};
-        for (let [key, value] of Object.entries(this.statsTemplate)) {
+        for (let key of Object.keys(this.statsTemplate)) {
             this.stats[key] = false;
         }
         this.stats.ints = {};
-        for (let [key, value] of Object.entries(this.statsTemplate.ints)) {
+        for (let key of Object.keys(this.statsTemplate.ints)) {
             this.stats.ints[key] = 0;
         }
 
         for (let i = 0; i < team.length; i++) {
-            for (let [key, value] of Object.entries(this.statsTemplate.ints)) {
+            for (let key of Object.keys(this.statsTemplate.ints)) {
                 if (team[i][key]) {
                     this.stats.ints[key] += team[i][key];
                 }
             }
 
-            for (let [key, value] of Object.entries(this.statsTemplate)) {
+            for (let key of Object.keys(this.statsTemplate)) {
                 if (key != "ints" && team[i][key]) {
                     this.stats[key] = true;
                 }
@@ -74,6 +74,10 @@ class Util {
                     });
                 }
             });
+        }
+
+        if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {
+            return false;
         }
 
         return true;

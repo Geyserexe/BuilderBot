@@ -59,17 +59,6 @@ function isValid(mon, team) {
     if (!util.isValid(mon, team)) {
         return false;
     }
-    for (let i = 0; i < team.length; i++) {
-        if (mon.mega && team[i].mega) {
-            return false;
-        }
-        if (mon.z && team[i].z) {
-            return false;
-        }
-    }
-    if (mon.set.item.toLowerCase().includes("choice")) {
-        return false;
-    }
     return true;
 }
 
