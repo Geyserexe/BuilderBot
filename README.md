@@ -1,11 +1,9 @@
 # BuilderBot
-A program to build teams for Pokemon Showdown in the gen8nationaldexag & gen7anythinggoes formats
+A package to automatically build teams for Pokemon Showdown in the gen8nationaldexag & gen7anythinggoes formats
 
 Use config.cutoff to change the building style by changing it between 0 and 10.  Lower cutoffs result in more offensive teams that are less likely to have effective meta checks, while higher cutoffs generally result in bulkier teams. 
 Add additional sets to the approproiate file in src/mon-sets/. 
-In order to run the teambuilder, open Terminal / cmd, cd into the builderbot file, and run "node builder".
 
-- Note: dev branch may be unreliable / produce really bad teams
 
 #### Config Info ####
 
@@ -49,12 +47,3 @@ Create a builderconfig.json file in the main directory of your project to contro
 }
 
 All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
-
-#### File-Structure Info ####
-
-All builder and set files are located within "src".  You shouldn't touch the .vscode folder, .gitignore, package.json, or package-lock.json unless you really know what you're doing.
-
-#### TODO ####
-
-- Add more sets
-- Add gen6 support
