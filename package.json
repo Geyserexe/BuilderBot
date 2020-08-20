@@ -1,6 +1,6 @@
 {
   "name": "teambuilder",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "pokemon teambuilder",
   "main": "builder.js",
   "scripts": {
@@ -10,5 +10,14 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2"
-  }
+  },
+  "keywords": [
+    "Pokemon",
+    "team",
+    "teambuilder",
+    "Pokemon Showdown",
+    "PS",
+    "Showdown",
+    "Smogon"
+  ]
 }
