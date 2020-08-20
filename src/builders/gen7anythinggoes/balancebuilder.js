@@ -138,11 +138,16 @@ function buildTeam() {
                     prunedArray.push(util.getRandomMon(team));
                 }
             }
+            let tests = 0;
             while (true) {
                 let rand = prunedArray[util.getRandomInt(prunedArray.length)];
                 if (util.isValid(rand, team)) {
                     team.push(rand);
                     break;
+                }
+                tests++
+                if(tests >= 1000){
+                    throw("recurseThreshold or breakerThreshold too hight - lower one or try again");
                 }
             }
             stats = util.updateStats(team);

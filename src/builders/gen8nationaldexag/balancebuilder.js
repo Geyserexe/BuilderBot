@@ -157,9 +157,9 @@ function buildTeam() {
                     team.push(rand);
                     break;
                 }
-                tests++
+                tests++;
                 if(tests >= 1000){
-                    throw("error while building - please try again");
+                    throw("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
             }
             stats = util.updateStats(team);
