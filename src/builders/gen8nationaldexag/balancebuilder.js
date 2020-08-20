@@ -150,11 +150,16 @@ function buildTeam() {
                     prunedArray.push(util.getRandomMon(team));
                 }
             }
+            let tests = 0;
             while (true) {
                 let rand = prunedArray[util.getRandomInt(prunedArray.length)];
                 if (util.isValid(rand, team)) {
                     team.push(rand);
                     break;
+                }
+                tests++
+                if(tests >= 1000){
+                    throw("error while building - please try again");
                 }
             }
             stats = util.updateStats(team);
