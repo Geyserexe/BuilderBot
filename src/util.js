@@ -41,18 +41,18 @@ class Util {
 
     isValid(mon, team) {
 
-        for (const a of config.monsToAvoid){
-            if(a && mon.set.name.toLowerCase().includes(a.toLowerCase())){
+        for (const a of config.monsToAvoid) {
+            if (a && mon.set.name.toLowerCase().includes(a.toLowerCase())) {
                 return false;
             }
         }
 
-        for (const a of team){
+        for (const a of team) {
 
-            if(mon.mega && a.mega){
+            if (mon.mega && a.mega) {
                 return false;
             }
-            if(mon.z && a.z){
+            if (mon.z && a.z) {
                 return false;
             }
             if (a.cleric && mon.cleric) {
@@ -68,7 +68,7 @@ class Util {
             a.set.moves.forEach(move => {
                 if (move.toLowerCase().includes("whirlpool")) {
                     mon.set.moves.forEach(move2 => {
-                        if(move2.toLowerCase().includes("whirlpool")){
+                        if (move2.toLowerCase().includes("whirlpool")) {
                             return false;
                         }
                     });
@@ -88,17 +88,9 @@ class Util {
         let completed = false;
         while (!completed) {
             let rand = sets[this.getRandomInt(sets.length)];
-            if (config.breakerOverride) {
-                if (this.isValid(rand, team)) {
-                    if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
-                        return (rand);
-                    }
-                }
-            } else {
-                if (this.isValid(rand, team) && rand.breaker <= config.breakerWeight) {
-                    if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
-                        return (rand);
-                    }
+            if (this.isValid(rand, team)) {
+                if ((!this.stats.rocks) || (this.stats.rocks && !rand.rocks)) {
+                    return (rand);
                 }
             }
             a++;
