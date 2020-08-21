@@ -821,7 +821,7 @@
             ]
         },
         "breaker": 4,
-        "ogreCheck": 5,
+        "ogreCheck": 7,
         "donCheck": 0,
         "ygodCheck": 2,
         "xernCheck": 2,
