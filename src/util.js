@@ -49,13 +49,7 @@ class Util {
 
         for (const a of team) {
 
-            if (mon.mega && a.mega) {
-                return false;
-            }
-            if (mon.z && a.z) {
-                return false;
-            }
-            if (a.cleric && mon.cleric) {
+            if ((mon.mega && a.mega) || (mon.z && a.z) || (a.cleric && mon.cleric)) {
                 return false;
             }
             if (mon.set.name.toLowerCase().includes(a.set.name.toLowerCase()) || a.set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
