@@ -1,6 +1,6 @@
 const axios = require('axios');
 const querystring = require('querystring');
-const config = require('./config.js');
+const config = require('../config.js');
 
 exports.uploadToPokepaste = function (text) {
 	return new Promise((resolve, reject) => {

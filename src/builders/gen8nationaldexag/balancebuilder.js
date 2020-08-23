@@ -1,5 +1,5 @@
 const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
-const config = require("../../config.js");
+const config = require("../../../config.js");
 const cores = require("../../mon-sets/gen8nationaldexag/cores.json")
 const util = require("../../util.js");
 

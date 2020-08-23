@@ -5,7 +5,7 @@ Use config.cutoff to change the building style by changing it between 0 and 10. 
 Add additional sets to the approproiate file in src/mon-sets/. 
 In order to run the teambuilder, open Terminal / cmd, cd into the builderbot file, and run "node builder".
 
-- Note: dev branch may be unreliable / produce really bad teams.
+- Note: dev branch may be unreliable / produce really bad teams
 
 #### Config Info ####
 
@@ -20,19 +20,6 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 - "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.  This field is not case-sensitive.
 - "startMon" allows the user to provide a set around which to build a team.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
 
-#### Flags ####
-
-"node builder" can be run with each of the following flags, which are added after the command, each of which override anything in config.json.
-
-an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a chansey,groudon-primal"
-
-- --c controls the cutoff variable.
-- --t controls the tier built for.
-- --m controls the mode (offense / balance / stall) built for.
-- --b controls the breakerThreshold value.
-- --r controls the recurseThreshold value.
-- --n controls the number of teams built.
-- --a controls the avoided mons; formatting is a comma-separated-list.
 
 #### Set Formatting ####
 
@@ -59,7 +46,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
     defog:
 }
 
-All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.json or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
+All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
 
 #### File-Structure Info ####
 
