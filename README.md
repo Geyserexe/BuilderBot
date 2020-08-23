@@ -2,7 +2,11 @@
 A package to automatically build teams for Pokemon Showdown in the gen8nationaldexag & gen7anythinggoes formats
 
 Use config.cutoff to change the building style by changing it between 0 and 10.  Lower cutoffs result in more offensive teams that are less likely to have effective meta checks, while higher cutoffs generally result in bulkier teams. 
-Add additional sets to the approproiate file in src/mon-sets/. 
+Add additional sets to the appropriate file in src/mon-sets/. 
+
+### Methods ###
+
+- buildTeam() returns a team using the builderconfig.json file
 
 
 #### Config Info ####
