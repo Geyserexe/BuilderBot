@@ -1,4 +1,4 @@
-const config = require("../config.js");
+const config = require("./config.js");
 const sets = require(`./mon-sets/${config.tier}/sets.json`);
 
 class Util {
@@ -41,6 +41,10 @@ class Util {
 
     isValid(mon, team) {
 
+        if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {
+            return false;
+        }
+
         for (const a of config.monsToAvoid) {
             if (a && mon.set.name.toLowerCase().includes(a.toLowerCase())) {
                 return false;
@@ -70,10 +74,6 @@ class Util {
             });
         }
 
-        if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {
-            return false;
-        }
-
         return true;
     }
 
@@ -99,10 +99,11 @@ class Util {
         let teamString = "";
 
         for (let i = 0; i < team.length; i++) {
-            if (team[i] == null) {
+            let mon = team[i];
+            if (mon == null) {
                 throw ("cutoff too high");
             }
-            let set = team[i].set;
+            let set = mon.set;
             let moves = "";
             for (let a = 0; a < set.moves.length; a++) {
                 moves += `\n- ${set.moves[a]}`;
