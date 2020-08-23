@@ -25,12 +25,13 @@ for (let i = 0; i < process.argv.length; i+=2) {
             config.mode = value;
             break;
         case "--a":
-            for(let mon of value.split(",")){
+            config.monsToAvoid = [];
+            for(const mon of value.split(",")){
                 config.monsToAvoid.push(mon);
             }
             break;
         case "--n":
-            config.teamNumber = parseInt(value)
+            config.teamNumber = parseInt(value);
     }
 }
 
