@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 let config = null;
-const upload = require('./src/uploadtopokepaste.js');
 let help = false;
+
 try {
     config = require("./src/config.js");
 }
@@ -12,6 +12,8 @@ catch (e) {
 }
 
 if (!help) {
+
+    const upload = require('./src/uploadtopokepaste.js');
 
     let team = "";
 
