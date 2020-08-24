@@ -5,7 +5,7 @@ Use config.cutoff to change the building style by changing it between 0 and 10. 
 Add additional sets to the approproiate file in src/mon-sets/. 
 In order to run the teambuilder, open Terminal / cmd, cd into the builderbot file, and run "node builder".
 
-- Note: dev branch may be unreliable / produce really bad teams.
+- Note: dev branch may be unreliable / produce really bad teams
 
 #### Config Info ####
 
@@ -60,7 +60,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
     defog:
 }
 
-All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.json or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
+All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
 
 #### File-Structure Info ####
 
