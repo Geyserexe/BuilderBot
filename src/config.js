@@ -35,6 +35,7 @@ for (let i = 0; i < process.argv.length; i+=2) {
             break;
         case "--cm":
             config.coreMode = true;
+            i--;
             break;
     }
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const config = require("./config.js");
+const config = require("./src/config.js");
 const upload = require('./src/uploadtopokepaste.js');
 
 let team = "";
