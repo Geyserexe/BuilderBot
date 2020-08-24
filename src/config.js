@@ -5,7 +5,7 @@ for (let i = 0; i < process.argv.length; i+=2) {
     let flag = process.argv[i];
     switch (flag) {
         case "help":
-            throw("usage: node builder [--c | --n | --t | --r | --b | --m]");
+            throw("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
         case "--c":
             if(parseInt(value > 10)){
                 throw("cutoff too high");
@@ -32,6 +32,10 @@ for (let i = 0; i < process.argv.length; i+=2) {
             break;
         case "--n":
             config.teamNumber = parseInt(value);
+            break;
+        case "--cm":
+            config.coreMode = true;
+            break;
     }
 }
 

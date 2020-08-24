@@ -33,6 +33,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --r controls the recurseThreshold value.
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
+- --cm turns on core mode.
 
 #### Set Formatting ####
 
@@ -63,7 +64,7 @@ All fields between "breaker" and "zacCheck" should be integers between 0 and 10.
 
 #### File-Structure Info ####
 
-All builder and set files are located within "src".  You shouldn't touch the .vscode folder, .gitignore, package.json, or package-lock.json unless you really know what you're doing.
+All builder and set files are located within "src".  You shouldn't touch the .gitignore, package.json, or package-lock.json unless you really know what you're doing.
 
 #### TODO ####
 
