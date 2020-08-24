@@ -811,7 +811,7 @@
             "name": "Eternatus",
             "item": "Firium Z",
             "ability": "Pressure",
-            "evs": "188 HP / 80 SpA / 196 SpD / 44 Spe",
+            "evs": "192 HP / 76 SpA / 196 SpD / 44 Spe",
             "nature": "Calm",
             "moves": [
                 "Flamethrower",

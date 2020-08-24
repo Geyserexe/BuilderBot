@@ -5,7 +5,7 @@ for (let i = 0; i < process.argv.length; i+=2) {
     let flag = process.argv[i];
     switch (flag) {
         case "help":
-            throw("usage: node builder [--c | --n | --t | --r | --b | --m]");
+            throw("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
         case "--c":
             if(parseInt(value > 10)){
                 throw("cutoff too high");
@@ -25,12 +25,18 @@ for (let i = 0; i < process.argv.length; i+=2) {
             config.mode = value;
             break;
         case "--a":
-            for(let mon of value.split(",")){
+            config.monsToAvoid = [];
+            for(const mon of value.split(",")){
                 config.monsToAvoid.push(mon);
             }
             break;
         case "--n":
-            config.teamNumber = parseInt(value)
+            config.teamNumber = parseInt(value);
+            break;
+        case "--cm":
+            config.coreMode = true;
+            i--;
+            break;
     }
 }
 
