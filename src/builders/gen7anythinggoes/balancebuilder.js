@@ -80,8 +80,10 @@ function buildTeam() {
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
                 if (value <= currentValue) {
-                    currentValue = value;
-                    priority = key;
+                    if (value != "breaker" && value < config.recurseThreshold) {
+                        currentValue = value;
+                        priority = key;
+                    }
                 }
             }
 
