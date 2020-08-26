@@ -1,6 +1,7 @@
 const sets = require("../../mon-sets/gen7anythinggoes/sets.json");
 const config = require("../../config.js");
 const util = require("../../util.js");
+const { recurseThreshold } = require("../../config.js");
 
 let recursions = 0;
 
@@ -75,12 +76,17 @@ function buildTeam() {
 
             let pruneArray = [];
             let prunedArray = [];
-            let priority = "";
+            let priority = "breaker";
             let currentValue = 100;
             let rejected = [];
             for (let [key, value] of Object.entries(stats.ints)) {
                 if (value <= currentValue) {
-                    if (value != "breaker" && value < config.recurseThreshold) {
+                    if (config.breakerThreshold >= config.recurseThreshold) {
+                        if (value < config.recurseThreshold) {
+                            currentValue = value;
+                            priority = key;
+                        }
+                    } else if(key != "breaker" && value < config.recurseThreshold){
                         currentValue = value;
                         priority = key;
                     }
@@ -148,8 +154,8 @@ function buildTeam() {
                     break;
                 }
                 tests++
-                if(tests >= 1000){
-                    throw("recurseThreshold or breakerThreshold too hight - lower one or try again");
+                if (tests >= 1000) {
+                    throw ("recurseThreshold or breakerThreshold too hight - lower one or try again");
                 }
             }
             stats = util.updateStats(team);
