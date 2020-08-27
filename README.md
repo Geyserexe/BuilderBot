@@ -34,30 +34,32 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
+- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 15 rT 10 etc).
+- --raw makes the builder output the team as text rather than as a pokepaste link.
 
 #### Set Formatting ####
 
 {
-    set: {
-        name:"",
-        item:"",
-        ability:"",
-        evs:"",
-        nature:"",
-        moves:["", "", "", ""]
+    "set": {
+        "name":"",
+        "item":"",
+        "ability":"",
+        "evs":"",
+        "nature":"",
+        "moves":["", "", "", ""]
      },
-    breaker:,
-    ogreCheck:,
-    donCheck:,
-    ygodCheck:,
-    xernCheck:,
-    rayCheck:,
-    zygCheck:,
-    zacCheck:,
-    mega:,
-    z:,
-    rocks:,
-    defog:
+    "breaker":,
+    "ogreCheck":,
+    "donCheck":,
+    "ygodCheck":,
+    "xernCheck":,
+    "rayCheck":,
+    "zygCheck":,
+    "zacCheck":,
+    "mega":,
+    "z":,
+    "rocks":,
+    "defog":
 }
 
 All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json

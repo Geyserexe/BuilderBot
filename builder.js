@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 let config = null;
+const upload = require('./src/uploadtopokepaste.js');
 let help = false;
-
 try {
     config = require("./src/config.js");
 }
@@ -12,8 +12,6 @@ catch (e) {
 }
 
 if (!help) {
-
-    const upload = require('./src/uploadtopokepaste.js');
 
     let team = "";
 
@@ -25,8 +23,12 @@ if (!help) {
         if (team.includes("error")) {
             console.log(team);
         } else {
-            console.log("exporting...");
-            console.log(await upload.uploadToPokepaste(team));
+            if (!config.raw) {
+                console.log("exporting...");
+                console.log(await upload.uploadToPokepaste(team));
+            } else {
+                console.log(team);
+            }
         }
     }
 
