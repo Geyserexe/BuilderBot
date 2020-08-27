@@ -1,5 +1,22 @@
 let config = require("../config.json");
 
+const defaultconfig = {
+    teamNumber: 1,
+    cutoff: 7,
+    teamLength: 6,
+    tier: "gen8nationaldexag",
+    mode: "balance",
+    coreMode: false,
+    breakerThreshold: 15,
+    recurseThreshold: 10,
+    monsToAvoid: [
+        ""
+    ],
+    startMon: {
+
+    }
+};
+
 for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
     let flag = process.argv[i];
@@ -38,23 +55,11 @@ for (let i = 0; i < process.argv.length; i += 2) {
             i--;
             break;
         case "--d":
-            config = {
-                teamNumber: 1,
-                cutoff: 7,
-                teamLength: 6,
-                tier: "gen8nationaldexag",
-                mode: "balance",
-                coreMode: false,
-                breakerThreshold: 15,
-                recurseThreshold: 10,
-                monsToAvoid: [
-                    ""
-                ],
-                startMon: {
-
-                }
-            };
-            i--;
+            config = defaultconfig;
+            i = process.argv.length;
+            break;
+        case "--raw":
+            config.raw = true;
     }
 }
 

@@ -25,8 +25,12 @@ if (!help) {
         if (team.includes("error")) {
             console.log(team);
         } else {
-            console.log("exporting...");
-            console.log(await upload.uploadToPokepaste(team));
+            if (!config.raw) {
+                console.log("exporting...");
+                console.log(await upload.uploadToPokepaste(team));
+            } else {
+                console.log(team);
+            }
         }
     }
 
