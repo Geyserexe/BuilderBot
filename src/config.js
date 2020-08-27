@@ -1,14 +1,14 @@
 let config = require("../config.json");
 
-for (let i = 0; i < process.argv.length; i+=2) {
+for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
     let flag = process.argv[i];
     switch (flag) {
         case "help":
-            throw("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
+            throw ("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
         case "--c":
-            if(parseInt(value > 10)){
-                throw("cutoff too high");
+            if (parseInt(value > 10)) {
+                throw ("cutoff too high");
             }
             config.cutoff = parseInt(value);
             break;
@@ -26,7 +26,7 @@ for (let i = 0; i < process.argv.length; i+=2) {
             break;
         case "--a":
             config.monsToAvoid = [];
-            for(const mon of value.split(",")){
+            for (const mon of value.split(",")) {
                 config.monsToAvoid.push(mon);
             }
             break;
@@ -37,6 +37,24 @@ for (let i = 0; i < process.argv.length; i+=2) {
             config.coreMode = true;
             i--;
             break;
+        case "--d":
+            config = {
+                teamNumber: 1,
+                cutoff: 7,
+                teamLength: 6,
+                tier: "gen8nationaldexag",
+                mode: "balance",
+                coreMode: false,
+                breakerThreshold: 15,
+                recurseThreshold: 10,
+                monsToAvoid: [
+                    ""
+                ],
+                startMon: {
+
+                }
+            };
+            i--;
     }
 }
 
