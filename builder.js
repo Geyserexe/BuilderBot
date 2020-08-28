@@ -17,16 +17,17 @@ console.log("building...");
 
 team = require(`./src/builders/${config.tier}/${config.mode}builder.js`);
 
+if (team.includes("error")) {
+    console.log(team);
+    process.exit();
+}
+
 async function exportTeam() {
-    if (team.includes("error")) {
-        console.log(team);
+    if (!config.raw) {
+        console.log("exporting...");
+        console.log(await upload.uploadToPokepaste(team));
     } else {
-        if (!config.raw) {
-            console.log("exporting...");
-            console.log(await upload.uploadToPokepaste(team));
-        } else {
-            console.log(team);
-        }
+        console.log(team);
     }
 }
 
