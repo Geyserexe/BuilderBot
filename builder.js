@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 let config = null;
-
 try {
     config = require("./src/config.js");
 }
