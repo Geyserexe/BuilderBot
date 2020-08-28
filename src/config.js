@@ -22,7 +22,7 @@ for (let i = 0; i < process.argv.length; i += 2) {
     let flag = process.argv[i];
     switch (flag) {
         case "help":
-            throw ("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
+            throw ("usage: node builder [--c | --n | --t | --r | --b | --m | --cm | --d | --raw | --a]");
         case "--c":
             if (parseInt(value > 10)) {
                 throw ("cutoff too high");
