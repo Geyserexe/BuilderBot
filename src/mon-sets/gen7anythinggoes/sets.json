@@ -1647,33 +1647,6 @@
     },
     {
         "set": {
-            "name": "Toxapex",
-            "item": "Black Sludge",
-            "ability": "Regenerator",
-            "evs": "252 HP / 252 Def / 4 SpD",
-            "nature": "Bold",
-            "moves": [
-                "Toxic",
-                "Toxic Spikes",
-                "Recover",
-                "Haze"
-            ]
-        },
-        "breaker": 0,
-        "ogreCheck": 4,
-        "donCheck": 0,
-        "xernCheck": 8,
-        "rayCheck": 0,
-        "zygCheck": 0,
-        "marshCheck": 5,
-        "ultraCheck": 0,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
             "name": "Tapu Koko",
             "item": "Choice Specs",
             "ability": "Electric Surge",

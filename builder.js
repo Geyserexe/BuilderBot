@@ -9,7 +9,7 @@ catch (e) {
     process.exit();
 }
 
-const upload = require('./src/uploadtopokepaste.js');
+const { uploadToPokepaste } = require('./src/uploadtopokepaste.js');
 
 let team = "";
 
@@ -25,7 +25,7 @@ if (team.includes("error")) {
 async function exportTeam() {
     if (!config.raw) {
         console.log("exporting...");
-        console.log(await upload.uploadToPokepaste(team));
+        console.log(await uploadToPokepaste(team));
     } else {
         console.log(team);
     }
