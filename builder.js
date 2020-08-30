@@ -1,36 +1,34 @@
 #!/usr/bin/env node
 
 let config = null;
-const upload = require('./src/uploadtopokepaste.js');
-let help = false;
 try {
     config = require("./src/config.js");
 }
 catch (e) {
     console.log(e);
-    help = true;
+    process.exit();
 }
 
-if (!help) {
+const { uploadToPokepaste } = require('./src/uploadtopokepaste.js');
 
-    let team = "";
+let team = "";
 
-    console.log("building...");
+console.log("building...");
 
-    team = require(`./src/builders/${config.tier}/${config.mode}builder.js`);
+team = require(`./src/builders/${config.tier}/${config.mode}builder.js`);
 
-    async function exportTeam() {
-        if (team.includes("error")) {
-            console.log(team);
-        } else {
-            if (!config.raw) {
-                console.log("exporting...");
-                console.log(await upload.uploadToPokepaste(team));
-            } else {
-                console.log(team);
-            }
-        }
+if (team.includes("error")) {
+    console.log(team);
+    process.exit();
+}
+
+async function exportTeam() {
+    if (!config.raw) {
+        console.log("exporting...");
+        console.log(await uploadToPokepaste(team));
+    } else {
+        console.log(team);
     }
-
-    exportTeam();
 }
+
+exportTeam();

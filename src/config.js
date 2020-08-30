@@ -21,44 +21,44 @@ for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
     let flag = process.argv[i];
     switch (flag) {
-        case "help":
-            throw ("usage: node builder [--c | --n | --t | --r | --b | --m | --cm]");
-        case "--c":
+        case 'help':
+            throw ('usage: node builder [--c | --n | --t | --r | --b | --m | --cm | --d | --raw | --a]');
+        case '--c':
             if (parseInt(value > 10)) {
-                throw ("cutoff too high");
+                throw ('cutoff too high');
             }
             config.cutoff = parseInt(value);
             break;
-        case "--t":
+        case '--t':
             config.tier = value;
             break;
-        case "--r":
+        case '--r':
             config.recurseThreshold = parseInt(value);
             break;
-        case "--b":
+        case '--b':
             config.breakerThreshold = parseInt(value);
             break;
-        case "--m":
+        case '--m':
             config.mode = value;
             break;
-        case "--a":
+        case '--a':
             config.monsToAvoid = [];
-            for (const mon of value.split(",")) {
+            for (const mon of value.split(',')) {
                 config.monsToAvoid.push(mon);
             }
             break;
-        case "--n":
+        case '--n':
             config.teamNumber = parseInt(value);
             break;
-        case "--cm":
+        case '--cm':
             config.coreMode = true;
             i--;
             break;
-        case "--d":
+        case '--d':
             config = defaultconfig;
             i = process.argv.length;
             break;
-        case "--raw":
+        case '--raw':
             config.raw = true;
     }
 }

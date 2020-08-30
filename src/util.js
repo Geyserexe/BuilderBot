@@ -59,15 +59,19 @@ class Util {
                 return false;
             }
 
-            a.set.moves.forEach(move => {
-                if (move.toLowerCase().includes("whirlpool")) {
-                    mon.set.moves.forEach(move2 => {
-                        if (move2.toLowerCase().includes("whirlpool")) {
-                            return false;
-                        }
-                    });
-                }
-            });
+            let avoidDupMoves = ["whirlpool", "knock off"];
+
+            for (const avoidMove of avoidDupMoves) {
+                a.set.moves.forEach(move => {
+                    if (move.toLowerCase().includes(avoidMove)) {
+                        mon.set.moves.forEach(move2 => {
+                            if (move2.toLowerCase().includes(avoidMove)) {
+                                return false;
+                            }
+                        });
+                    }
+                });
+            }
         }
 
         if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {

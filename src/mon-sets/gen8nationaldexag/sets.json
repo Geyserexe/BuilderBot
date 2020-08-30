@@ -433,6 +433,33 @@
     },
     {
         "set": {
+            "name": "Xerneas",
+            "item": "Power Herb",
+            "ability": "Fairy Aura",
+            "evs": "108 Def / 252 SpA / 148 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Substitute",
+                "Geomancy",
+                "Moonblast",
+                "Thunder"
+            ]
+        },
+        "breaker": 10,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 5,
+        "xernCheck": 0,
+        "rayCheck": 1,
+        "zygCheck": 5,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Groudon-Primal",
             "item": "Red Orb",
             "ability": "Desolate Land",
@@ -479,7 +506,7 @@
         "xernCheck": 1,
         "rayCheck": 2,
         "zygCheck": 0,
-        "zacCheck": 9,
+        "zacCheck": 8,
         "mega": false,
         "z": false,
         "rocks": true,
@@ -2032,7 +2059,7 @@
             "moves": [
                 "Calm Mind",
                 "Thunder",
-                "Flash Cannon",
+                "Judgment",
                 "Recover"
             ]
         },
