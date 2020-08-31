@@ -26,11 +26,11 @@ function tryBuild() {
     try {
         util.init(stats);
         return (buildTeam());
-    } catch (err) {
-        if (String(err).includes("RangeError")) {
+    } catch (e) {
+        if (String(e).includes("RangeError")) {
             return ("error: recurseThreshold too high - try again or lower it.");
         }
-        return (`error: ${err}`);
+        return (`error: ${e}`);
     }
 }
 

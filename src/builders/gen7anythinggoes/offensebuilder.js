@@ -9,8 +9,8 @@ function tryBuild() {
     try {
         return buildTeam();
     }
-    catch (err) {
-        return (`error: ${err}`);
+    catch (e) {
+        return (`error: ${e}`);
     }
 }
 
