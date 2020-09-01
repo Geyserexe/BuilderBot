@@ -23,9 +23,6 @@ let stats = {
 module.exports = tryBuild();
 
 function tryBuild() {
-    if(util.getRandomInt(100) === 27){
-        return util.bp;
-    }
     try {
         util.init(stats);
         return (buildTeam());
