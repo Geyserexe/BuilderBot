@@ -3,6 +3,65 @@ const sets = require(`./mon-sets/${config.tier}/sets.json`);
 
 class Util {
 
+    bp = `Scolipede @ Mental Herb
+Ability: Speed Boost
+EVs: 80 HP / 240 Def / 188 Spe
+Timid Nature
+IVs: 0 Atk
+- Baton Pass
+- Substitute
+- Protect
+- Iron Defense
+
+Smeargle @ Focus Sash
+Ability: Moody
+EVs: 20 HP / 252 Def / 236 Spe
+Jolly Nature
+- Baton Pass
+- Spore
+- Ingrain
+- Spectral Thief
+
+Drifblim @ Sitrus Berry
+Ability: Unburden
+EVs: 188 HP / 252 Def / 60 SpD / 8 Spe
+Bold Nature
+IVs: 0 Atk
+- Baton Pass
+- Minimize
+- Substitute
+- Defog   
+
+Mr. Mime @ Wiki Berry
+Ability: Soundproof
+EVs: 204 HP / 244 Def / 32 SpD / 28 Spe
+Bold Nature
+IVs: 0 Atk
+- Baton Pass
+- Calm Mind
+- Substitute
+- Taunt
+
+Vaporeon @ Normalium Z
+Ability: Water Absorb
+EVs: 216 HP / 252 Def / 40 Spe
+Bold Nature
+IVs: 0 Atk
+- Baton Pass
+- Aqua Ring
+- Acid Armor
+- Roar
+
+Espeon @ Shell Bell
+Ability: Magic Bounce
+EVs: 8 HP / 208 Def / 68 SpA / 224 Spe
+Modest Nature
+IVs: 0 Atk
+- Baton Pass
+- Stored Power
+- Dazzling Gleam
+- Substitute`
+
     init(stats) {
         this.statsTemplate = stats;
         this.stats = this.statsTemplate;

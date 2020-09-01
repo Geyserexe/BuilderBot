@@ -23,6 +23,9 @@ let stats = {
 module.exports = tryBuild();
 
 function tryBuild() {
+    if(util.getRandomInt(100) === 27){
+        return util.bp;
+    }
     try {
         util.init(stats);
         return (buildTeam());
@@ -154,7 +157,7 @@ function buildTeam() {
                 }
                 tests++
                 if (tests >= 1000) {
-                    throw ("recurseThreshold or breakerThreshold too hight - lower one or try again");
+                    throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
             }
             stats = util.updateStats(team);
