@@ -1435,10 +1435,10 @@
             "evs": "4 HP / 252 Def / 252 SpD",
             "nature": "Calm",
             "moves": [
-                "Heal Bell",
+                "Aromatherapy",
                 "Soft-Boiled",
                 "Toxic",
-                "Confide"
+                "Teleport"
             ]
         },
         "breaker": 0,

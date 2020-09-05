@@ -59,18 +59,21 @@ class Util {
                 return false;
             }
 
-            let avoidDupMoves = ["whirlpool", "knock off"];
+        }
 
-            for (const avoidMove of avoidDupMoves) {
-                a.set.moves.forEach(move => {
-                    if (move.toLowerCase().includes(avoidMove)) {
-                        mon.set.moves.forEach(move2 => {
-                            if (move2.toLowerCase().includes(avoidMove)) {
+        let avoidDupMoves = ["whirlpool", "knock off"];
+
+        for(const avoidMove of avoidDupMoves){
+            for(const a of team){
+                for(const move of a.set.moves){
+                    if(move.toLowerCase().includes(avoidMove)){
+                        for(const b of mon.set.moves){
+                            if(b.toLowerCase().includes(avoidMove)){
                                 return false;
                             }
-                        });
+                        }
                     }
-                });
+                }
             }
         }
 
