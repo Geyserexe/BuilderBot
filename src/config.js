@@ -42,7 +42,6 @@ for (let i = 0; i < process.argv.length; i += 2) {
             config.mode = value;
             break;
         case '--a':
-            config.monsToAvoid = [];
             for (const mon of value.split(',')) {
                 config.monsToAvoid.push(mon);
             }

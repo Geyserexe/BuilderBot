@@ -3,6 +3,8 @@ const leads = require("../../mon-sets/gen7anythinggoes/leads.json");
 const sets = require("../../mon-sets/gen7anythinggoes/sets.json");
 const util = require("../../util.js");
 
+let recursions = 0;
+
 module.exports = tryBuild();
 
 function tryBuild() {
@@ -15,6 +17,8 @@ function tryBuild() {
 }
 
 function buildTeam() {
+
+    let breakerTotal = 0;
 
     let teamString = "";
     for (var b = 1; b < config.teamNumber + 1; b++) {
@@ -48,9 +52,17 @@ function buildTeam() {
                     }
                 }
             }
+            breakerTotal += team[i].breaker;
         }
 
         teamString += util.parseTeam(team);
+        if (breakerTotal < config.breakerThreshold && config.teamNumber === 1) {
+            if (recursions > 6000) {
+                throw ("breakerThreshold too high.");
+            }
+            recursions++;
+            teamString = buildTeam();
+        }
     }
     return (teamString);
 }

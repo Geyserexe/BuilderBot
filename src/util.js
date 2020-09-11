@@ -63,12 +63,12 @@ class Util {
 
         let avoidDupMoves = ["whirlpool", "knock off"];
 
-        for(const avoidMove of avoidDupMoves){
-            for(const a of team){
-                for(const move of a.set.moves){
-                    if(move.toLowerCase().includes(avoidMove)){
-                        for(const b of mon.set.moves){
-                            if(b.toLowerCase().includes(avoidMove)){
+        for (const avoidMove of avoidDupMoves) {
+            for (const a of team) {
+                for (const move of a.set.moves) {
+                    if (move.toLowerCase().includes(avoidMove)) {
+                        for (const b of mon.set.moves) {
+                            if (b.toLowerCase().includes(avoidMove)) {
                                 return false;
                             }
                         }

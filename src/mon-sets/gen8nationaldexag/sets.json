@@ -2030,17 +2030,17 @@
             "evs": "252 HP / 156 SpD / 100 Spe",
             "nature": "Timid",
             "moves": [
-                "Calm Mind",
+                "Psych Up",
                 "Sludge Bomb",
                 "Earth Power",
                 "Recover"
             ]
         },
-        "breaker": 6,
+        "breaker": 2,
         "ogreCheck": 1,
         "donCheck": 0,
         "ygodCheck": 2,
-        "xernCheck": 6,
+        "xernCheck": 8,
         "rayCheck": 2,
         "zygCheck": 0,
         "zacCheck": 0,

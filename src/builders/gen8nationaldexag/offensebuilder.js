@@ -3,11 +3,14 @@ const leads = require("../../mon-sets/gen8nationaldexag/leads.json");
 const sets = require("../../mon-sets/gen8nationaldexag/sets.json");
 const util = require("../../util.js");
 
+let recursions = 0;
+
 module.exports = tryBuild();
 
 function tryBuild() {
     try {
-        return buildTeam();
+        let team = buildTeam();
+        return team;
     }
     catch (e) {
         return (`error: ${e}`);
@@ -16,12 +19,14 @@ function tryBuild() {
 
 function buildTeam() {
 
+    let breakerTotal = 0;
+
     let teamString = "";
-    for (var b = 1; b < config.teamNumber + 1; b++) {
+    for (var b = 0; b < config.teamNumber; b++) {
         let team = [];
 
         if (config.teamNumber > 1) {
-            teamString += `=== [${config.tier}] team${b} ===\n\n`;
+            teamString += `=== [${config.tier}] team${b + 1} ===\n\n`;
         }
 
         if (config.startMon.set) {
@@ -48,9 +53,16 @@ function buildTeam() {
                     }
                 }
             }
+            breakerTotal += team[i].breaker;
         }
-
         teamString += util.parseTeam(team);
+    }
+    if (breakerTotal < config.breakerThreshold && config.teamNumber === 1) {
+        if (recursions > 6000) {
+            throw ("breakerThreshold too high.");
+        }
+        recursions++;
+        teamString = buildTeam();
     }
     return (teamString);
 }

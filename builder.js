@@ -17,7 +17,7 @@ console.log("building...");
 
 team = require(`./src/builders/${config.tier}/${config.mode}builder.js`);
 
-if (team.includes("error")) {
+if (team.includes("error") || !team) {
     console.log(team);
     process.exit();
 }
