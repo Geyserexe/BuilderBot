@@ -1,4 +1,5 @@
 let config = require("../config.json");
+config.speciesClause = true;
 
 const defaultconfig = {
     teamNumber: 1,
@@ -59,6 +60,8 @@ for (let i = 0; i < process.argv.length; i += 2) {
             break;
         case '--raw':
             config.raw = true;
+        case '--ncs':
+            config.speciesClause = false;
     }
 }
 
