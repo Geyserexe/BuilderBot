@@ -26,11 +26,11 @@ function tryBuild() {
     try {
         util.init(stats);
         return (buildTeam());
-    } catch (err) {
-        if (String(err).includes("RangeError")) {
+    } catch (e) {
+        if (String(e).includes("RangeError")) {
             return ("error: recurseThreshold too high - try again or lower it.");
         }
-        return (`error: ${err}`);
+        return (`error: ${e}`);
     }
 }
 
@@ -154,7 +154,7 @@ function buildTeam() {
                 }
                 tests++
                 if (tests >= 1000) {
-                    throw ("recurseThreshold or breakerThreshold too hight - lower one or try again");
+                    throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
             }
             stats = util.updateStats(team);
