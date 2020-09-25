@@ -35,7 +35,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
-- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 15 rT 10 etc).
+- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 20 rT 11 etc).
 - --raw makes the builder output the team as text rather than as a pokepaste link.
 
 #### Set Formatting ####
