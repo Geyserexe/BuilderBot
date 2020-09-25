@@ -6,12 +6,12 @@ Add additional sets to the appropriate file in src/mon-sets/.
 In order to run the teambuilder, open Terminal / cmd, cd into the builderbot file, and run "node builder".
 
 - Note: dev branch may be unreliable / produce really bad teams
-- If you're using this on repl.it, run "npm install" in the console to the right to set it up, followed by "node builder" to run teams.
+- If you're using this on repl.it, run "npm install" in the console to the right to set it up, followed by "node builder" to build teams.
 
 #### Config Info ####
 
 - "teamNumber" controls the number of teams built.  Whenever multiple teams are built, they'll be exported in a bulk format.
-- "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels.  Cutoff 10 is likely to results in glitchy or inconsistent building.
+- "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels.  Cutoff 10 is likely to result in glitchy or inconsistent building.
 - "teamLength" controls the number of Pokémon in a team, on the off chance that you want more / fewer than 6
 - "tier" controls the tier being built for.  Current options are gen7anythinggoes and gen8nationaldexag.
 - "mode" controls what type of teams the builder will create.  Current options are balance, offense, and stall.
@@ -35,7 +35,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
-- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 15 rT 10 etc).
+- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 20 rT 11 etc).
 - --raw makes the builder output the team as text rather than as a pokepaste link.
 
 #### Set Formatting ####

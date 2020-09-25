@@ -361,6 +361,33 @@
                 "Stealth Rock",
                 "Morning Sun",
                 "Sunsteel Strike",
+                "Thunder Wave"
+            ]
+        },
+        "breaker": 1,
+        "ogreCheck": 0,
+        "donCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 8,
+        "rayCheck": 7,
+        "zygCheck": 0,
+        "zacCheck": 10,
+        "mega": false,
+        "z": false,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Rocky Helmet",
+            "ability": "Prism Armor",
+            "evs": "252 HP / 252 Def / 4 SpD",
+            "nature": "Impish",
+            "moves": [
+                "Stealth Rock",
+                "Morning Sun",
+                "Sunsteel Strike",
                 "Knock Off"
             ]
         },
@@ -510,6 +537,33 @@
         "mega": false,
         "z": false,
         "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Groudon-Primal",
+            "item": "Red Orb",
+            "ability": "Desolate Land",
+            "evs": "252 HP / 4 Atk / 252 SpD",
+            "nature": "Careful",
+            "moves": [
+                "Swords Dance",
+                "Stone Edge",
+                "Precipice Blades",
+                "Rest"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 9,
+        "donCheck": 0,
+        "ygodCheck": 1,
+        "xernCheck": 5,
+        "rayCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 5,
+        "mega": false,
+        "z": false,
+        "rocks": false,
         "defog": false
     },
     {
@@ -669,6 +723,33 @@
         "rayCheck": 0,
         "zygCheck": 1,
         "zacCheck": 0,
+        "mega": true,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza-Mega",
+            "item": "Life Orb",
+            "ability": "Delta Stream",
+            "evs": "4 Def / 252 Atk / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Dragon Dance",
+                "Dragon Ascent",
+                "V-create",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 9,
+        "ogreCheck": 4,
+        "donCheck": 3,
+        "ygodCheck": 0,
+        "xernCheck": 1,
+        "rayCheck": 0,
+        "zygCheck": 1,
+        "zacCheck": 1,
         "mega": true,
         "z": false,
         "rocks": false,
@@ -955,7 +1036,7 @@
                 "Refresh"
             ]
         },
-        "breaker": 5,
+        "breaker": 7,
         "ogreCheck": 5,
         "donCheck": 0,
         "ygodCheck": 1,
@@ -963,6 +1044,60 @@
         "rayCheck": 2,
         "zygCheck": 5,
         "zacCheck": 1,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Water",
+            "item": "Splash Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 48 SpA / 72 SpD / 136 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Judgment",
+                "Calm Mind",
+                "Recover",
+                "Earth Power"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 6,
+        "donCheck": 5,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 0,
+        "zygCheck": 4,
+        "zacCheck": 0,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Arceus-Water",
+            "item": "Splash Plate",
+            "ability": "Multitype",
+            "evs": "252 HP / 120 Def / 136 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Judgment",
+                "Calm Mind",
+                "Recover",
+                "Ice Beam"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 6,
+        "donCheck": 4,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 4,
+        "zacCheck": 0,
         "mega": false,
         "z": false,
         "rocks": false,

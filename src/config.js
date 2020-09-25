@@ -8,8 +8,8 @@ const defaultconfig = {
     tier: "gen8nationaldexag",
     mode: "balance",
     coreMode: false,
-    breakerThreshold: 15,
-    recurseThreshold: 10,
+    breakerThreshold: 20,
+    recurseThreshold: 11,
     monsToAvoid: [
         ""
     ],
