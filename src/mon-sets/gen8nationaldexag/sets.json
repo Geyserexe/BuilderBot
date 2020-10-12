@@ -950,33 +950,6 @@
             "nature": "Bold",
             "moves": [
                 "Ice Beam",
-                "Will-O-Wisp",
-                "Recover",
-                "Refresh"
-            ]
-        },
-        "breaker": 0,
-        "ogreCheck": 7,
-        "donCheck": 7,
-        "ygodCheck": 2,
-        "xernCheck": 0,
-        "rayCheck": 7,
-        "zygCheck": 9,
-        "zacCheck": 2,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Arceus-Water",
-            "item": "Splash Plate",
-            "ability": "Multitype",
-            "evs": "248 HP / 240 Def / 20 Spe",
-            "nature": "Bold",
-            "moves": [
-                "Ice Beam",
                 "Whirlpool",
                 "Recover",
                 "Perish Song"
