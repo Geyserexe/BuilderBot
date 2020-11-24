@@ -15,8 +15,11 @@ const defaultconfig = {
     ],
     startMon: {
 
-    }
+    },
+    speciesClause: true
 };
+
+config = defaultconfig
 
 for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];

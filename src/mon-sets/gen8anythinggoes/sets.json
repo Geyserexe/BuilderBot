@@ -522,7 +522,7 @@
         "ygodCheck": 0,
         "xernCheck": 8,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 10,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
@@ -546,7 +546,7 @@
         "ygodCheck": 0,
         "xernCheck": 8,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 9,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
@@ -570,7 +570,7 @@
         "ygodCheck": 0,
         "xernCheck": 8,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 10,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
@@ -594,7 +594,7 @@
         "ygodCheck": 0,
         "xernCheck": 6,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 10,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
@@ -687,7 +687,7 @@
         "ygodCheck": 4,
         "xernCheck": 6,
         "zygCheck": 4,
-        "zacCheck": 0,
+        "zacCheck": 6,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -828,11 +828,11 @@
         },
         "breaker": 6,
         "ogreCheck": 3,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "zygCheck": 0,
-        "zacCheck": 0,
-        "calyCheck": 0,
+        "ygodCheck": 1,
+        "xernCheck": 1,
+        "zygCheck": 4,
+        "zacCheck": 4,
+        "calyCheck": 4,
         "rocks": false,
         "defog": false
     },
@@ -879,7 +879,7 @@
         "ygodCheck": 0,
         "xernCheck": 0,
         "zygCheck": 2,
-        "zacCheck": 0,
+        "zacCheck": 7,
         "calyCheck": 0,
         "rocks": false,
         "defog": true
@@ -1434,7 +1434,7 @@
         "ygodCheck": 0,
         "xernCheck": 0,
         "zygCheck": 5,
-        "zacCheck": 0,
+        "zacCheck": 10,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
