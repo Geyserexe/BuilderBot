@@ -1057,6 +1057,54 @@
     },
     {
         "set": {
+            "name": "Kyurem-White",
+            "item": "Utility Umbrella",
+            "ability": "Turboblaze",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Calm",
+            "moves": [
+                "Roost",
+                "Toxic",
+                "Freeze Dry",
+                "Fusion Flare"
+            ]
+        },
+        "breaker": 1,
+        "ogreCheck": 9,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "zygCheck": 2,
+        "zacCheck": 0,
+        "calyCheck": 1,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Kyurem-White",
+            "item": "heavy-Duty Boots",
+            "ability": "Turboblaze",
+            "evs": "252 Spa / 4 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Roost",
+                "Stone Edge",
+                "Freeze Dry",
+                "Fusion Flare"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 4,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "zygCheck": 4,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Lugia",
             "item": "Heavy-Duty Boots",
             "ability": "Multiscale",

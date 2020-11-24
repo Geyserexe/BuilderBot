@@ -5,11 +5,11 @@ const defaultconfig = {
     teamNumber: 1,
     cutoff: 7,
     teamLength: 6,
-    tier: "gen8nationaldexag",
+    tier: "gen8anythinggoes",
     mode: "balance",
     coreMode: false,
-    breakerThreshold: 20,
-    recurseThreshold: 11,
+    breakerThreshold: 14,
+    recurseThreshold: 12,
     monsToAvoid: [
         ""
     ],
