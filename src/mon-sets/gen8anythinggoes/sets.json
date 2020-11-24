@@ -784,6 +784,30 @@
         "xernCheck": 5,
         "zygCheck": 0,
         "zacCheck": 0,
+        "calyCheck": 1,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Ferrothorn",
+            "item": "Leftovers",
+            "ability": "Iron Barbs",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Sassy",
+            "moves": [
+                "Leech Seed",
+                "Protect",
+                "Spikes",
+                "Power Whip"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 10,
+        "ygodCheck": 3,
+        "xernCheck": 5,
+        "zygCheck": 0,
+        "zacCheck": 0,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -1009,6 +1033,30 @@
     },
     {
         "set": {
+            "name": "Gastrodon",
+            "item": "Leftovers",
+            "ability": "Storm Drain",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Calm",
+            "moves": [
+                "Scald",
+                "Toxic",
+                "Confide",
+                "Recover"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 10,
+        "ygodCheck": 1,
+        "xernCheck": 1,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Lugia",
             "item": "Heavy-Duty Boots",
             "ability": "Multiscale",
@@ -1193,9 +1241,129 @@
         "ogreCheck": 7,
         "ygodCheck": 1,
         "xernCheck": 0,
-        "zygCheck": 0,
+        "zygCheck": 4,
         "zacCheck": 1,
-        "calyCheck": 2,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Dialga",
+            "item": "Leftovers",
+            "ability": "Pressure",
+            "evs": "252 HP / 252 SpA / 4 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Stealth Rock",
+                "Draco Meteor",
+                "Fire Blast",
+                "Toxic"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 5,
+        "ygodCheck": 1,
+        "xernCheck": 1,
+        "zygCheck": 2,
+        "zacCheck": 1,
+        "calyCheck": 0,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Dialga",
+            "item": "Leftovers",
+            "ability": "Pressure",
+            "evs": "252 HP / 252 SpA / 4 Spe",
+            "nature": "Modest",
+            "moves": [
+                "Stealth Rock",
+                "Draco Meteor",
+                "Fire Blast",
+                "Thunder"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 6,
+        "ygodCheck": 1,
+        "xernCheck": 1,
+        "zygCheck": 2,
+        "zacCheck": 1,
+        "calyCheck": 0,
+        "rocks": true,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza",
+            "item": "Life Orb",
+            "ability": "Air Lock",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Dragon Ascent",
+                "V-Create",
+                "Extreme Speed"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Rayquaza",
+            "item": "Life Orb",
+            "ability": "Air Lock",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Swords Dance",
+                "Dragon Ascent",
+                "V-Create",
+                "Outrage"
+            ]
+        },
+        "breaker": 7,
+        "ogreCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "zygCheck": 4,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Reshiram",
+            "item": "Life Orb",
+            "ability": "Air Lock",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Jolly",
+            "moves": [
+                "Dragon Dance",
+                "Outrage",
+                "Flare Blitz",
+                "Roost"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 1,
+        "zygCheck": 2,
+        "zacCheck": 4,
+        "calyCheck": 0,
         "rocks": false,
         "defog": false
     },
