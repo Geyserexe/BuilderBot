@@ -6,7 +6,7 @@ const defaultconfig = {
     cutoff: 7,
     teamLength: 6,
     tier: "gen8anythinggoes",
-    mode: "balance",
+    mode: "stall",
     coreMode: false,
     breakerThreshold: 20,
     recurseThreshold: 12,

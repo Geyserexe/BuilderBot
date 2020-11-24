@@ -128,7 +128,7 @@ class Util {
 
         for (let i = 0; i < team.length; i++) {
             if (team[i] == null) {
-                throw ("cutoff too high");
+                throw ("Error while building. Please try again.");
             }
             let set = team[i].set;
             let moves = "";
