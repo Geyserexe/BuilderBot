@@ -13,7 +13,7 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 - "teamNumber" controls the number of teams built.  Whenever multiple teams are built, they'll be exported in a bulk format.
 - "cutoff" controls the threshold at which the builder will allow a given pokemon onto a team, resulting in potentially less reliable builds at lower levels, but overly similar builds at higher levels.  Cutoff 10 is likely to result in glitchy or inconsistent building.
 - "teamLength" controls the number of Pokémon in a team, on the off chance that you want more / fewer than 6
-- "tier" controls the tier being built for.  Current options are gen7anythinggoes and gen8nationaldexag.
+- "tier" controls the tier being built for.  Current options are gen8anythinggoes, gen7anythinggoes and gen8nationaldexag.
 - "mode" controls what type of teams the builder will create.  Current options are balance, offense, and stall.
 - "coreMode" controls whether or not the builder uses an experimental, currently natdex-only, building mode where the team starts with a pre-chosen set of 3 Pokémon.
 - "breakerThreshold" is the minimum value for the breaker stat below which the builder will rebuild a team.  Higher values lead to more offensive teams, potentially to the detriment of the other stats.  Low values will not necessaily lead to correspondingly reduced offensive presence.  This feature is balance-only.
@@ -37,6 +37,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --cm turns on core mode.
 - --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 20 rT 11 etc).
 - --raw makes the builder output the team as text rather than as a pokepaste link.
+- --nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
 
 #### Set Formatting ####
 

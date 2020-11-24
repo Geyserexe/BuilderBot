@@ -5,18 +5,21 @@ const defaultconfig = {
     teamNumber: 1,
     cutoff: 7,
     teamLength: 6,
-    tier: "gen8nationaldexag",
-    mode: "balance",
+    tier: "gen8anythinggoes",
+    mode: "stall",
     coreMode: false,
     breakerThreshold: 20,
-    recurseThreshold: 11,
+    recurseThreshold: 12,
     monsToAvoid: [
         ""
     ],
     startMon: {
 
-    }
+    },
+    speciesClause: true
 };
+
+config = defaultconfig
 
 for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
@@ -60,7 +63,7 @@ for (let i = 0; i < process.argv.length; i += 2) {
             break;
         case '--raw':
             config.raw = true;
-        case '--ncs':
+        case '--nsc':
             config.speciesClause = false;
     }
 }

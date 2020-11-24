@@ -950,33 +950,6 @@
             "nature": "Bold",
             "moves": [
                 "Ice Beam",
-                "Will-O-Wisp",
-                "Recover",
-                "Refresh"
-            ]
-        },
-        "breaker": 0,
-        "ogreCheck": 7,
-        "donCheck": 7,
-        "ygodCheck": 2,
-        "xernCheck": 0,
-        "rayCheck": 7,
-        "zygCheck": 9,
-        "zacCheck": 2,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Arceus-Water",
-            "item": "Splash Plate",
-            "ability": "Multitype",
-            "evs": "248 HP / 240 Def / 20 Spe",
-            "nature": "Bold",
-            "moves": [
-                "Ice Beam",
                 "Whirlpool",
                 "Recover",
                 "Perish Song"
@@ -1510,33 +1483,6 @@
     },
     {
         "set": {
-            "name": "Smeargle",
-            "item": "Leftovers",
-            "ability": "Moody",
-            "evs": "4 HP / 252 Atk / 252 Spe",
-            "nature": "Jolly",
-            "moves": [
-                "Power Trip",
-                "Spore",
-                "Shell Smash",
-                "Substitute"
-            ]
-        },
-        "breaker": 4,
-        "ogreCheck": 0,
-        "donCheck": 0,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "rayCheck": 0,
-        "zygCheck": 0,
-        "zacCheck": 0,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
             "name": "Arceus",
             "item": "Life Orb",
             "ability": "Multitype",
@@ -1685,7 +1631,7 @@
                 "Ice Beam"
             ]
         },
-        "breaker": 9,
+        "breaker": 7,
         "ogreCheck": 1,
         "donCheck": 1,
         "ygodCheck": 0,
@@ -1827,33 +1773,6 @@
         "xernCheck": 0,
         "rayCheck": 2,
         "zygCheck": 2,
-        "zacCheck": 0,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Diancie",
-            "item": "Leftovers",
-            "ability": "Clear Body",
-            "evs": "248 HP / 8 Def / 252 SpD",
-            "nature": "Calm",
-            "moves": [
-                "Stealth Rock",
-                "Moonblast",
-                "Power Gem",
-                "Rest"
-            ]
-        },
-        "breaker": 0,
-        "ogreCheck": 0,
-        "donCheck": 0,
-        "ygodCheck": 7,
-        "xernCheck": 0,
-        "rayCheck": 0,
-        "zygCheck": 1,
         "zacCheck": 0,
         "mega": false,
         "z": false,
