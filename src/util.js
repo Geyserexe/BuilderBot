@@ -62,7 +62,9 @@ class Util {
                 return false;
             }
             if(!config.speciesClause){
-                if(mon.set.name.toLowerCase() == "necrozma-dusk-mane" && a.set.name.toLowerCase() == "necrozma-dusk-mane"){
+                if((mon.set.name.toLowerCase() == "necrozma-dusk-mane" && a.set.name.toLowerCase() == "necrozma-dusk-mane") 
+                || (mon.set.name.toLowerCase() == "calyrex-shadow" && a.set.name.toLowerCase() == "calyrex-shadow")
+                || (mon.set.name.toLowerCase() == "zacian-crowned" && a.set.name.toLowerCase() == "zacian-crowned")){
                     return false;
                 }
                 let moves = a.set.moves;

@@ -8,7 +8,7 @@ const defaultconfig = {
     tier: "gen8anythinggoes",
     mode: "balance",
     coreMode: false,
-    breakerThreshold: 14,
+    breakerThreshold: 20,
     recurseThreshold: 12,
     monsToAvoid: [
         ""
@@ -63,7 +63,7 @@ for (let i = 0; i < process.argv.length; i += 2) {
             break;
         case '--raw':
             config.raw = true;
-        case '--ncs':
+        case '--nsc':
             config.speciesClause = false;
     }
 }

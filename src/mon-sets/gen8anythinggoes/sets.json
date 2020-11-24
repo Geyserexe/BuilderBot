@@ -289,6 +289,54 @@
     },
     {
         "set": {
+            "name": "Dracovish",
+            "item": "Choice Band",
+            "ability": "Strong Jaw",
+            "evs": "252 Atk / 4 SpD / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Fishious Rend",
+                "Crunch",
+                "Outrage",
+                "Psychic Fangs"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 1,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Gothitelle",
+            "item": "Leftovers",
+            "ability": "Shadow Tag",
+            "evs": "252 HP / 148 SpD / 108 Spe",
+            "nature": "Calm",
+            "moves": [
+                "Rest",
+                "Taunt",
+                "Charm",
+                "Cosmic Power"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "zygCheck": 4,
+        "zacCheck": 0,
+        "calyCheck": 7,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
             "name": "Calyrex-Shadow",
             "item": "Choice Scarf",
             "ability": "As One (Spectrier)",
