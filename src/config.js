@@ -3,13 +3,13 @@ config.speciesClause = true;
 
 const defaultconfig = {
     teamNumber: 1,
-    cutoff: 7,
+    cutoff: 5,
     teamLength: 6,
     tier: "gen8anythinggoes",
     mode: "balance",
     coreMode: false,
-    breakerThreshold: 20,
-    recurseThreshold: 10,
+    breakerThreshold: 25,
+    recurseThreshold: 12,
     monsToAvoid: [
         ""
     ],

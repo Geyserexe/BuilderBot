@@ -99,7 +99,7 @@ function buildTeam() {
                             currentValue = value;
                             priority = key;
                         }
-                    } else if(key != "breaker" && value < config.recurseThreshold){
+                    } else if (key != "breaker" && value < config.recurseThreshold) {
                         currentValue = value;
                         priority = key;
                     }
@@ -107,24 +107,26 @@ function buildTeam() {
             }
 
             for (let a = 0; a < sets.length; a++) {
-                if (sets[a][priority] >= config.cutoff) {
-                    pruneArray.push(sets[a]);
+                let set = sets[a];
+                if (set[priority] >= config.cutoff) {
+                    pruneArray.push(set);
                 }
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a], team)) {
+                let mon = pruneArray[a]
+                if (util.isValid(mon, team)) {
                     if (!stats.rocks || !stats.defog) {
-                        if (!stats.rocks && pruneArray[a].rocks) {
-                            prunedArray.push(pruneArray[a]);
-                        } else if (!stats.defog && pruneArray[a].defog) {
-                            prunedArray.push(pruneArray[a]);
+                        if (!stats.rocks && mon.rocks) {
+                            prunedArray.push(mon);
+                        } else if (!stats.defog && mon.defog) {
+                            prunedArray.push(mon);
                         } else {
-                            rejected.push(pruneArray[a]);
+                            rejected.push(mon);
                         }
                     } else {
-                        if ((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)) {
-                            prunedArray.push(pruneArray[a]);
+                        if ((!stats.rocks) || (stats.rocks && !mon.rocks)) {
+                            prunedArray.push(mon);
                         }
                     }
                 }

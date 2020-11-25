@@ -110,18 +110,26 @@ function buildTeam() {
             }
 
             for (let a = 0; a < pruneArray.length; a++) {
+                let mon = pruneArray[a];
                 if (util.isValid(pruneArray[a], team)) {
-                    if (!stats.rocks || !stats.defog) {
-                        if (!stats.rocks && pruneArray[a].rocks) {
-                            prunedArray.push(pruneArray[a]);
-                        } else if (!stats.defog && pruneArray[a].defog) {
-                            prunedArray.push(pruneArray[a]);
+                    if(mon.set.name == "Necrozma-Dusk-Mane" && mon.set.item == "Utility Umbrella"){
+                        for (let b = 0; b < team.length; b++){
+                            if(team[b].set.name == "Kyogre"){
+                                prunedArray.push(mon);
+                            }
+                        }
+                    }
+                    else if (!stats.rocks || !stats.defog) {
+                        if (!stats.rocks && mon.rocks) {
+                            prunedArray.push(mon);
+                        } else if (!stats.defog && mon.defog) {
+                            prunedArray.push(mon);
                         } else {
-                            rejected.push(pruneArray[a]);
+                            rejected.push(mon);
                         }
                     } else {
-                        if ((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)) {
-                            prunedArray.push(pruneArray[a]);
+                        if ((!stats.rocks) || (stats.rocks && !mon.rocks)) {
+                            prunedArray.push(mon);
                         }
                     }
                 }
