@@ -827,11 +827,11 @@
             ]
         },
         "breaker": 4,
-        "ogreCheck": 7,
+        "ogreCheck": 10,
         "ygodCheck": 2,
         "xernCheck": 2,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 3,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -1068,9 +1068,9 @@
             ]
         },
         "breaker": 0,
-        "ogreCheck": 10,
+        "ogreCheck": 9,
         "ygodCheck": 6,
-        "xernCheck": 7,
+        "xernCheck": 6,
         "zygCheck": 0,
         "zacCheck": 0,
         "calyCheck": 3,
