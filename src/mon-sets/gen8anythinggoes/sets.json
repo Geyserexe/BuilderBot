@@ -106,30 +106,6 @@
                 "Dark Pulse",
                 "Oblivion Wing",
                 "Heat Wave",
-                "Rock Slide"
-            ]
-        },
-        "breaker": 7,
-        "ogreCheck": 0,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "zygCheck": 3,
-        "zacCheck": 0,
-        "calyCheck": 6,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Yveltal",
-            "item": "Life Orb",
-            "ability": "Dark Aura",
-            "evs": "4 Atk / 252 SpA / 252 Spe",
-            "nature": "Rash",
-            "moves": [
-                "Dark Pulse",
-                "Oblivion Wing",
-                "Heat Wave",
                 "Steel Wing"
             ]
         },
@@ -1467,7 +1443,7 @@
         "set": {
             "name": "Reshiram",
             "item": "Life Orb",
-            "ability": "Air Lock",
+            "ability": "Turboblaze",
             "evs": "252 Atk / 4 SpD / 252 Spe",
             "nature": "Jolly",
             "moves": [
