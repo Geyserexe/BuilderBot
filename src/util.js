@@ -82,7 +82,7 @@ class Util {
             }
         }
 
-        let avoidDupMoves = ["whirlpool", "knock off"];
+        let avoidDupMoves = ["whirlpool", "snarl"];
 
         for (const avoidMove of avoidDupMoves) {
             for (const a of team) {
