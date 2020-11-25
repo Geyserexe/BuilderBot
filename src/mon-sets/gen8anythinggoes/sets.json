@@ -1443,7 +1443,7 @@
         "set": {
             "name": "Reshiram",
             "item": "Life Orb",
-            "ability": "Air Lock",
+            "ability": "Turboblaze",
             "evs": "252 Atk / 4 SpD / 252 Spe",
             "nature": "Jolly",
             "moves": [
