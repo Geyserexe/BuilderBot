@@ -99,7 +99,7 @@ function buildTeam() {
                             currentValue = value;
                             priority = key;
                         }
-                    } else if(key != "breaker" && value < config.recurseThreshold){
+                    } else if (key != "breaker" && value < config.recurseThreshold) {
                         currentValue = value;
                         priority = key;
                     }
@@ -116,14 +116,7 @@ function buildTeam() {
             for (let a = 0; a < pruneArray.length; a++) {
                 let mon = pruneArray[a]
                 if (util.isValid(mon, team)) {
-                    if(mon.set.name == "Necrozma-Dusk-Mane" && mon.set.item == "Utility Umbrella"){
-                        for (let b = 0; b < team.length; b++){
-                            if(team[b].set.name == "Kyogre"){
-                                prunedArray.push(mon);
-                            }
-                        }
-                    }
-                    else if (!stats.rocks || !stats.defog) {
+                    if (!stats.rocks || !stats.defog) {
                         if (!stats.rocks && mon.rocks) {
                             prunedArray.push(mon);
                         } else if (!stats.defog && mon.defog) {

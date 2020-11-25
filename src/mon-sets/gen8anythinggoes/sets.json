@@ -628,7 +628,7 @@
             "name": "Xerneas",
             "item": "Power Herb",
             "ability": "Fairy Aura",
-            "evs": "108 Def / 252 SpA / 148 Spe",
+            "evs": "4 Def / 252 SpA / 252 Spe",
             "nature": "Modest",
             "moves": [
                 "Substitute",
@@ -745,7 +745,7 @@
             "name": "Eternatus",
             "item": "Power Herb",
             "ability": "Pressure",
-            "evs": "112 Def / 252 SpA / 144 Spe",
+            "evs": "124 HP / 252 SpA / 132 Spe",
             "nature": "Modest",
             "moves": [
                 "Dynamax Cannon",
@@ -824,6 +824,30 @@
                 "Protect",
                 "Spikes",
                 "Power Whip"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 10,
+        "ygodCheck": 3,
+        "xernCheck": 5,
+        "zygCheck": 0,
+        "zacCheck": 0,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Ferrothorn",
+            "item": "Leftovers",
+            "ability": "Iron Barbs",
+            "evs": "252 HP / 4 Def / 252 SpD",
+            "nature": "Sassy",
+            "moves": [
+                "Leech Seed",
+                "Protect",
+                "Spikes",
+                "Gyro Ball"
             ]
         },
         "breaker": 0,
@@ -996,11 +1020,11 @@
         },
         "breaker": 0,
         "ogreCheck": 8,
-        "ygodCheck": 6,
+        "ygodCheck": 4,
         "xernCheck": 10,
         "zygCheck": 0,
         "zacCheck": 0,
-        "calyCheck": 3,
+        "calyCheck": 1,
         "rocks": false,
         "defog": false,
         "cleric": true
@@ -1020,12 +1044,12 @@
             ]
         },
         "breaker": 0,
-        "ogreCheck": 8,
-        "ygodCheck": 4,
+        "ogreCheck": 6,
+        "ygodCheck": 3,
         "xernCheck": 5,
         "zygCheck": 0,
         "zacCheck": 0,
-        "calyCheck": 3,
+        "calyCheck": 2,
         "rocks": false,
         "defog": false,
         "cleric": true
@@ -1045,12 +1069,12 @@
             ]
         },
         "breaker": 0,
-        "ogreCheck": 10,
-        "ygodCheck": 6,
-        "xernCheck": 7,
+        "ogreCheck": 6,
+        "ygodCheck": 3,
+        "xernCheck": 5,
         "zygCheck": 0,
         "zacCheck": 0,
-        "calyCheck": 3,
+        "calyCheck": 2,
         "rocks": false,
         "defog": false,
         "cleric": true
@@ -1147,30 +1171,6 @@
         "xernCheck": 2,
         "zygCheck": 1,
         "zacCheck": 8,
-        "calyCheck": 0,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Mewtwo",
-            "item": "Life Orb",
-            "ability": "Unnerve",
-            "evs": "252 SpA / 4 SpD / 252 Spe",
-            "nature": "Timid",
-            "moves": [
-                "Nasty Plot",
-                "Hurricane",
-                "Psystrike",
-                "Fire Blast"
-            ]
-        },
-        "breaker": 8,
-        "ogreCheck": 0,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "zygCheck": 0,
-        "zacCheck": 0,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -1436,6 +1436,30 @@
         "zygCheck": 2,
         "zacCheck": 4,
         "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Reshiram",
+            "item": "Choice Scarf",
+            "ability": "Turboblaze",
+            "evs": "52 Atk / 252 SpA / 204 Spe",
+            "nature": "Naive",
+            "moves": [
+                "Stone Edge",
+                "Draco Meteor",
+                "Blue Flare",
+                "Shadow Ball"
+            ]
+        },
+        "breaker": 5,
+        "ogreCheck": 0,
+        "ygodCheck": 2,
+        "xernCheck": 0,
+        "zygCheck": 3,
+        "zacCheck": 5,
+        "calyCheck": 4,
         "rocks": false,
         "defog": false
     },
