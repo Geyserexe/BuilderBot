@@ -1068,9 +1068,9 @@
             ]
         },
         "breaker": 0,
-        "ogreCheck": 9,
-        "ygodCheck": 6,
-        "xernCheck": 6,
+        "ogreCheck": 8,
+        "ygodCheck": 4,
+        "xernCheck": 5,
         "zygCheck": 0,
         "zacCheck": 0,
         "calyCheck": 3,
