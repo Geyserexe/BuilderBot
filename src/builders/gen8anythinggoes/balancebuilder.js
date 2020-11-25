@@ -129,10 +129,10 @@ function buildTeam() {
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
-                    let mon = getRandomMon(team);
+                    let mon = util.getRandomMon(team);
                     let a = 0;
                     while (!mon.defog) {
-                        mon = getRandomMon(team);
+                        mon = util.getRandomMon(team);
                         a++;
                         if (a > 1000) {
                             throw ("Not enough defoggers - try again or add more defoggers.");
