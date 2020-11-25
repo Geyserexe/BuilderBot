@@ -554,30 +554,6 @@
     {
         "set": {
             "name": "Necrozma-Dusk-Mane",
-            "item": "Leftovers",
-            "ability": "Prism Armor",
-            "evs": "252 HP / 252 Def / 4 SpD",
-            "nature": "Impish",
-            "moves": [
-                "Stealth Rock",
-                "Morning Sun",
-                "Sunsteel Strike",
-                "Knock Off"
-            ]
-        },
-        "breaker": 1,
-        "ogreCheck": 0,
-        "ygodCheck": 0,
-        "xernCheck": 8,
-        "zygCheck": 3,
-        "zacCheck": 10,
-        "calyCheck": 0,
-        "rocks": true,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Necrozma-Dusk-Mane",
             "item": "Utility Umbrella",
             "ability": "Prism Armor",
             "evs": "252 HP / 252 Def / 4 SpD",
