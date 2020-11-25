@@ -9,7 +9,7 @@ const defaultconfig = {
     mode: "balance",
     coreMode: false,
     breakerThreshold: 20,
-    recurseThreshold: 12,
+    recurseThreshold: 10,
     monsToAvoid: [
         ""
     ],
