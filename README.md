@@ -22,7 +22,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
-- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 25 rT 10 etc).
+- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 25 rT 10 etc) and overrides any other settings.
 - --raw makes the builder output the team as text rather than as a pokepaste link.
 - --nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
 

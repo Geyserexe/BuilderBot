@@ -7,7 +7,7 @@ exports.uploadToPokepaste = function (text) {
 		text = {
 			title: `${config.teamNumber} ${config.mode} team(s)`,
 			author: 'Geysers\' BuilderBot',
-			notes: `Cutoff: ${config.cutoff}\nCore Mode: ${config.coreMode}\nRecurse Threshold: ${config.recurseThreshold}\nBreaker Threshold: ${config.breakerThreshold}\nhttps://github.com/Geyserexe/BuilderBot`,
+			notes: `Cutoff: ${config.cutoff} recurseThreshold: ${config.recurseThreshold} breakerThreshold: ${config.breakerThreshold} Tier: ${config.tier} https://github.com/Geyserexe/BuilderBot`,
 			paste: text.replace(/\n(?:[^\r]|$)/g, match => match.replace(/\n/g, '\r\n'))
 		}
 		axios.post("https://pokepast.es/create", querystring.stringify(text)).then(res => {
