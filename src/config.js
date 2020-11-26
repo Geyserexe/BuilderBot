@@ -1,4 +1,4 @@
-let defaultconfig = require("../config.json");
+const defaultconfig = require("../config.json");
 defaultconfig.speciesClause = true;
 
 let config = defaultconfig
