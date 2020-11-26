@@ -52,25 +52,22 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
      },
     "breaker":,
     "ogreCheck":,
-    "donCheck":,
     "ygodCheck":,
     "xernCheck":,
-    "rayCheck":,
     "zygCheck":,
     "zacCheck":,
-    "mega":,
-    "z":,
+    "calyCheck":,
     "rocks":,
     "defog":
 }
 
-All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  All fields between "mega" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
+All fields between "breaker" and "zacCheck" should be integers between 0 and 10.  "rock" and "defog" should be booleans.  An optional "cleric": true field can be added after "defog", in the event of cleric use.  This format can be used for both the "startMon" field in config.js or for any of the three natdex sets files.  Gen7 set files use a slightly different format, which can be found in either gen7sets.json or gen7leads.json
 
 #### File-Structure Info ####
 
-All builder and set files are located within "src".  You shouldn't touch the .gitignore, package.json, or package-lock.json unless you really know what you're doing.
+All builder and set files are located within "src".  You shouldn't touch the .gitignore, package.json, or package-lock.json unless you really know what you're doing.  Honestly, you probably shouldn't touch any of it outside of the set files or config file.
 
 #### TODO ####
 
-- Add more sets
 - Add gen6 support
+- Update Natdex building for post-dlc meta

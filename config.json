@@ -1,12 +1,12 @@
 {
     "teamNumber": 1,
-    "cutoff": 7,
+    "cutoff": 5,
     "teamLength": 6,
-    "tier": "gen8nationaldexag",
+    "tier": "gen8anythinggoes",
     "mode": "balance",
     "coreMode": false,
-    "breakerThreshold": 20,
-    "recurseThreshold": 11,
+    "breakerThreshold": 25,
+    "recurseThreshold": 10,
     "monsToAvoid": [
         ""
     ],
