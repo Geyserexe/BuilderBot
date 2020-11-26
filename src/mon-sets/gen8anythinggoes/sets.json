@@ -18,7 +18,7 @@
         "ygodCheck": 3,
         "xernCheck": 3,
         "zygCheck": 3,
-        "zacCheck": 0,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -42,7 +42,7 @@
         "ygodCheck": 3,
         "xernCheck": 3,
         "zygCheck": 1,
-        "zacCheck": 0,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -66,7 +66,7 @@
         "ygodCheck": 3,
         "xernCheck": 3,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -90,7 +90,7 @@
         "ygodCheck": 3,
         "xernCheck": 3,
         "zygCheck": 0,
-        "zacCheck": 0,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
