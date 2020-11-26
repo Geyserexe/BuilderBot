@@ -1,25 +1,7 @@
-let config = require("../config.json");
-config.speciesClause = true;
+let defaultconfig = require("../config.json");
+defaultconfig.speciesClause = true;
 
-const defaultconfig = {
-    teamNumber: 1,
-    cutoff: 5,
-    teamLength: 6,
-    tier: "gen8anythinggoes",
-    mode: "balance",
-    coreMode: false,
-    breakerThreshold: 25,
-    recurseThreshold: 12,
-    monsToAvoid: [
-        ""
-    ],
-    startMon: {
-
-    },
-    speciesClause: true
-};
-
-config = defaultconfig
+let config = defaultconfig
 
 for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
