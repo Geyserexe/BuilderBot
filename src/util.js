@@ -1,5 +1,4 @@
 const config = require("./config.js");
-const { match } = require("./builders/gen8nationaldexag/offensebuilder.js");
 const sets = require(`./mon-sets/${config.tier}/sets.json`);
 
 class Util {
@@ -49,9 +48,10 @@ class Util {
         }
 
         for (const a of team) {
-
-            if ((mon.mega && a.mega) || (mon.z && a.z) || (a.cleric && mon.cleric)) {
-                return false;
+            if (config.tier.toLowerCase() != "gen8anythinggoes") {
+                if ((mon.mega && a.mega) || (mon.z && a.z) || (a.cleric && mon.cleric)) {
+                    return false;
+                }
             }
             if (config.speciesClause) {
                 if (mon.set.name.toLowerCase().includes(a.set.name.toLowerCase()) || a.set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
@@ -61,21 +61,20 @@ class Util {
             if ((mon.set.name.includes("Tyranitar") && a.set.name === "Shedinja") || (mon === "Shedinja" && a.set.name.includes("Tyranitar"))) {
                 return false;
             }
-            if(!config.speciesClause){
-                if((mon.set.name.toLowerCase() == "necrozma-dusk-mane" && a.set.name.toLowerCase() == "necrozma-dusk-mane") 
-                || (mon.set.name.toLowerCase() == "calyrex-shadow" && a.set.name.toLowerCase() == "calyrex-shadow")
-                || (mon.set.name.toLowerCase() == "zacian-crowned" && a.set.name.toLowerCase() == "zacian-crowned")){
+            if (!config.speciesClause) {
+                if ((mon.set.name.toLowerCase() == "necrozma-dusk-mane" && a.set.name.toLowerCase() == "necrozma-dusk-mane")
+                    || (mon.set.name.toLowerCase() == "calyrex-shadow" && a.set.name.toLowerCase() == "calyrex-shadow")) {
                     return false;
                 }
                 let moves = a.set.moves;
-                if(a.set.name.toLowerCase().includes(mon.set.name.toLowerCase())){
+                if (a.set.name.toLowerCase().includes(mon.set.name.toLowerCase())) {
                     let matches = 0;
-                    for(let i = 0; i < moves.length; i++){
-                        if(moves[i].toLowerCase().includes(mon.set.moves[i].toLowerCase())){
+                    for (let i = 0; i < moves.length; i++) {
+                        if (moves[i].toLowerCase().includes(mon.set.moves[i].toLowerCase())) {
                             matches++;
                         }
                     }
-                    if(matches == moves.length){
+                    if (matches == moves.length) {
                         return false;
                     }
                 }

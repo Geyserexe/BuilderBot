@@ -65,16 +65,6 @@ function buildTeam() {
 
         if (config.startMon.set) {
             team[0] = config.startMon;
-        }
-        if (config.coreMode) {
-            let core = cores[util.getRandomInt(cores.length)];
-            for (let i = 0; i < core.length; i++) {
-                team.push(core[i]);
-            }
-            config.teamLength -= core.length - 1;
-            if (config.startMon.set) {
-                config.teamLength--;
-            }
         } else if (!config.startMon.set) {
             team[0] = util.getRandomMon([]);
         }

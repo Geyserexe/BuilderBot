@@ -1,7 +1,8 @@
-let defaultconfig = require("../config.json");
-defaultconfig.speciesClause = true;
+const configTemplates = require("../config.json");
 
-let config = defaultconfig
+let mode = null;
+let tier = null;
+let configEdits = {};
 
 for (let i = 0; i < process.argv.length; i += 2) {
     let value = process.argv[i + 1];
@@ -13,40 +14,59 @@ for (let i = 0; i < process.argv.length; i += 2) {
             if (parseInt(value > 10)) {
                 throw ('cutoff too high');
             }
-            config.cutoff = parseInt(value);
+            configEdits.cutoff = parseInt(value);
             break;
         case '--t':
-            config.tier = value;
+            tier = value;
             break;
         case '--r':
-            config.recurseThreshold = parseInt(value);
+            configEdits.recurseThreshold = parseInt(value);
             break;
         case '--b':
-            config.breakerThreshold = parseInt(value);
+            configEdits.breakerThreshold = parseInt(value);
             break;
         case '--m':
-            config.mode = value;
+            mode = value;
             break;
         case '--a':
             for (const mon of value.split(',')) {
-                config.monsToAvoid.push(mon);
+                configEdits.monsToAvoid.push(mon);
             }
             break;
         case '--n':
-            config.teamNumber = parseInt(value);
+            configEdits.teamNumber = parseInt(value);
             break;
         case '--cm':
-            config.coreMode = true;
+            configEdits.coreMode = true;
             i--;
             break;
         case '--d':
-            config = defaultconfig;
+            configEdits = defaultconfig;
             i = process.argv.length;
             break;
         case '--raw':
-            config.raw = true;
+            configEdits.raw = true;
         case '--nsc':
-            config.speciesClause = false;
+            configEdits.speciesClause = false;
+    }
+}
+
+let config = null;
+if(tier && mode){
+    config = configTemplates[tier][mode];
+} else if (tier && !mode){
+    config = configTemplates[tier].balance;
+} else if (!tier && mode){
+    config = configTemplates.gen8anythinggoes[mode];
+} else if (!tier && !mode){
+    config = configTemplates.gen8anythinggoes.balance;
+}
+
+for (let [key, value] of Object.entries(configEdits)){
+    for (let [key1, value1] of Object.entries(config)){
+        if (key == key1 && value != value1){
+            config[key] = value;
+        }
     }
 }
 

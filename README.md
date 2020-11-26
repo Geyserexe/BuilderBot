@@ -22,7 +22,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
-- --d runs the builder on the default settings (i.e natdex balance cutoff 7 bT 20 rT 11 etc).
+- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 25 rT 10 etc).
 - --raw makes the builder output the team as text rather than as a pokepaste link.
 - --nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
 
@@ -37,7 +37,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - "breakerThreshold" is the minimum value for the breaker stat below which the builder will rebuild a team.  Higher values lead to more offensive teams, potentially to the detriment of the other stats.  Low values will not necessaily lead to correspondingly reduced offensive presence.  This feature is balance-only.
 - "recurseThreshold" is the minimum value for a given stat below which the builder will rebuild a team.  If this value is set too high, an error will likely appear.  Higher values will lead to better teams, but only up to a point, beyond which teams may appear overly similar.  Optimal values for this field are integers between 10 and 20.  This feature does nothing if teamNumber is greater than 1, owing to stack size limitations.  This feature applies only to balance and stall.
 - "monsToAvoid" allows the user to decide if there are certain Pokémon that they do not want on their team.  Commonly used options are Chansey or Diancie.  Formatting within the [] is "mon","mon","mon", etc.  This field is not case-sensitive.
-- "startMon" allows the user to provide a set around which to build a team.  The set should be formatted as below for natdex.  For gen7, the formatting can be found in the gen7sets file.  "__check" information is optional, but should be incuded for best results.
+- "startMon" allows the user to provide a set around which to build a team.  The set should be formatted as below for galar dex AG.  For gen7 or natdex, the formatting can be found in the gen7 sets or natdex sets file.  "__check" information is optional, but should be incuded for best results.
 
 #### Set Formatting ####
 
