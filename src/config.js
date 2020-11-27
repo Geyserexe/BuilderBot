@@ -9,10 +9,10 @@ for (let i = 0; i < process.argv.length; i += 2) {
     let flag = process.argv[i];
     switch (flag) {
         case 'help':
-            throw ('usage: node builder [--c | --n | --t | --r | --b | --m | --cm | --d | --raw | --a]');
+            throw ('usage: node builder [--c (arg #)| --n (arg #)| --t (arg tier)| --r (arg #)| --b (arg #)| --m (arg mode)| --cm | --d | --raw | --a]');
         case '--c':
-            if (parseInt(value > 10)) {
-                throw ('cutoff too high');
+            if (parseInt(value) > 10) {
+                throw ('cutoff too high (lower it below 10)');
             }
             configEdits.cutoff = parseInt(value);
             break;
@@ -29,7 +29,8 @@ for (let i = 0; i < process.argv.length; i += 2) {
             mode = value;
             break;
         case '--a':
-            for (const mon of value.split(',')) {
+            configEdits.monsToAvoid=[];
+            for (let mon of value.split(',')) {
                 configEdits.monsToAvoid.push(mon);
             }
             break;
@@ -52,19 +53,18 @@ for (let i = 0; i < process.argv.length; i += 2) {
 }
 
 let config = null;
-if(tier && mode){
-    config = configTemplates[tier][mode];
-} else if (tier && !mode){
-    config = configTemplates[tier].balance;
-} else if (!tier && mode){
-    config = configTemplates.gen8anythinggoes[mode];
-} else if (!tier && !mode){
-    config = configTemplates.gen8anythinggoes.balance;
+
+if (tier) {
+    if (mode) { config = configTemplates[tier][mode] }
+    else { config = configTemplates[tier].balance; }
+} else {
+    if (mode) { config = configTemplates.gen8anythinggoes[mode]; }
+    else { config = configTemplates.gen8anythinggoes.balance; }
 }
 
-for (let [key, value] of Object.entries(configEdits)){
-    for (let [key1, value1] of Object.entries(config)){
-        if (key == key1 && value != value1){
+for (let [key, value] of Object.entries(configEdits)) {
+    for (let [key1, value1] of Object.entries(config)) {
+        if (key == key1 && value != value1) {
             config[key] = value;
         }
     }
