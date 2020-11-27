@@ -11,8 +11,8 @@ for (let i = 0; i < process.argv.length; i += 2) {
         case 'help':
             throw ('usage: node builder [--c (arg #)| --n (arg #)| --t (arg tier)| --r (arg #)| --b (arg #)| --m (arg mode)| --cm | --d | --raw | --a]');
         case '--c':
-            if (parseInt(value > 10)) {
-                throw ('cutoff too high');
+            if (parseInt(value) > 10) {
+                throw ('cutoff too high (lower it below 10)');
             }
             configEdits.cutoff = parseInt(value);
             break;
@@ -29,7 +29,8 @@ for (let i = 0; i < process.argv.length; i += 2) {
             mode = value;
             break;
         case '--a':
-            for (const mon of value.split(',')) {
+            configEdits.monsToAvoid=[];
+            for (let mon of value.split(',')) {
                 configEdits.monsToAvoid.push(mon);
             }
             break;
