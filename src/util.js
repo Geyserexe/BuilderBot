@@ -82,6 +82,10 @@ class Util {
         }
 
         let avoidDupMoves = ["whirlpool", "snarl"];
+        
+        if(config.tier == "gen8nationaldex"){
+            avoidDupMoves.push("knock off");
+        }
 
         for (const avoidMove of avoidDupMoves) {
             for (const a of team) {
