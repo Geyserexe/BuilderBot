@@ -245,9 +245,9 @@
             "item": "Heavy-Duty Boots",
             "ability": "Dark Aura",
             "evs": "248 HP / 8 Def / 252 SpD",
-            "nature": "Calm",
+            "nature": "Careful",
             "moves": [
-                "Snarl",
+                "Foul Play",
                 "U-Turn",
                 "Roost",
                 "Defog"
