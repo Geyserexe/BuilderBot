@@ -1466,7 +1466,31 @@
     {
         "set": {
             "name": "Quagsire",
-            "item": "Leftovers",
+            "item": "Rocky Helmet",
+            "ability": "Unaware",
+            "evs": "252 HP / 4 Atk / 252 Def",
+            "nature": "Impish",
+            "moves": [
+                "Earthquake",
+                "Recover",
+                "Haze",
+                "Toxic"
+            ]
+        },
+        "breaker": 0,
+        "ogreCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 0,
+        "zygCheck": 5,
+        "zacCheck": 10,
+        "calyCheck": 0,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Quagsire",
+            "item": "Heavy-Duty Boots",
             "ability": "Unaware",
             "evs": "252 HP / 4 Atk / 252 Def",
             "nature": "Impish",
