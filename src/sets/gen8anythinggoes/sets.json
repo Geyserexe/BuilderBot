@@ -1108,46 +1108,46 @@
             "name": "Kyurem-White",
             "item": "Utility Umbrella",
             "ability": "Turboblaze",
-            "evs": "252 HP / 4 Def / 252 SpD",
-            "nature": "Calm",
+            "evs": "40 SpA / 216 SpD / 252 Spe",
+            "nature": "Timid",
             "moves": [
                 "Roost",
-                "Toxic",
+                "Sheer Cold",
                 "Freeze Dry",
                 "Fusion Flare"
             ]
         },
         "breaker": 1,
-        "ogreCheck": 9,
+        "ogreCheck": 10,
         "ygodCheck": 1,
         "xernCheck": 0,
-        "zygCheck": 2,
+        "zygCheck": 5,
         "zacCheck": 0,
         "calyCheck": 1,
         "rocks": false,
         "defog": false
     },
-    {
+        {
         "set": {
             "name": "Kyurem-White",
-            "item": "heavy-Duty Boots",
+            "item": "Utility Umbrella",
             "ability": "Turboblaze",
-            "evs": "252 Spa / 4 SpD / 252 Spe",
+            "evs": "40 SpA / 216 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
                 "Roost",
-                "Stone Edge",
-                "Freeze Dry",
+                "Sheer Cold",
+                "Dragon Tail",
                 "Fusion Flare"
             ]
         },
-        "breaker": 6,
-        "ogreCheck": 4,
+        "breaker": 1,
+        "ogreCheck": 10,
         "ygodCheck": 1,
         "xernCheck": 0,
-        "zygCheck": 4,
+        "zygCheck": 5,
         "zacCheck": 0,
-        "calyCheck": 0,
+        "calyCheck": 1,
         "rocks": false,
         "defog": false
     },
