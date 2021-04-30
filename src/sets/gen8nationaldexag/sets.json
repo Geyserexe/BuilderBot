@@ -1577,7 +1577,7 @@
                 "Fire Blast"
             ]
         },
-        "breaker": 8,
+        "breaker": 5,
         "ogreCheck": 0,
         "donCheck": 2,
         "ygodCheck": 0,
@@ -1604,34 +1604,7 @@
                 "Focus Blast"
             ]
         },
-        "breaker": 9,
-        "ogreCheck": 1,
-        "donCheck": 1,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "rayCheck": 1,
-        "zygCheck": 1,
-        "zacCheck": 5,
-        "mega": true,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Mewtwo-Mega-Y",
-            "item": "Mewtwonite Y",
-            "ability": "Unnerve",
-            "evs": "80 Def / 252 SpA / 176 Spe",
-            "nature": "Timid",
-            "moves": [
-                "Nasty Plot",
-                "Psystrike",
-                "Fire Blast",
-                "Ice Beam"
-            ]
-        },
-        "breaker": 7,
+        "breaker": 6,
         "ogreCheck": 1,
         "donCheck": 1,
         "ygodCheck": 0,
@@ -2048,33 +2021,6 @@
         "z": false,
         "rocks": false,
         "defog": false
-    },
-    {
-        "set": {
-            "name": "Salamence-Mega",
-            "item": "Salamencite",
-            "ability": "Intimidate",
-            "evs": "252 HP / 240 Def / 16 Spe",
-            "nature": "Impish",
-            "moves": [
-                "Defog",
-                "Refresh",
-                "Roost",
-                "Body Slam"
-            ]
-        },
-        "breaker": 2,
-        "ogreCheck": 0,
-        "donCheck": 7,
-        "ygodCheck": 0,
-        "xernCheck": 0,
-        "rayCheck": 0,
-        "zygCheck": 2,
-        "zacCheck": 2,
-        "mega": true,
-        "z": false,
-        "rocks": false,
-        "defog": true
     },
     {
         "set": {

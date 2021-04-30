@@ -1,5 +1,5 @@
 # BuilderBot
-A program to build teams for Pokemon Showdown in the gen8nationaldexag & gen7anythinggoes formats
+A program to build teams for Pokemon Showdown in the gen8nationaldexag, gen8anythinggoes & gen7anythinggoes formats
 
 Use config.cutoff to change the building style by changing it between 0 and 10.  Lower cutoffs result in more offensive teams that are less likely to have effective meta checks, while higher cutoffs generally result in bulkier teams. 
 Add additional sets to the appropriate file in src/sets/. 
@@ -70,4 +70,4 @@ All builder and set files are located within "src".  You shouldn't touch the .gi
 #### TODO ####
 
 - Add gen6 support
-- Update Natdex building for post-dlc meta
+- Update Natdex building for post-dlc metan

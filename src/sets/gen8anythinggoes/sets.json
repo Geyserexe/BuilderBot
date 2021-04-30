@@ -554,33 +554,9 @@
     {
         "set": {
             "name": "Necrozma-Dusk-Mane",
-            "item": "Utility Umbrella",
-            "ability": "Prism Armor",
-            "evs": "252 HP / 252 Def / 4 SpD",
-            "nature": "Impish",
-            "moves": [
-                "Stealth Rock",
-                "Morning Sun",
-                "Sunsteel Strike",
-                "Knock Off"
-            ]
-        },
-        "breaker": 1,
-        "ogreCheck": 2,
-        "ygodCheck": 0,
-        "xernCheck": 8,
-        "zygCheck": 3,
-        "zacCheck": 9,
-        "calyCheck": 0,
-        "rocks": true,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Necrozma-Dusk-Mane",
             "item": "Rocky Helmet",
             "ability": "Prism Armor",
-            "evs": "252 HP / 252 Def / 4 SpD",
+            "evs": "248 HP / 252 Def / 8 Spe",
             "nature": "Impish",
             "moves": [
                 "Stealth Rock",
@@ -604,7 +580,7 @@
             "name": "Necrozma-Dusk-Mane",
             "item": "Rocky Helmet",
             "ability": "Prism Armor",
-            "evs": "252 HP / 252 Def / 4 SpD",
+            "evs": "248 HP / 252 Def / 8 Spe",
             "nature": "Impish",
             "moves": [
                 "Stealth Rock",
@@ -614,6 +590,54 @@
             ]
         },
         "breaker": 1,
+        "ogreCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 6,
+        "zygCheck": 3,
+        "zacCheck": 10,
+        "calyCheck": 0,
+        "rocks": true,
+        "defog": false
+    },
+        {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Rocky Helmet",
+            "ability": "Prism Armor",
+            "evs": "248 HP / 252 Def / 8 Spe",
+            "nature": "Impish",
+            "moves": [
+                "Stealth Rock",
+                "Morning Sun",
+                "Sunsteel Strike",
+                "Earthquake"
+            ]
+        },
+        "breaker": 2,
+        "ogreCheck": 0,
+        "ygodCheck": 0,
+        "xernCheck": 6,
+        "zygCheck": 3,
+        "zacCheck": 10,
+        "calyCheck": 0,
+        "rocks": true,
+        "defog": false
+    },
+        {
+        "set": {
+            "name": "Necrozma-Dusk-Mane",
+            "item": "Heavy-Duty Boots",
+            "ability": "Prism Armor",
+            "evs": "248 HP / 252 Def / 8 Spe",
+            "nature": "Impish",
+            "moves": [
+                "Stealth Rock",
+                "Morning Sun",
+                "Sunsteel Strike",
+                "Earthquake"
+            ]
+        },
+        "breaker": 2,
         "ogreCheck": 0,
         "ygodCheck": 0,
         "xernCheck": 6,
@@ -1108,46 +1132,46 @@
             "name": "Kyurem-White",
             "item": "Utility Umbrella",
             "ability": "Turboblaze",
-            "evs": "252 HP / 4 Def / 252 SpD",
-            "nature": "Calm",
-            "moves": [
-                "Roost",
-                "Toxic",
-                "Freeze Dry",
-                "Fusion Flare"
-            ]
-        },
-        "breaker": 1,
-        "ogreCheck": 9,
-        "ygodCheck": 1,
-        "xernCheck": 0,
-        "zygCheck": 2,
-        "zacCheck": 0,
-        "calyCheck": 1,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Kyurem-White",
-            "item": "heavy-Duty Boots",
-            "ability": "Turboblaze",
-            "evs": "252 Spa / 4 SpD / 252 Spe",
+            "evs": "40 SpA / 216 SpD / 252 Spe",
             "nature": "Timid",
             "moves": [
                 "Roost",
-                "Stone Edge",
+                "Sheer Cold",
                 "Freeze Dry",
                 "Fusion Flare"
             ]
         },
         "breaker": 6,
-        "ogreCheck": 4,
+        "ogreCheck": 10,
         "ygodCheck": 1,
         "xernCheck": 0,
-        "zygCheck": 4,
+        "zygCheck": 5,
         "zacCheck": 0,
-        "calyCheck": 0,
+        "calyCheck": 1,
+        "rocks": false,
+        "defog": false
+    },
+        {
+        "set": {
+            "name": "Kyurem-White",
+            "item": "Utility Umbrella",
+            "ability": "Turboblaze",
+            "evs": "40 SpA / 216 SpD / 252 Spe",
+            "nature": "Timid",
+            "moves": [
+                "Roost",
+                "Sheer Cold",
+                "Dragon Tail",
+                "Fusion Flare"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 10,
+        "ygodCheck": 1,
+        "xernCheck": 0,
+        "zygCheck": 5,
+        "zacCheck": 0,
+        "calyCheck": 1,
         "rocks": false,
         "defog": false
     },

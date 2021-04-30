@@ -61,6 +61,9 @@ class Util {
             if ((mon.set.name.includes("Tyranitar") && a.set.name === "Shedinja") || (mon === "Shedinja" && a.set.name.includes("Tyranitar"))) {
                 return false;
             }
+            if ((mon.set.name.includes("Dracovish") && a.set.name === "Groudon") || (mon.set.name.includes("Groudon") && a.set.name === "Dracovish")){
+                return false;
+            }
             if (!config.speciesClause) {
                 if ((mon.set.name.toLowerCase() == "necrozma-dusk-mane" && a.set.name.toLowerCase() == "necrozma-dusk-mane")
                     || (mon.set.name.toLowerCase() == "calyrex-shadow" && a.set.name.toLowerCase() == "calyrex-shadow")) {
