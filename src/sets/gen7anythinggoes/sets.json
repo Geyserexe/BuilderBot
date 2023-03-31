@@ -1674,33 +1674,6 @@
     },
     {
         "set": {
-            "name": "Arceus-Grass",
-            "item": "Meadow Plate",
-            "ability": "Multitype",
-            "evs": "248 HP / 244 SpD / 16 Spe",
-            "nature": "Calm",
-            "moves": [
-                "Grass Knot",
-                "Recover",
-                "Defog",
-                "Roar"
-            ]
-        },
-        "breaker": 2,
-        "ogreCheck": 9,
-        "donCheck": 1,
-        "xernCheck": 5,
-        "rayCheck": 0,
-        "zygCheck": 2,
-        "marshCheck": 2,
-        "ultraCheck": 0,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": true
-    },
-    {
-        "set": {
             "name": "Marshadow",
             "item": "Choice Scarf",
             "ability": "Technician",

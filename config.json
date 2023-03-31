@@ -7,8 +7,8 @@
             "tier": "gen8anythinggoes",
             "mode": "balance",
             "coreMode": false,
-            "breakerThreshold": 25,
-            "recurseThreshold": 10,
+            "breakerThreshold": 30,
+            "recurseThreshold": 15,
             "monsToAvoid": [
                 ""
             ],

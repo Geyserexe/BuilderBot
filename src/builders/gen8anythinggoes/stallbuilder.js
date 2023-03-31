@@ -8,16 +8,13 @@ let recursions = 0;
 
 let stats = {
     ints: {
-        zygCheck: 0,
         zacCheck: 0,
-        ygodCheck: 0,
         xernCheck: 0,
         ogreCheck: 0,
         calyCheck: 0
     },
     rocks: false,
     defog: false,
-    cleric: false
 };
 
 module.exports = tryBuild();
@@ -64,7 +61,7 @@ function buildTeam() {
                 }
             }
             if(!options){
-                let priority = ["zygCheck","zacCheck","xernCheck","ogreCheck","calyCheck","ygodCheck"][util.getRandomInt(6)];
+                let priority = ["zacCheck","xernCheck","ogreCheck","calyCheck"][util.getRandomInt(4)];
                 let options = [];
                 for (let b = 0; b < sets.length; b++) {
                     if (!stats.defog && sets[b].defog && a < config.teamLength - 2 && util.isValid(sets[b], team)) {
