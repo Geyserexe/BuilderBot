@@ -16,10 +16,8 @@
         "breaker": 5,
         "ogreCheck": 0,
         "donCheck": 0,
-        
         "xernCheck": 0,
         "rayCheck": 0,
-        
         "zacCheck": 0,
         "rocks": true,
         "defog": false
@@ -41,10 +39,8 @@
         "breaker": 0,
         "ogreCheck": 0,
         "donCheck": 0,
-        
         "xernCheck": 0,
         "rayCheck": 0,
-        
         "zacCheck": 0,
         "rocks": true,
         "defog": false
@@ -66,10 +62,8 @@
         "breaker": 0,
         "ogreCheck": 0,
         "donCheck": 0,
-        
         "xernCheck": 0,
         "rayCheck": 0,
-        
         "zacCheck": 0,
         "rocks": true,
         "defog": false
@@ -91,10 +85,8 @@
         "breaker": 2,
         "ogreCheck": 0,
         "donCheck": 0,
-        
         "xernCheck": 0,
         "rayCheck": 0,
-        
         "zacCheck": 0,
         "rocks": true,
         "defog": false

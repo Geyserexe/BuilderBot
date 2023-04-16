@@ -52,10 +52,8 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
      },
     "breaker":,
     "ogreCheck":,
-    "ygodCheck":,
     "xernCheck":,
     "zygCheck":,
-    "zacCheck":,
     "calyCheck":,
     "rocks":,
     "defog":
