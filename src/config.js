@@ -55,13 +55,9 @@ for (let i = 0; i < process.argv.length; i += 2) {
 }
 let config = null;
 
-if (tier) {
-    if (mode) { config = configTemplates[tier][mode] }
-    else { config = configTemplates[tier].balance; }
-} else {
-    if (mode) { config = configTemplates.gen8anythinggoes[mode]; }
-    else { config = configTemplates.gen8anythinggoes.balance; }
-}
+if (!tier) { tier = "gen8anythinggoes"; }
+if (!mode) { mode = "balance" }
+config = configTemplates[tier][mode];
 
 for (let [key, value] of Object.entries(configEdits)) {
     for (let [key1, value1] of Object.entries(config)) {

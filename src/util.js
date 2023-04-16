@@ -86,7 +86,7 @@ class Util {
 
         let avoidDupMoves = ["whirlpool", "snarl"];
         
-        if(config.tier == "gen8nationaldex"){
+        if(config.tier == "gen8nationaldexag"){
             avoidDupMoves.push("knock off");
         }
 

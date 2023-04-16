@@ -25,7 +25,7 @@
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [
-                ""
+                "Kyogre"
             ],
             "startMon": {},
             "speciesClause": true
