@@ -22,7 +22,7 @@ an example of flag usage is "node builder --t gen8nationaldexag --c 7 --r 14 --a
 - --n controls the number of teams built.
 - --a controls the avoided mons; formatting is a comma-separated-list.
 - --cm turns on core mode.
-- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 25 rT 10 etc) and overrides any other settings.
+- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 35 rT 15 etc) and overrides any other settings.
 - --raw makes the builder output the team as text rather than as a pokepaste link.
 - --nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
 
@@ -63,9 +63,9 @@ All fields between "breaker" and "zacCheck" should be integers between 0 and 10.
 
 #### File-Structure Info ####
 
-All builder and set files are located within "src".  You shouldn't touch the .gitignore, package.json, or package-lock.json unless you really know what you're doing.  Honestly, you probably shouldn't touch any of it outside of the set files or config file.
+All builder and set files are located within "src".  You shouldn't touch the .gitignore, package.json, or package-lock.json unless you really know what you're doing.  Honestly, you probably shouldn't touch any of it outside of the set files or config file because most of it is a sketchy house of cards that'll collapse quickly.
 
 #### TODO ####
 
-- Add gen6 support
-- Update Natdex building for post-dlc metan
+- Add gen9 support
+- Update Natdex building for post-dlc meta
