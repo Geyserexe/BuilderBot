@@ -6,7 +6,6 @@
             "teamLength": 6,
             "tier": "gen8anythinggoes",
             "mode": "balance",
-            "coreMode": false,
             "breakerThreshold": 30,
             "recurseThreshold": 15,
             "monsToAvoid": [
@@ -21,7 +20,6 @@
             "teamLength": 6,
             "tier": "gen8anythinggoes",
             "mode": "offense",
-            "coreMode": false,
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [
@@ -38,7 +36,6 @@
             "teamLength": 6,
             "tier": "gen7anythinggoes",
             "mode": "balance",
-            "coreMode": false,
             "breakerThreshold": 20,
             "recurseThreshold": 11,
             "monsToAvoid": [
@@ -53,7 +50,6 @@
             "teamLength": 6,
             "tier": "gen7anythinggoes",
             "mode": "offense",
-            "coreMode": false,
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [

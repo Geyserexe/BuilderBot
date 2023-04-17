@@ -89,23 +89,15 @@ function buildTeam() {
                 }
             }
 
-            for (let a = 0; a < sets.length; a++) {
-                if (sets[a][priority] >= config.cutoff) {
-                    pruneArray.push(sets[a]);
+            sets.forEach(a => {
+                if(a[priority] >= config.cutoff){
+                    pruneArray.push(a);
                 }
-            }
+            });
 
-            for (let a = 0; a < pruneArray.length; a++) {
-                let mon = pruneArray[a];
-                if (util.isValid(pruneArray[a], team)) {
-                    if(mon.set.name == "Necrozma-Dusk-Mane" && mon.set.item == "Utility Umbrella"){
-                        for (let b = 0; b < team.length; b++){
-                            if(team[b].set.name == "Kyogre"){
-                                prunedArray.push(mon);
-                            }
-                        }
-                    }
-                    else if (!stats.defog) {
+            pruneArray.forEach(mon => {
+                if (util.isValid(mon, team)) {
+                    if (!stats.defog) {
                         if (!stats.defog && mon.defog) {
                             prunedArray.push(mon);
                         } else {
@@ -113,7 +105,7 @@ function buildTeam() {
                         }
                     }
                 }
-            }
+            });
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
@@ -151,7 +143,7 @@ function buildTeam() {
 
         for (let value of Object.values(stats.ints)) {
             if (config.teamNumber === 1 && ((value < config.recurseThreshold || !stats.defog) || stats.ints.breaker < config.breakerThreshold)) {
-                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                if (recursions > 3200) {
                     throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
                 recursions++;

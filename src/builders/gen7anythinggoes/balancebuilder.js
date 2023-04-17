@@ -92,31 +92,29 @@ function buildTeam() {
                 }
             }
 
-            for (let a = 0; a < sets.length; a++) {
-                for (let a = 0; a < sets.length; a++) {
-                    if (sets[a][priority] >= config.cutoff) {
-                        pruneArray.push(sets[a]);
-                    }
+            sets.forEach(a => {
+                if(a[priority] >= config.cutoff){
+                    pruneArray.push(a);
                 }
-            }
+            });
 
-            for (let a = 0; a < pruneArray.length; a++) {
-                if (util.isValid(pruneArray[a], team)) {
+            pruneArray.forEach(mon =>{
+                if (util.isValid(mon, team)) {
                     if (!stats.rocks || !stats.defog) {
-                        if (!stats.rocks && pruneArray[a].rocks) {
-                            prunedArray.push(pruneArray[a]);
-                        } else if (!stats.defog && pruneArray[a].defog) {
-                            prunedArray.push(pruneArray[a]);
+                        if (!stats.rocks && mon.rocks) {
+                            prunedArray.push(mon);
+                        } else if (!stats.defog && mon.defog) {
+                            prunedArray.push(mon);
                         } else {
-                            rejected.push(pruneArray[a]);
+                            rejected.push(mon);
                         }
                     } else {
-                        if ((!stats.rocks) || (stats.rocks && !pruneArray[a].rocks)) {
-                            prunedArray.push(pruneArray[a]);
+                        if ((!stats.rocks) || (stats.rocks && !mon.rocks)) {
+                            prunedArray.push(mon);
                         }
                     }
                 }
-            }
+            });
 
             if (prunedArray.length === 0) {
                 if (!stats.defog && config.cutoff <= 2) {
@@ -165,7 +163,7 @@ function buildTeam() {
 
         for (let value of Object.values(stats.ints)) {
             if (config.teamNumber === 1 && ((value < config.recurseThreshold || !stats.defog) || stats.ints.breaker < config.breakerThreshold)) {
-                if (recursions > 3200 || ((config.coreMode && config.startMon.set) && recursions > 500)) {
+                if (recursions > 3200) {
                     throw ("recurseThreshold or breakerThreshold too high - lower one or try again");
                 }
                 recursions++;

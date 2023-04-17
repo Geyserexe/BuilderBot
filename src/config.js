@@ -43,10 +43,6 @@ for (let i = 0; i < process.argv.length; i += 2) {
         case '--n':
             configEdits.teamNumber = parseInt(value);
             break;
-        case '--cm':
-            configEdits.coreMode = true;
-            i--;
-            break;
         case '--d':
             configEdits = defaultconfig;
             i = process.argv.length;
