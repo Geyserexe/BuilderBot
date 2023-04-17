@@ -62,37 +62,5 @@
             "startMon": {},
             "speciesClause": true
         }
-    },
-    "gen8nationaldexag": {
-        "balance": {
-            "teamNumber": 1,
-            "cutoff": 7,
-            "teamLength": 6,
-            "tier": "gen8nationaldexag",
-            "mode": "balance",
-            "coreMode": false,
-            "breakerThreshold": 20,
-            "recurseThreshold": 11,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        },
-        "offense": {
-            "teamNumber": 1,
-            "cutoff": 6,
-            "teamLength": 6,
-            "tier": "gen8nationaldexag",
-            "mode": "offense",
-            "coreMode": false,
-            "breakerThreshold": 40,
-            "recurseThreshold": 0,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        }
     }
 }

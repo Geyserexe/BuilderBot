@@ -17,6 +17,9 @@ for (let i = 0; i < process.argv.length; i += 2) {
             configEdits.cutoff = parseInt(value);
             break;
         case '--t':
+            if(!(value == "gen8anythinggoes" || value == "gen7anythinggoes")){
+                throw("invalid tier");
+            }
             tier = value;
             break;
         case '--r':
@@ -26,6 +29,9 @@ for (let i = 0; i < process.argv.length; i += 2) {
             configEdits.breakerThreshold = parseInt(value);
             break;
         case '--m':
+            if(!(value == "balance" || value == "offense")){
+                throw("invalid mode");
+            }
             mode = value;
             break;
         case '--a':
