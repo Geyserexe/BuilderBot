@@ -391,7 +391,7 @@
         "ogreCheck": 0,
         "xernCheck": 0,
         "zacCheck": 6,
-        "calyCheck": 0,
+        "calyCheck": 2,
         "rocks": false,
         "defog": false
     },
@@ -413,7 +413,7 @@
         "ogreCheck": 0,
         "xernCheck": 0,
         "zacCheck": 1,
-        "calyCheck": 0,
+        "calyCheck": 1,
         "rocks": false,
         "defog": false
     },
@@ -434,8 +434,8 @@
         "breaker": 9,
         "ogreCheck": 0,
         "xernCheck": 0,
-        "zacCheck": 1,
-        "calyCheck": 0,
+        "zacCheck": 2,
+        "calyCheck": 2,
         "rocks": false,
         "defog": false
     },
@@ -478,7 +478,7 @@
         "breaker": 6,
         "ogreCheck": 1,
         "xernCheck": 1,
-        "zacCheck": 7,
+        "zacCheck": 6,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
@@ -567,7 +567,7 @@
         "ogreCheck": 0,
         "xernCheck": 5,
         "zacCheck": 4,
-        "calyCheck": 4,
+        "calyCheck": 6,
         "rocks": false,
         "defog": true
     },
@@ -582,11 +582,11 @@
                 "Transform"
             ]
         },
-        "breaker": 0,
+        "breaker": 4,
         "ogreCheck": 5,
-        "xernCheck": 6,
-        "zacCheck": 6,
-        "calyCheck": 0,
+        "xernCheck": 5,
+        "zacCheck": 5,
+        "calyCheck": 5,
         "rocks": false,
         "defog": false
     },
@@ -629,7 +629,7 @@
         "breaker": 4,
         "ogreCheck": 10,
         "xernCheck": 2,
-        "zacCheck": 3,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -651,7 +651,7 @@
         "breaker": 4,
         "ogreCheck": 10,
         "xernCheck": 2,
-        "zacCheck": 3,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -673,7 +673,7 @@
         "breaker": 4,
         "ogreCheck": 10,
         "xernCheck": 2,
-        "zacCheck": 3,
+        "zacCheck": 1,
         "calyCheck": 0,
         "rocks": false,
         "defog": false
@@ -761,7 +761,7 @@
         "breaker": 8,
         "ogreCheck": 4,
         "xernCheck": 0,
-        "zacCheck": 5,
+        "zacCheck": 4,
         "calyCheck": 2,
         "rocks": false,
         "defog": false
@@ -783,7 +783,7 @@
         "breaker": 8,
         "ogreCheck": 4,
         "xernCheck": 0,
-        "zacCheck": 5,
+        "zacCheck": 4,
         "calyCheck": 2,
         "rocks": false,
         "defog": false
@@ -805,7 +805,7 @@
         "breaker": 8,
         "ogreCheck": 4,
         "xernCheck": 0,
-        "zacCheck": 5,
+        "zacCheck": 4,
         "calyCheck": 2,
         "rocks": false,
         "defog": false
@@ -924,6 +924,28 @@
     {
         "set": {
             "name": "Marshadow",
+            "item": "Choice Band",
+            "ability": "Technician",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Adamant",
+            "moves": [
+                "Spectral Thief",
+                "Close Combat",
+                "Ice Punch",
+                "Shadow Sneak"
+            ]
+        },
+        "breaker": 8,
+        "ogreCheck": 4,
+        "xernCheck": 2,
+        "zacCheck": 0,
+        "calyCheck": 6,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Marshadow",
             "item": "Life Orb",
             "ability": "Technician",
             "evs": "252 Atk / 4 Def / 252 Spe",
@@ -953,7 +975,7 @@
             "moves": [
                 "Dragon Dance",
                 "Bolt Strike",
-                "Outrage",
+                "Zekrom",
                 "Substitute"
             ]
         },
@@ -998,35 +1020,13 @@
                 "Stealth Rock",
                 "Draco Meteor",
                 "Fire Blast",
-                "Toxic"
-            ]
-        },
-        "breaker": 3,
-        "ogreCheck": 3,
-        "xernCheck": 1,
-        "zacCheck": 1,
-        "calyCheck": 0,
-        "rocks": true,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Dialga",
-            "item": "Leftovers",
-            "ability": "Pressure",
-            "evs": "252 HP / 252 SpA / 4 Spe",
-            "nature": "Modest",
-            "moves": [
-                "Stealth Rock",
-                "Draco Meteor",
-                "Fire Blast",
                 "Thunder"
             ]
         },
         "breaker": 3,
         "ogreCheck": 3,
         "xernCheck": 1,
-        "zacCheck": 1,
+        "zacCheck": 0,
         "calyCheck": 0,
         "rocks": true,
         "defog": false
