@@ -6,10 +6,8 @@ let recursions = 0;
 
 let stats = {
     ints: {
-        zygCheck: 0,
         zacCheck: 0,
         breaker: 0,
-        ygodCheck: 0,
         xernCheck: 0,
         ogreCheck: 0,
         calyCheck: 0
@@ -42,10 +40,8 @@ function buildTeam() {
 
         let stats = {
             ints: {
-                zygCheck: 0,
                 zacCheck: 0,
                 breaker: 0,
-                ygodCheck: 0,
                 xernCheck: 0,
                 ogreCheck: 0,
                 calyCheck: 0
@@ -109,17 +105,11 @@ function buildTeam() {
                             }
                         }
                     }
-                    else if (!stats.rocks || !stats.defog) {
-                        if (!stats.rocks && mon.rocks) {
-                            prunedArray.push(mon);
-                        } else if (!stats.defog && mon.defog) {
+                    else if (!stats.defog) {
+                        if (!stats.defog && mon.defog) {
                             prunedArray.push(mon);
                         } else {
                             rejected.push(mon);
-                        }
-                    } else {
-                        if ((!stats.rocks) || (stats.rocks && !mon.rocks)) {
-                            prunedArray.push(mon);
                         }
                     }
                 }
@@ -137,17 +127,6 @@ function buildTeam() {
                         }
                     }
                     prunedArray.push(mon);
-                } else if (rejected) {
-                    for (let i = 0; i < rejected.length; i++) {
-                        if (rejected[i] && util.isValid(rejected[i], team)) {
-                            if ((!stats.rocks) || (stats.rocks && !rejected[i].rocks)) {
-                                prunedArray.push(rejected[i]);
-                            }
-                        }
-                    }
-                    if (prunedArray.length === 0) {
-                        prunedArray.push(util.getRandomMon(team));
-                    }
                 } else {
                     prunedArray.push(util.getRandomMon(team));
                 }

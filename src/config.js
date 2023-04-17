@@ -11,12 +11,15 @@ for (let i = 0; i < process.argv.length; i += 2) {
         case 'help':
             throw ('usage: node builder [--c (arg #)| --n (arg #)| --t (arg tier)| --r (arg #)| --b (arg #)| --m (arg mode)| --cm | --d | --raw | --a]');
         case '--c':
-            if (parseInt(value) > 10) {
+            if (parseInt(value) >= 10) {
                 throw ('cutoff too high (lower it below 10)');
             }
             configEdits.cutoff = parseInt(value);
             break;
         case '--t':
+            if(!(value == "gen8anythinggoes" || value == "gen7anythinggoes")){
+                throw("invalid tier");
+            }
             tier = value;
             break;
         case '--r':
@@ -26,6 +29,9 @@ for (let i = 0; i < process.argv.length; i += 2) {
             configEdits.breakerThreshold = parseInt(value);
             break;
         case '--m':
+            if(!(value == "balance" || value == "offense")){
+                throw("invalid mode");
+            }
             mode = value;
             break;
         case '--a':
@@ -47,20 +53,17 @@ for (let i = 0; i < process.argv.length; i += 2) {
             break;
         case '--raw':
             configEdits.raw = true;
+            i--;
         case '--nsc':
             configEdits.speciesClause = false;
+            i--;
     }
 }
-
 let config = null;
 
-if (tier) {
-    if (mode) { config = configTemplates[tier][mode] }
-    else { config = configTemplates[tier].balance; }
-} else {
-    if (mode) { config = configTemplates.gen8anythinggoes[mode]; }
-    else { config = configTemplates.gen8anythinggoes.balance; }
-}
+if (!tier) { tier = "gen8anythinggoes"; }
+if (!mode) { mode = "balance" }
+config = configTemplates[tier][mode];
 
 for (let [key, value] of Object.entries(configEdits)) {
     for (let [key1, value1] of Object.entries(config)) {

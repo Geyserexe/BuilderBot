@@ -7,23 +7,8 @@
             "tier": "gen8anythinggoes",
             "mode": "balance",
             "coreMode": false,
-            "breakerThreshold": 25,
-            "recurseThreshold": 10,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        },
-        "stall": {
-            "teamNumber": 1,
-            "cutoff": 7,
-            "teamLength": 6,
-            "tier": "gen8anythinggoes",
-            "mode": "stall",
-            "coreMode": false,
-            "breakerThreshold": 0,
-            "recurseThreshold": 8,
+            "breakerThreshold": 30,
+            "recurseThreshold": 15,
             "monsToAvoid": [
                 ""
             ],
@@ -40,7 +25,7 @@
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [
-                ""
+                "Kyogre"
             ],
             "startMon": {},
             "speciesClause": true
@@ -62,21 +47,6 @@
             "startMon": {},
             "speciesClause": true
         },
-        "stall": {
-            "teamNumber": 1,
-            "cutoff": 7,
-            "teamLength": 6,
-            "tier": "gen7anythinggoes",
-            "mode": "stall",
-            "coreMode": false,
-            "breakerThreshold": 0,
-            "recurseThreshold": 8,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        },
         "offense": {
             "teamNumber": 1,
             "cutoff": 7,
@@ -85,53 +55,6 @@
             "mode": "offense",
             "coreMode": false,
             "breakerThreshold": 35,
-            "recurseThreshold": 0,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        }
-    },
-    "gen8nationaldexag": {
-        "balance": {
-            "teamNumber": 1,
-            "cutoff": 7,
-            "teamLength": 6,
-            "tier": "gen8nationaldexag",
-            "mode": "balance",
-            "coreMode": false,
-            "breakerThreshold": 20,
-            "recurseThreshold": 11,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        },
-        "stall": {
-            "teamNumber": 1,
-            "cutoff": 7,
-            "teamLength": 6,
-            "tier": "gen8nationaldexag",
-            "mode": "stall",
-            "coreMode": false,
-            "breakerThreshold": 0,
-            "recurseThreshold": 9,
-            "monsToAvoid": [
-                ""
-            ],
-            "startMon": {},
-            "speciesClause": true
-        },
-        "offense": {
-            "teamNumber": 1,
-            "cutoff": 6,
-            "teamLength": 6,
-            "tier": "gen8nationaldexag",
-            "mode": "offense",
-            "coreMode": false,
-            "breakerThreshold": 40,
             "recurseThreshold": 0,
             "monsToAvoid": [
                 ""

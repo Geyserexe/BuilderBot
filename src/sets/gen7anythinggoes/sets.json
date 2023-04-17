@@ -286,7 +286,7 @@
         "breaker": 2,
         "ogreCheck": 10,
         "donCheck": 0,
-        "xernCheck": 7,
+        "xernCheck": 9,
         "rayCheck": 0,
         "zygCheck": 0,
         "marshCheck": 3,
@@ -365,9 +365,9 @@
             ]
         },
         "breaker": 2,
-        "ogreCheck": 10,
+        "ogreCheck": 7,
         "donCheck": 0,
-        "xernCheck": 9,
+        "xernCheck": 7,
         "rayCheck": 0,
         "zygCheck": 0,
         "marshCheck": 1,
@@ -453,6 +453,33 @@
         "zygCheck": 0,
         "marshCheck": 0,
         "ultraCheck": 3,
+        "mega": false,
+        "z": false,
+        "rocks": false,
+        "defog": false
+    },
+    {
+        "set": {
+            "name": "Marshadow",
+            "item": "Life Orb",
+            "ability": "Technician",
+            "evs": "252 Atk / 4 Def / 252 Spe",
+            "nature": "Hasty",
+            "moves": [
+                "Hidden Power [Ice]",
+                "Spectral Thief",
+                "Close Combat",
+                "Shadow Sneak"
+            ]
+        },
+        "breaker": 6,
+        "ogreCheck": 1,
+        "donCheck": 1,
+        "xernCheck": 0,
+        "rayCheck": 4,
+        "zygCheck": 4,
+        "marshCheck": 0,
+        "ultraCheck": 5,
         "mega": false,
         "z": false,
         "rocks": false,
@@ -1352,33 +1379,6 @@
     },
     {
         "set": {
-            "name": "Mewtwo",
-            "item": "Life Orb",
-            "ability": "Pressure",
-            "evs": "252 HP / 4 Def / 252 Spe",
-            "nature": "Timid",
-            "moves": [
-                "Taunt",
-                "Flamethrower",
-                "Ice Beam",
-                "Psystrike"
-            ]
-        },
-        "breaker": 7,
-        "ogreCheck": 1,
-        "donCheck": 1,
-        "xernCheck": 1,
-        "rayCheck": 1,
-        "zygCheck": 2,
-        "marshCheck": 0,
-        "ultraCheck": 7,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
             "name": "Sableye-Mega",
             "item": "Sablenite",
             "ability": "Magic Bounce",
@@ -1588,7 +1588,7 @@
         "rayCheck": 2,
         "zygCheck": 0,
         "marshCheck": 0,
-        "ultraCheck": 0,
+        "ultraCheck": 1,
         "mega": false,
         "z": true,
         "rocks": false,
@@ -1605,14 +1605,14 @@
                 "Transform"
             ]
         },
-        "breaker": 5,
+        "breaker": 4,
         "ogreCheck": 0,
         "donCheck": 2,
-        "xernCheck": 5,
-        "rayCheck": 4,
+        "xernCheck": 4,
+        "rayCheck": 3,
         "zygCheck": 0,
         "marshCheck": 0,
-        "ultraCheck": 6,
+        "ultraCheck": 4,
         "mega": false,
         "z": false,
         "rocks": false,
@@ -1644,60 +1644,6 @@
         "z": false,
         "rocks": false,
         "defog": false
-    },
-    {
-        "set": {
-            "name": "Tapu Koko",
-            "item": "Choice Specs",
-            "ability": "Electric Surge",
-            "evs": "252 SpA / 4 SpD / 252 Spe",
-            "nature": "Timid",
-            "moves": [
-                "Volt Switch",
-                "Thunderbolt",
-                "Dazzling Gleam",
-                "Grass Knot"
-            ]
-        },
-        "breaker": 6,
-        "ogreCheck": 3,
-        "donCheck": 0,
-        "xernCheck": 0,
-        "rayCheck": 4,
-        "zygCheck": 4,
-        "marshCheck": 4,
-        "ultraCheck": 4,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": false
-    },
-    {
-        "set": {
-            "name": "Arceus-Grass",
-            "item": "Meadow Plate",
-            "ability": "Multitype",
-            "evs": "248 HP / 244 SpD / 16 Spe",
-            "nature": "Calm",
-            "moves": [
-                "Grass Knot",
-                "Recover",
-                "Defog",
-                "Roar"
-            ]
-        },
-        "breaker": 2,
-        "ogreCheck": 9,
-        "donCheck": 1,
-        "xernCheck": 5,
-        "rayCheck": 0,
-        "zygCheck": 2,
-        "marshCheck": 2,
-        "ultraCheck": 0,
-        "mega": false,
-        "z": false,
-        "rocks": false,
-        "defog": true
     },
     {
         "set": {
