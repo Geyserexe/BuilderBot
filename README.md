@@ -5,7 +5,7 @@ Use config.cutoff to change the building style by changing it between 0 and 10. 
 Add additional sets to the appropriate file in src/sets/. 
 In order to run the teambuilder, open Terminal / cmd, cd into the builderbot file, and run "node builder".
 
-- Note: dev branch may be unreliable / produce really bad teams
+- Note: dev branch may be unreliable / produce really bad teams.
 - If you're using this on repl.it, run "npm install" in the console to the right to set it up, followed by "node builder" to build teams.
 
 ## Flags ##

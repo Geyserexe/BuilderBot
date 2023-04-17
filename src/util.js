@@ -84,15 +84,16 @@ class Util {
             }
         }
 
-        let avoidDupMoves = ["whirlpool", "snarl"];
-
-        for (const avoidMove of avoidDupMoves) {
-            for (const a of team) {
-                for (const move of a.set.moves) {
-                    if (move.toLowerCase().includes(avoidMove)) {
-                        for (const b of mon.set.moves) {
-                            if (b.toLowerCase().includes(avoidMove)) {
-                                return false;
+        if(config.tier == "gen7anythinggoes"){
+            let avoidDupMoves = ["whirlpool"];
+            for (const avoidMove of avoidDupMoves) {
+                for (const a of team) {
+                    for (const move of a.set.moves) {
+                        if (move.toLowerCase().includes(avoidMove)) {
+                            for (const b of mon.set.moves) {
+                                if (b.toLowerCase().includes(avoidMove)) {
+                                    return false;
+                                }
                             }
                         }
                     }
