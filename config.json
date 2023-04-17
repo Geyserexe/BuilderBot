@@ -12,7 +12,8 @@
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         },
         "offense": {
             "teamNumber": 1,
@@ -26,7 +27,8 @@
                 "Kyogre"
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         }
     },
     "gen7anythinggoes": {
@@ -42,7 +44,8 @@
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         },
         "offense": {
             "teamNumber": 1,
@@ -56,7 +59,8 @@
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         }
     }
 }
