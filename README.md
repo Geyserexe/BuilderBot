@@ -12,19 +12,18 @@ In order to run the teambuilder, open Terminal / cmd, cd into the builderbot fil
 
 "node builder" can be run with each of the following flags, which are added after the command, each of which override anything in config.json.
 
-an example of flag usage is "node builder --t gen7anythinggoes --c 7 --r 14 --a chansey,groudon-primal"
+an example of flag usage is "node builder -t gen7anythinggoes -c 7 -r 14 -a chansey,groudon-primal"
 
-- --c controls the cutoff variable.
-- --t controls the tier built for.
-- --m controls the mode (offense / balance) built for.
-- --b controls the breakerThreshold value.
-- --r controls the recurseThreshold value.
-- --n controls the number of teams built.
-- --a controls the avoided mons; formatting is a comma-separated-list.
-- --cm turns on core mode.
-- --d runs the builder on the default settings (i.e galar balance cutoff 5 bT 35 rT 15 etc) and overrides any other settings.
-- --raw makes the builder output the team as text rather than as a pokepaste link.
-- --nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
+- -c controls the cutoff variable.
+- -t controls the tier built for.
+- -m controls the mode (offense / balance) built for.
+- -b controls the breakerThreshold value.
+- -r controls the recurseThreshold value.
+- -n controls the number of teams built (max 2000).
+- -a controls the avoided mons; formatting is a comma-separated-list.
+- -d runs the builder on the default settings (i.e galar balance cutoff 5 bT 35 rT 15 etc) and overrides any other settings.
+- -raw makes the builder output the team as text rather than as a pokepaste link.
+- -nsc deactivates species clause, allowing duplication of Pokemon, excluding those that are illegal in-game.
 
 ## Config Info ##
 

@@ -6,14 +6,14 @@
             "teamLength": 6,
             "tier": "gen8anythinggoes",
             "mode": "balance",
-            "coreMode": false,
             "breakerThreshold": 30,
             "recurseThreshold": 15,
             "monsToAvoid": [
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         },
         "offense": {
             "teamNumber": 1,
@@ -21,14 +21,14 @@
             "teamLength": 6,
             "tier": "gen8anythinggoes",
             "mode": "offense",
-            "coreMode": false,
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [
                 "Kyogre"
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         }
     },
     "gen7anythinggoes": {
@@ -38,14 +38,14 @@
             "teamLength": 6,
             "tier": "gen7anythinggoes",
             "mode": "balance",
-            "coreMode": false,
             "breakerThreshold": 20,
             "recurseThreshold": 11,
             "monsToAvoid": [
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         },
         "offense": {
             "teamNumber": 1,
@@ -53,14 +53,14 @@
             "teamLength": 6,
             "tier": "gen7anythinggoes",
             "mode": "offense",
-            "coreMode": false,
             "breakerThreshold": 35,
             "recurseThreshold": 0,
             "monsToAvoid": [
                 ""
             ],
             "startMon": {},
-            "speciesClause": true
+            "speciesClause": true,
+            "raw": false
         }
     }
 }

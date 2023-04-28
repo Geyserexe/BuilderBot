@@ -23,12 +23,12 @@ if (team.includes("error") || !team) {
 }
 
 async function exportTeam() {
-    if (!config.raw) {
-        console.log("exporting...");
-        console.log(await uploadToPokepaste(team));
-    } else {
-        console.log(team);
-    }
+    console.log("exporting...");
+    console.log(await uploadToPokepaste(team));
 }
 
-exportTeam();
+if(!config.raw){
+    exportTeam();
+} else {
+    console.log(`\n${team}`);
+}

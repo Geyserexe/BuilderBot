@@ -2,6 +2,8 @@ const axios = require('axios');
 const querystring = require('querystring');
 const config = require('./config.js');
 
+//courtesy of the wonderful PartMan
+
 exports.uploadToPokepaste = function (text) {
 	return new Promise((resolve, reject) => {
 		text = {
