@@ -47,6 +47,10 @@ class Util {
             }
         }
 
+        if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {
+            return false;
+        }
+
         for (const a of team) {
             if (config.tier.toLowerCase() != "gen8anythinggoes") {
                 if ((mon.mega && a.mega) || (mon.z && a.z) || (a.cleric && mon.cleric)) {
@@ -101,10 +105,6 @@ class Util {
             }
         }
 
-        if (config.mode.toLowerCase() === "offense" && mon.set.item.toLowerCase().includes("choice")) {
-            return false;
-        }
-
         return true;
     }
 
@@ -120,7 +120,7 @@ class Util {
             }
             a++;
             if (a > 1000) {
-                return (sets[this.getRandomInt(sets.length)])
+                return (sets[this.getRandomInt(sets.length)]);
             }
         }
     }
@@ -129,17 +129,16 @@ class Util {
 
         let teamString = "";
 
-        for (let i = 0; i < team.length; i++) {
-            if (team[i] == null) {
+        team.forEach(mon => {
+            if (mon == null) {
                 throw ("Error while building. Please try again.");
             }
-            let set = team[i].set;
             let moves = "";
-            for (let a = 0; a < set.moves.length; a++) {
-                moves += `\n- ${set.moves[a]}`;
-            }
-            teamString += `${set.name} @ ${set.item}\nAbility: ${set.ability}\nEVs: ${set.evs}\n${set.nature} Nature${moves}\n\n`;
-        }
+            mon.set.moves.forEach(move => {
+                moves += `\n- ${move}`;
+            });
+            teamString += `${mon.set.name} @ ${mon.set.item}\nAbility: ${mon.set.ability}\nEVs: ${mon.set.evs}\n${mon.set.nature} Nature${moves}\n\n`;
+        });
 
         return (teamString);
     }
